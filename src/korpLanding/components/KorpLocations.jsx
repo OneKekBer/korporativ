@@ -24,7 +24,7 @@ const KorpLocations = () => {
       <div>
          <div className="wrapper ">
             <h1 className="text-center text-xl">Локации</h1>
-            <h2 className="text-center text-lg">
+            <h2 className="text-center text-md">
                У нас есть локации{" "}
                <span className="text-brown"> специально для вас</span>
             </h2>
@@ -35,7 +35,7 @@ const KorpLocations = () => {
                         className="flex max-h-[216px] max-w-[580px]  rounded-[19px] bg-korpPrimary"
                         key={i}
                      >
-                        <img src={loc.img} alt="" />
+                        <img className="" src={loc.img} alt="" />
                         <div className="flex flex-col justify-between    py-5">
                            <div className="text-md font-bold text-brown">
                               {loc.title}

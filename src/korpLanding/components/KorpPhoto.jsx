@@ -50,7 +50,7 @@ const Photo = () => {
                      slidesPerView={1}
                      navigation
                      loop={true}
-                     className="photo_swiper relative h-[70vh] w-full"
+                     className="photo_swiper relative "
                      onBeforeInit={(swiper) => {
                         swiperRef.current = swiper;
                      }}
@@ -58,7 +58,7 @@ const Photo = () => {
                      // onSlideChange={() => console.log("slide change")}
                   >
                      <SwiperSlide className="">
-                        <div>
+                        <div className="w-full h-full">
                            <a rel="noreferrer" target="_blank" href={ytSrc}>
                               <img
                                  className="h-full w-full"
@@ -85,28 +85,32 @@ const Photo = () => {
                      </SwiperSlide>
                      {photos.map((photo, i) => {
                         return (
-                           <SwiperSlide key={i}>
-                              <img src={photo.img} alt="" />
+                           <SwiperSlide className="h-full w-full" key={i}>
+                              <img
+                                 className="w-full h-full object-cover"
+                                 src={photo.img}
+                                 alt=""
+                              />
                            </SwiperSlide>
                         );
                      })}
+                     <button
+                        className="absolute right-0 md:-right-10 top-1/2 z-20 h-[50px] w-[50px] md:h-[150px] md:w-[150px] -translate-y-1/2 transform "
+                        onClick={() => {
+                           swiperRef.current?.slideNext();
+                        }}
+                     >
+                        <img src={next} alt="" />
+                     </button>
+                     <button
+                        className="absolute left-0 md:-left-10 top-1/2 z-20 h-[50px] w-[50px] md:h-[150px] md:w-[150px] -translate-y-1/2 transform "
+                        onClick={() => {
+                           swiperRef.current?.slidePrev();
+                        }}
+                     >
+                        <img src={prev} alt="" />
+                     </button>
                   </Swiper>
-                  <button
-                     className="absolute -right-10 top-1/2 z-20 h-[100px] w-[100px] -translate-y-1/2 transform rounded-full bg-grey"
-                     onClick={() => {
-                        swiperRef.current?.slideNext();
-                     }}
-                  >
-                     <img src={next} alt="" />
-                  </button>
-                  <button
-                     className="absolute -left-10 top-1/2 z-20 h-[100px] w-[100px] -translate-y-1/2 transform rounded-full bg-grey"
-                     onClick={() => {
-                        swiperRef.current?.slidePrev();
-                     }}
-                  >
-                     <img src={prev} alt="" />
-                  </button>
                </div>
             </div>
          </div>

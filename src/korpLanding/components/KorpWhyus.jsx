@@ -39,7 +39,7 @@ const Whyus = () => {
                            key={i}
                         >
                            <img
-                              className="whyus_img h-[180px] w-[168px]"
+                              className="whyus_img aspect-square  max-h-[180px] max-w-[168px]"
                               src={item.img}
                            />
                            <div>{item.text}</div>
