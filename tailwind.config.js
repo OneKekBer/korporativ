@@ -8,7 +8,7 @@ export default {
          xl: "clamp(40px, 5vw, 70px)",
          lg: "clamp(12px, 10vw, 48px)",
          md: "clamp(10px, 4vw, 28px)",
-         sm: "clamp(10px, 10vw, 18px)",
+         sm: "clamp(9px, 4vw, 18px)",
          small: "clamp(6px, 4vw, 18px)",
       },
       extend: {

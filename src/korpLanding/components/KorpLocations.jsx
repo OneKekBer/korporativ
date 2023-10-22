@@ -3,6 +3,7 @@ import loc2 from "images/korpLanding/locations/001.png";
 import loc3 from "images/korpLanding/locations/002.png";
 import loc4 from "images/korpLanding/locations/004.png";
 import longarrow from "icons/longarrow.png";
+
 const locations = [
    {
       title: "ЛЕСНАЯ РЕЗИДЕНЦИЯ",
@@ -21,7 +22,7 @@ const locations = [
 ];
 const KorpLocations = () => {
    return (
-      <div>
+      <div className="location">
          <div className="wrapper ">
             <h1 className="text-center text-xl">Локации</h1>
             <h2 className="text-center text-md">
@@ -32,20 +33,28 @@ const KorpLocations = () => {
                {locations.map((loc, i) => {
                   return (
                      <div
-                        className="flex max-h-[216px] max-w-[580px]  rounded-[19px] bg-korpPrimary"
+                        className="flex md:max-h-[216px] md:max-w-[580px]  rounded-[19px] bg-korpPrimary"
                         key={i}
                      >
-                        <img className="" src={loc.img} alt="" />
+                        <img
+                           className="  w-[100px] sm:w-[130px]  md:w-auto md:h-auto"
+                           src={loc.img}
+                           alt=""
+                        />
                         <div className="flex flex-col justify-between    py-5">
                            <div className="text-md font-bold text-brown">
                               {loc.title}
                            </div>
-                           <div className="flex items-center  gap-5 text-tarif font-bold text-white">
+                           <div className="flex items-center  gap-5 text-sm font-bold text-white">
                               <div className="flex flex-col gap-5">
                                  <div>{loc.people}</div>
                                  <div>{loc.price}</div>
                               </div>
-                              <img className="h-7" src={longarrow} alt="" />
+                              <img
+                                 className="w-7 pr-1"
+                                 src={longarrow}
+                                 alt=""
+                              />
                            </div>
                         </div>
                      </div>

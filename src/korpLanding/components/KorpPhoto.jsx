@@ -31,8 +31,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-const ytSrc = "https://www.youtube.com/watch?v=Eat2wgPNuIo";
-const ytId = ytSrc.split("/")[ytSrc.split("/").length - 1];
+// const ytSrc = "https://www.youtube.com/watch?v=Eat2wgPNuIo";
+// const ytId = ytSrc.split("/")[ytSrc.split("/").length - 1];
 const Photo = () => {
    const swiperRef = useRef();
    return (
@@ -57,11 +57,11 @@ const Photo = () => {
                      // onSwiper={(swiper) => console.log(swiper)}
                      // onSlideChange={() => console.log("slide change")}
                   >
-                     <SwiperSlide className="">
-                        <div className="w-full h-full">
+                     {/* <SwiperSlide className="">
+                        <div className="">
                            <a rel="noreferrer" target="_blank" href={ytSrc}>
                               <img
-                                 className="h-full w-full"
+                                 className="object-cover"
                                  src={`https://i.ytimg.com/vi_webp/${ytId}/mqdefault.webp`}
                                  alt="Обложка ролика с ютуб канала Икша Кантри Клаб"
                               />
@@ -82,7 +82,7 @@ const Photo = () => {
                               </svg>
                            </button>
                         </div>
-                     </SwiperSlide>
+                     </SwiperSlide> */}
                      {photos.map((photo, i) => {
                         return (
                            <SwiperSlide className="h-full w-full" key={i}>
@@ -94,23 +94,23 @@ const Photo = () => {
                            </SwiperSlide>
                         );
                      })}
-                     <button
-                        className="absolute right-0 md:-right-10 top-1/2 z-20 h-[50px] w-[50px] md:h-[150px] md:w-[150px] -translate-y-1/2 transform "
-                        onClick={() => {
-                           swiperRef.current?.slideNext();
-                        }}
-                     >
-                        <img src={next} alt="" />
-                     </button>
-                     <button
-                        className="absolute left-0 md:-left-10 top-1/2 z-20 h-[50px] w-[50px] md:h-[150px] md:w-[150px] -translate-y-1/2 transform "
-                        onClick={() => {
-                           swiperRef.current?.slidePrev();
-                        }}
-                     >
-                        <img src={prev} alt="" />
-                     </button>
                   </Swiper>
+                  <button
+                     className="absolute right-0 md:-right-10 top-1/2 z-20 h-[50px] w-[50px] md:h-[150px] md:w-[150px] -translate-y-1/2 transform "
+                     onClick={() => {
+                        swiperRef.current?.slideNext();
+                     }}
+                  >
+                     <img src={next} alt="" />
+                  </button>
+                  <button
+                     className="absolute left-0 md:-left-10 top-1/2 z-20 h-[50px] w-[50px] md:h-[150px] md:w-[150px] -translate-y-1/2 transform "
+                     onClick={() => {
+                        swiperRef.current?.slidePrev();
+                     }}
+                  >
+                     <img src={prev} alt="" />
+                  </button>
                </div>
             </div>
          </div>
