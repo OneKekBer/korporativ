@@ -110,7 +110,7 @@ const KorpGuest = () => {
                </button>
             </div>
             <img
-               className="absolute w-[30%] md:w-[25%] left-0 bottom-0"
+               className="absolute w-[40%] md:w-[30%] left-0 bottom-0"
                src={blag}
                alt=""
             />
