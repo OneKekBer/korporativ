@@ -64,14 +64,17 @@ const Header = ({ toggleMenu, isMenuOpen, className }) => {
          <AnimatePresence>
             <div className="wrapper  ">
                {isMenuOpen && (
-                  <div className="fixed inset-0 z-20 flex h-full w-full bg-slate-100 bg-opacity-60 md:hidden">
+                  <div
+                     onClick={toggleMenu}
+                     className="fixed inset-0 z-20 flex h-full w-full bg-slate-100 bg-opacity-60 md:hidden"
+                  >
                      <motion.div
                         key="menu" // Make sure to specify a unique key
                         variants={menuVars}
                         initial="initial"
                         animate="animate"
                         exit="exit"
-                        className="fixed left-1/2 top-1/2 z-20 flex h-[40%] w-[80%] -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-[5px] bg-brown p-5 duration-300"
+                        className="fixed left-1/2 top-1/2 z-[400] flex h-[40%] w-[80%] -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-[5px] bg-brown p-5 duration-300"
                      >
                         <div
                            className="absolute right-2 top-2"
