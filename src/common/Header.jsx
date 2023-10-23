@@ -51,10 +51,11 @@ const navVars = {
 };
 
 const links = [
-   { title: "Почему мы", link: "whyus" },
+   // { title: "Почему мы", link: "whyus" },
    { title: "Фотографии", link: "photo" },
    { title: "Локации", link: "locations" },
    { title: "Кейтеринг", link: "kay" },
+   { title: "Доп услуги", link: "add" },
    { title: "Связаться со мной", link: "Form" },
 ];
 // eslint-disable-next-line react/prop-types

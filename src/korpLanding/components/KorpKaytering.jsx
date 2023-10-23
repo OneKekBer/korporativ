@@ -8,7 +8,7 @@ const KorpKaytering = () => {
             <h1 className="text-lg text-center">Кейтеринг</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                <img src={kay1} alt="" />
-               <div>
+               <div className="flex flex-col justify-center gap-10">
                   <p className="text-white text-center text-md ">
                      Мы предлагаем вам профессиональный кейтеринг, который
                      подарит вам и вашим гостям незабываемый опыт. Наша команда

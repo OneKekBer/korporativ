@@ -63,7 +63,7 @@ const Form = () => {
    // };
 
    return (
-      <div className="bg-brown pt-[14%]">
+      <div className="bg-brown py-[14%]">
          <div className="">
             <form
                className="montserrat flex justify-center flex-col items-center mx-auto w-[90%] md:max-w-[840px] rounded-[40px] bg-black px-[20px] py-[30px] md:px-[50px] md:py-[70px]"
