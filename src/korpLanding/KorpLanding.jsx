@@ -9,6 +9,7 @@ import Whyus from "./components/KorpWhyus";
 import KorpKaytering from "./components/KorpKaytering";
 import KorpGuest from "./components/KorpGuest";
 import { useState } from "react";
+import Footer from "./../common/Footer";
 const KorpLanding = () => {
    const [isMenuOpen, setIsMenuOpen] = useState(false);
    const toggleMenu = () => {
@@ -29,6 +30,7 @@ const KorpLanding = () => {
          <KorpGuest />
          <Add />
          <Form />
+         <Footer />
       </div>
    );
 };

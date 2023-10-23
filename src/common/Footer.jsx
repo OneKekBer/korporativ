@@ -16,7 +16,7 @@ const slideVariants = {
 const Footer = () => {
    return (
       <div className="droid bg-darkViolet">
-         <div className="wrapper mt-20 text-grey ">
+         <div className="wrapper  text-grey ">
             <div className="flex justify-between gap-5 py-5">
                <div className="flex w-full items-center justify-between gap-5 md:justify-start">
                   <div>Икша Кантри Kлаб 2023 </div>
