@@ -22,7 +22,7 @@ const locations = [
 ];
 const KorpLocations = () => {
    return (
-      <div className="location">
+      <div id="locations" className="location py-[6vh]">
          <div className="wrapper ">
             <h1 className="text-center text-xl">Локации</h1>
             <h2 className="text-center text-md">

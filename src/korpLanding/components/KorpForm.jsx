@@ -18,6 +18,7 @@ const Form = () => {
          name: name,
          phone: phone,
          email: email,
+         groupID: 981875757,
       };
 
       const sendingData = {
@@ -65,7 +66,7 @@ const Form = () => {
       <div className="bg-brown pt-[14%]">
          <div className="">
             <form
-               className="montserrat mx-auto max-w-[840px] rounded-[40px] bg-black px-[50px] py-[70px]"
+               className="montserrat flex justify-center flex-col items-center mx-auto w-[90%] md:max-w-[840px] rounded-[40px] bg-black px-[20px] py-[30px] md:px-[50px] md:py-[70px]"
                name="Form"
                action=""
             >
@@ -76,7 +77,7 @@ const Form = () => {
                <input
                   type="text"
                   placeholder="Имя"
-                  className="mb-5 h-[80px] w-full rounded-[20px] bg-[#ECE9E9] p-2 text-[20px] text-black outline-none md:text-[27px]"
+                  className="mb-5 h-[50px] md:h-[80px] w-[80%] md:w-full rounded-[20px] bg-[#ECE9E9] p-2 text-[20px] text-black outline-none md:text-[27px]"
                   onChange={(e) => setName(e.target.value)}
                   value={name}
                />
@@ -92,7 +93,7 @@ const Form = () => {
                      <input
                         type="text"
                         placeholder="Телефон"
-                        className={`mb-5 h-[80px] w-full rounded-[20px] bg-[#ECE9E9] p-2 text-[20px] text-black outline-none md:text-[27px] ${
+                        className={`mb-5 h-[50px] md:h-[80px] w-[80%] md:w-full rounded-[20px] bg-[#ECE9E9] p-2 text-[20px] text-black outline-none md:text-[27px] ${
                            phoneError ? "border-red-500" : ""
                         }`}
                         {...inputProps}
@@ -103,7 +104,7 @@ const Form = () => {
                <input
                   type="text"
                   placeholder="Email"
-                  className="mb-5 h-[80px] w-full rounded-[20px] bg-[#ECE9E9] p-2 text-[20px] text-black outline-none md:text-[27px]"
+                  className="mb-5 h-[50px] md:h-[80px] w-[80%] md:w-full rounded-[20px] bg-[#ECE9E9] p-2 text-[20px] text-black outline-none md:text-[27px]"
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
                />

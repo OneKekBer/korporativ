@@ -4,7 +4,7 @@ import Button from "common/Button";
 import trans1 from "images/korpLanding/trans1.png";
 const Hero = () => {
    return (
-      <div className="relative bg-korpPrimary pb-[15%] pt-[5%] lg:pb-[26%]">
+      <div className="relative bg-korpPrimary pb-[30%] pt-[5%] lg:pb-[40%]">
          <div className="wrapper ">
             <div className="text-center">
                <h1 className="text-xl font-bold text-brown">

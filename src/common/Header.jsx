@@ -51,8 +51,10 @@ const navVars = {
 };
 
 const links = [
-   { title: "Программа", link: "Programa" },
-   { title: "Тарифы", link: "Tariff" },
+   { title: "Почему мы", link: "whyus" },
+   { title: "Фотографии", link: "photo" },
+   { title: "Локации", link: "locations" },
+   { title: "Кейтеринг", link: "kay" },
    { title: "Связаться со мной", link: "Form" },
 ];
 // eslint-disable-next-line react/prop-types
@@ -69,7 +71,7 @@ const Header = ({ toggleMenu, isMenuOpen, className }) => {
                         initial="initial"
                         animate="animate"
                         exit="exit"
-                        className="fixed left-1/2 top-1/2 z-20 flex h-[40%] w-[70%] -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-[5px] bg-violet p-5 duration-300"
+                        className="fixed left-1/2 top-1/2 z-20 flex h-[40%] w-[80%] -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-[5px] bg-brown p-5 duration-300"
                      >
                         <div
                            className="absolute right-2 top-2"
@@ -77,7 +79,7 @@ const Header = ({ toggleMenu, isMenuOpen, className }) => {
                         >
                            <img src={close} alt="" />
                         </div>
-                        <ul className="gap-10 text-center text-grey">
+                        <ul className="gap-10 text-center text-white">
                            {links.map((link, i) => {
                               return (
                                  <motion.li

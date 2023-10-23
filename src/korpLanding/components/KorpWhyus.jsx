@@ -25,7 +25,7 @@ const whyusmap = [
 
 const Whyus = () => {
    return (
-      <div className="relative bg-brown pb-[6%]  pt-[40vh]  ">
+      <div id="whyus" className="relative bg-brown pb-[6%]  pt-[30vh]  ">
          <div className="wrapper">
             <div className="text-center">
                <h1 className="mb-[1em] text-lg text-black">
@@ -39,10 +39,10 @@ const Whyus = () => {
                            key={i}
                         >
                            <img
-                              className="whyus_img aspect-square  max-h-[180px] max-w-[168px]"
+                              className="whyus_img aspect-square h-[120px] w-[120px]  md:h-[180px] md:w-[168px]"
                               src={item.img}
                            />
-                           <div>{item.text}</div>
+                           <div className="text-sm">{item.text}</div>
                         </div>
                      );
                   })}

@@ -36,7 +36,7 @@ import "swiper/css/scrollbar";
 const Photo = () => {
    const swiperRef = useRef();
    return (
-      <div className="bg-korpPrimary py-[4%]">
+      <div id="photo" className="bg-korpPrimary py-[5vh]">
          <div className="wrapper">
             <div className="text-center">
                <h1 className="mb-20 text-lg text-white">

@@ -3,7 +3,7 @@ import Button from "common/Button";
 import transline from "images/korpLanding/transline.png";
 const KorpKaytering = () => {
    return (
-      <div className="bg-brown">
+      <div id="kay" className="bg-brown py-[6vh]">
          <div className="wrapper">
             <h1 className="text-lg text-center">Кейтеринг</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
