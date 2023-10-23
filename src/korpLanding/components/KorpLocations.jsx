@@ -3,7 +3,7 @@ import loc2 from "images/korpLanding/locations/001.png";
 import loc3 from "images/korpLanding/locations/002.png";
 import loc4 from "images/korpLanding/locations/004.png";
 import longarrow from "icons/longarrow.png";
-
+import Button from "common/Button";
 const locations = [
    {
       title: "ЛЕСНАЯ РЕЗИДЕНЦИЯ",
@@ -25,7 +25,7 @@ const KorpLocations = () => {
       <div id="locations" className="location py-[6vh]">
          <div className="wrapper ">
             <h1 className="text-center text-xl">Локации</h1>
-            <h2 className="text-center text-md">
+            <h2 className="text-center text-md mb-10">
                У нас есть локации{" "}
                <span className="text-brown"> специально для вас</span>
             </h2>
@@ -51,7 +51,7 @@ const KorpLocations = () => {
                                  <div>{loc.price}</div>
                               </div>
                               <img
-                                 className="w-7 pr-1"
+                                 className="w-7 md:w-[120px] pr-1"
                                  src={longarrow}
                                  alt=""
                               />
@@ -61,6 +61,10 @@ const KorpLocations = () => {
                   );
                })}
             </div>
+            <Button className="bg-brown mx-auto montserrat text-black">
+               Узнать подробнее
+               <img src="" alt="" />
+            </Button>
          </div>
       </div>
    );

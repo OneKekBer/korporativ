@@ -14,6 +14,7 @@ import guest1 from "images/korpLanding/guest/001.png";
 import guest2 from "images/korpLanding/guest/002.png";
 import guest3 from "images/korpLanding/guest/003.png";
 import guest4 from "images/korpLanding/guest/004.png";
+import blag from "/images/korpLanding/blag.png";
 import korpprev from "icons/korpprev.png";
 import korpnext from "icons/korpnext.png";
 import { useRef } from "react";
@@ -47,7 +48,7 @@ const guests = [
 const KorpGuest = () => {
    const swiperRef = useRef();
    return (
-      <div className="bg-brown pt-[5vh] pb-[15vh]">
+      <div className="bg-brown relative pt-[5vh] pb-[15vh] md:pb-[25vh]">
          <div className="wrapper ">
             <Swiper
                // install Swiper modules
@@ -68,7 +69,7 @@ const KorpGuest = () => {
                {guests.map((guest, i) => {
                   return (
                      <SwiperSlide className="px-[2vw] md:p-0" key={i}>
-                        <div className="flex w-full items-center justify-center">
+                        <div className="flex w-full items-center justify-end">
                            <div className="min-w-[200px] min-h-[130px] md:w-[700px] bg-[#ECE9E9] rounded-[10px] md:h-[500px] relative">
                               <img
                                  className="absolute w-[30%] md:w-[40%]  md:max-w-auto -left-[10%] md:-left-[20%] top-1/2 transform -translate-y-1/2"
@@ -86,9 +87,9 @@ const KorpGuest = () => {
                   );
                })}
             </Swiper>
-            <div className="flex max-w-[800px] mx-auto z-10 justify-between">
+            <div className="flex max-w-[800px] ml-auto z-10 justify-between">
                <button
-                  className=""
+                  className="z-[200]"
                   onClick={() => swiperRef.current?.slidePrev()}
                >
                   <img
@@ -98,7 +99,7 @@ const KorpGuest = () => {
                   />
                </button>
                <button
-                  className=""
+                  className="z-[200]"
                   onClick={() => swiperRef.current?.slideNext()}
                >
                   <img
@@ -108,6 +109,11 @@ const KorpGuest = () => {
                   />
                </button>
             </div>
+            <img
+               className="absolute w-[30%] md:w-[25%] left-0 bottom-0"
+               src={blag}
+               alt=""
+            />
          </div>
       </div>
    );

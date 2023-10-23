@@ -25,7 +25,10 @@ const whyusmap = [
 
 const Whyus = () => {
    return (
-      <div id="whyus" className="relative bg-brown pb-[6%]  pt-[30vh]  ">
+      <div
+         id="whyus"
+         className="relative bg-brown pb-[6%] pt-[30vh] md:pt-[20vh]  "
+      >
          <div className="wrapper">
             <div className="text-center">
                <h1 className="mb-[1em] text-lg text-black">
