@@ -9,6 +9,7 @@ import add6 from "images/korpLanding/add/006.png";
 import Button from "common/Button";
 
 import trans3 from "images/korpLanding/trans3.png";
+import trans4 from "images/korpLanding/trans4.png";
 
 import arrow from "icons/arrow.png";
 
@@ -32,7 +33,11 @@ const Add = () => {
    };
    return (
       <div className="relative bg-korpPrimary pb-[10vh]">
-         <div className="wrapper ">
+         <img
+            src={trans4}
+            className="absolute -top-[4%] sm:-top-[5%] md:-top-[10%] lg:-top-[12%] xl:-top-[14%] w-full "
+         />
+         <div className="wrapper pt-[7%]">
             <div className="mb-[10vh]">
                <h1 className="mb-[5vh] text-center text-xl text-white">
                   Дополнительные услуги
@@ -65,7 +70,10 @@ const Add = () => {
                <img src={arrow} alt="" />
             </Button>
          </div>
-         <img src={trans3} className="absolute -bottom-[20vh]  w-full " />
+         <img
+            src={trans3}
+            className="absolute -bottom-[4%] sm:-bottom-[5%] md:-bottom-[10%] lg:-bottom-[12%] xl:-bottom-[14%] w-full "
+         />
       </div>
    );
 };
