@@ -1,5 +1,5 @@
 // import Swiper core and required modules
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css/autoplay";
 import "swiper/css/scrollbar";
 
 import guest1 from "images/korpLanding/guest/001.png";
@@ -50,10 +51,14 @@ const KorpGuest = () => {
          <div className="wrapper ">
             <Swiper
                // install Swiper modules
-               modules={[Navigation]}
+               modules={[Navigation, Autoplay]}
                className="korpswiper"
                spaceBetween={50}
                loop={true}
+               autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+               }}
                slidesPerView={1}
                navigation
                onBeforeInit={(swiper) => {
@@ -70,7 +75,7 @@ const KorpGuest = () => {
                                  src={guest.img}
                                  alt=""
                               />
-                              <div className="pl-[25%] md:pl-[20%] py-[2vh]">
+                              <div className="pl-[25%] flex h-full flex-col justify-center md:pl-[20%] py-[2vh]">
                                  <h1 className="text-md ">{guest.name}</h1>
                                  <div className="text-sm ">{guest.date}</div>
                                  <h1 className="text-extramd ">{guest.text}</h1>
@@ -80,29 +85,29 @@ const KorpGuest = () => {
                      </SwiperSlide>
                   );
                })}
-               <div className="flex z-10 justify-between">
-                  <button
-                     className=""
-                     onClick={() => swiperRef.current?.slidePrev()}
-                  >
-                     <img
-                        className="aspect-square w-[40px] md:w-[120px]"
-                        src={korpprev}
-                        alt=""
-                     />
-                  </button>
-                  <button
-                     className=""
-                     onClick={() => swiperRef.current?.slideNext()}
-                  >
-                     <img
-                        className="aspect-square w-[40px] md:w-[120px]"
-                        src={korpnext}
-                        alt=""
-                     />
-                  </button>
-               </div>
             </Swiper>
+            <div className="flex max-w-[800px] mx-auto z-10 justify-between">
+               <button
+                  className=""
+                  onClick={() => swiperRef.current?.slidePrev()}
+               >
+                  <img
+                     className="aspect-square w-[40px] md:w-[120px]"
+                     src={korpprev}
+                     alt=""
+                  />
+               </button>
+               <button
+                  className=""
+                  onClick={() => swiperRef.current?.slideNext()}
+               >
+                  <img
+                     className="aspect-square w-[40px] md:w-[120px]"
+                     src={korpnext}
+                     alt=""
+                  />
+               </button>
+            </div>
          </div>
       </div>
    );

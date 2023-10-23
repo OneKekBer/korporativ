@@ -32,12 +32,12 @@ const Add = () => {
       setActiveTab(index);
    };
    return (
-      <div className="relative bg-korpPrimary pb-[10vh]">
+      <div className="relative bg-korpPrimary pb-[9vh]">
          <img
             src={trans4}
             className="absolute -top-[4%] sm:-top-[5%] md:-top-[10%] lg:-top-[12%] xl:-top-[13%] w-full "
          />
-         <div className="wrapper pt-[7%]">
+         <div className="wrapper pt-[3%]">
             <div className="mb-[10vh]">
                <h1 className="mb-[5vh] text-center text-xl text-white">
                   Дополнительные услуги
