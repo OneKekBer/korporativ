@@ -42,14 +42,14 @@ const Add = () => {
                <h1 className="mb-[5vh] text-center text-xl text-white">
                   Дополнительные услуги
                </h1>
-               <div className="flex  gap-10">
-                  <div className="tabs flex max-w-[400px] flex-col gap-5  text-grey">
+               <div className="flex flex-col-reverse md:flex-row  gap-10">
+                  <div className="tabs flex w-full md:max-w-[400px] flex-col gap-5  text-grey">
                      {tabs.map((tab, index) => (
                         <div
                            key={index}
                            className={`${
                               index === activeTab ? "text-white" : ""
-                           } cursor-pointer text-md`}
+                           } cursor-pointer text-md text-center md:text-start`}
                            onClick={() => handleTabClick(index)}
                         >
                            {tab.label}
