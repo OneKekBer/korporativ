@@ -24,7 +24,7 @@ const KorpLocations = () => {
    return (
       <div id="locations" className="location py-[6vh]">
          <div className="wrapper ">
-            <h1 className="text-center text-xl">Локации</h1>
+            <h1 className="text-center text-lg">Локации</h1>
             <h2 className="text-center text-md mb-10">
                У нас есть локации{" "}
                <span className="text-brown"> специально для вас</span>
@@ -33,7 +33,7 @@ const KorpLocations = () => {
                {locations.map((loc, i) => {
                   return (
                      <div
-                        className="flex md:max-h-[216px] md:max-w-[580px]  rounded-[19px] bg-korpPrimary"
+                        className="flex gap-[10px] md:gap-[30px] md:max-h-[216px] md:max-w-[580px]  rounded-[19px] bg-korpPrimary"
                         key={i}
                      >
                         <img

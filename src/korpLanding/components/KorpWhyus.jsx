@@ -27,11 +27,11 @@ const Whyus = () => {
    return (
       <div
          id="whyus"
-         className="relative bg-brown pb-[6%] pt-[30vh] md:pt-[20vh]  "
+         className="relative bg-brown pb-[6%] pt-[20vh] md:pt-[20vh]  "
       >
          <div className="wrapper">
             <div className="text-center">
-               <h1 className="mb-[1em] text-lg text-black">
+               <h1 className="mb-[1em] text-lg text-white">
                   Почему Нас Выбирают
                </h1>
                <div className="grid grid-cols-2 gap-10 md:grid-cols-4">

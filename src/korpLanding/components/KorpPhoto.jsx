@@ -39,7 +39,7 @@ const Photo = () => {
       <div id="photo" className="bg-korpPrimary py-[5vh]">
          <div className="wrapper">
             <div className="text-center">
-               <h1 className="mb-20 text-lg text-white">
+               <h1 className=" mb-[30px] text-lg text-white">
                   Фотографии наших мероприятий
                </h1>
                <div className="relative">

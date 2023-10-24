@@ -93,7 +93,7 @@ const KorpGuest = () => {
                   onClick={() => swiperRef.current?.slidePrev()}
                >
                   <img
-                     className="aspect-square w-[40px] md:w-[120px]"
+                     className="aspect-square hover:scale-110 duration-300 w-[40px] md:w-[120px]"
                      src={korpprev}
                      alt=""
                   />
@@ -103,14 +103,14 @@ const KorpGuest = () => {
                   onClick={() => swiperRef.current?.slideNext()}
                >
                   <img
-                     className="aspect-square w-[40px] md:w-[120px]"
+                     className="aspect-square hover:scale-110 duration-300 w-[40px] md:w-[120px]"
                      src={korpnext}
                      alt=""
                   />
                </button>
             </div>
             <img
-               className="absolute w-[40%] md:w-[30%] left-0 bottom-0"
+               className="absolute w-[40%] md:w-[30%] left-0 bottom-0 md:bottom-10"
                src={blag}
                alt="blagodarnosc"
             />
