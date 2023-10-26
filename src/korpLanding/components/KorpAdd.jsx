@@ -67,7 +67,7 @@ const Add = () => {
                Также по вашему желанию мы можем предоставить услугу
                <br /> оформление юр.договора (+10% к общей сумме)
             </h2>
-            <Button className="h-max-[65px] z-[100] min-w-[200px] sm:w-[600px] gap-5 bg-brown text-white">
+            <Button className="h-max-[65px] montserrat z-[100] min-w-[200px] sm:w-[600px] gap-5 bg-brown text-white">
                Узнать стоимость
                <img src={arrow} alt="" />
             </Button>

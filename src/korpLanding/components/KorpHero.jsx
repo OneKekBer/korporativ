@@ -21,7 +21,7 @@ const Hero = () => {
                      src={hero}
                      alt=""
                   />
-                  <Button className="absolute -bottom-7 md:-bottom-5 left-1/2 h-[30px] md:h-[65px] min-w-[310px] sm:w-[600px] -translate-x-1/2 bg-brown text-white shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
+                  <Button className="absolute montserrat -bottom-7 md:-bottom-5 left-1/2 max-h-[20px] md:h-[65px] min-w-[310px] sm:w-[600px] -translate-x-1/2 bg-brown text-white shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
                      Организовать мероприятие
                      <img src={arrow} alt="" />
                   </Button>

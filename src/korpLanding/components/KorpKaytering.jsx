@@ -28,7 +28,7 @@ const KorpKaytering = () => {
                      <div className="text-md text-white text-center">
                         Выберите блюда на мероприятие
                      </div>
-                     <Button className="bg-brown mt-4 mx-auto text-white w-full">
+                     <Button className="bg-brown montserrat mt-4 mx-auto text-white w-full">
                         Посмотреть меню
                      </Button>
                   </div>
