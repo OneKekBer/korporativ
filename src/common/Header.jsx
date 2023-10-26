@@ -96,6 +96,7 @@ const Header = ({ toggleMenu, isMenuOpen, className }) => {
                                        onClick={toggleMenu}
                                        to={link.link}
                                        smooth={true}
+                                       className="underlineOnHoverHeader"
                                        duration={1000} // Длительность анимации скролла (в миллисекундах)
                                     >
                                        {link.title}
@@ -117,6 +118,7 @@ const Header = ({ toggleMenu, isMenuOpen, className }) => {
                                  <ScrollLink
                                     to={link.link}
                                     smooth={true}
+                                    className="underlineOnHoverHeader"
                                     duration={1000} // Длительность анимации скролла (в миллисекундах)
                                  >
                                     {link.title}

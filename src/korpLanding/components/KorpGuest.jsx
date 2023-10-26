@@ -87,7 +87,7 @@ const KorpGuest = () => {
                   );
                })}
             </Swiper>
-            <div className="flex max-w-[800px] ml-auto z-10 justify-between">
+            <div className="flex max-w-[700px] ml-auto z-10 justify-between">
                <button
                   className="z-[200]"
                   onClick={() => swiperRef.current?.slidePrev()}

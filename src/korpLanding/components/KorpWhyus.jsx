@@ -27,7 +27,7 @@ const Whyus = () => {
    return (
       <div
          id="whyus"
-         className="relative bg-brown pb-[6%] pt-[20vh] md:pt-[20vh]  "
+         className="relative bg-brown pb-[6%] pt-[20vh] md:pt-[25vh] lg:pt-[20vh] s  "
       >
          <div className="wrapper">
             <div className="text-center">
