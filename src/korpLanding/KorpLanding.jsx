@@ -9,14 +9,16 @@ import Whyus from "./components/KorpWhyus";
 import KorpKaytering from "./components/KorpKaytering";
 import KorpGuest from "./components/KorpGuest";
 import { useState } from "react";
-import Footer from "./../common/Footer";
+import Footer from "common/Footer";
+import Cookie from "common/Cookie";
 const KorpLanding = () => {
    const [isMenuOpen, setIsMenuOpen] = useState(false);
    const toggleMenu = () => {
       setIsMenuOpen(!isMenuOpen);
    };
    return (
-      <div className="montserrat">
+      <div className="montserrat relative">
+         <Cookie />
          <Header
             isMenuOpen={isMenuOpen}
             toggleMenu={toggleMenu}
@@ -30,7 +32,7 @@ const KorpLanding = () => {
          <KorpGuest />
          <Add />
          <Form />
-         <Footer />
+         <Footer className="montserrat bg-korpHeader" />
       </div>
    );
 };

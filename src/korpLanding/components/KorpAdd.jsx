@@ -17,7 +17,7 @@ const tabs = [
    { label: "Растопка бани/купели", img: add1 },
    { label: "Аренда территории", img: add2 },
    {
-      label: "Активный отдых (квадроциклы, рыбалка с лодки, велосипедная и лыжная  экскурсии и др)",
+      label: "Активный отдых (квадроциклы, рыбалка с лодки и др)",
       img: add3,
    },
    { label: "Караоке", img: add4 },
@@ -43,12 +43,14 @@ const Add = () => {
                   Дополнительные услуги
                </h1>
                <div className="flex flex-col-reverse md:flex-row  gap-10">
-                  <div className="tabs flex w-full md:max-w-[400px] flex-col gap-5  text-grey">
+                  <div className="tabs flex w-full md:max-w-[400px] flex-col gap-5  text-slate-600">
                      {tabs.map((tab, index) => (
                         <div
                            key={index}
                            className={`${
-                              index === activeTab ? "text-white" : ""
+                              index === activeTab
+                                 ? "text-white border border-white rounded-[30px] p-2 border-opacity-50"
+                                 : ""
                            } cursor-pointer text-md font-semibold text-center md:text-start`}
                            onClick={() => handleTabClick(index)}
                         >

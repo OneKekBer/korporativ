@@ -77,7 +77,7 @@ const Form = () => {
                <input
                   type="text"
                   placeholder="Имя"
-                  className="mb-5 h-[50px] md:h-[80px] w-[80%] md:w-full rounded-[20px] bg-[#ECE9E9] p-2 text-[20px] text-black outline-none md:text-[27px]"
+                  className="mb-5 h-[40px] pl-[25px] md:pl-[50px]  md:h-[80px] w-[80%] md:w-full rounded-[20px] bg-[#ECE9E9] p-2 text-[20px] text-black outline-none md:text-[27px]"
                   onChange={(e) => setName(e.target.value)}
                   value={name}
                />
@@ -93,7 +93,7 @@ const Form = () => {
                      <input
                         type="text"
                         placeholder="Телефон"
-                        className={`mb-5 h-[50px] md:h-[80px] w-[80%] md:w-full rounded-[20px] bg-[#ECE9E9] p-2 text-[20px] text-black outline-none md:text-[27px] ${
+                        className={`mb-5 h-[40px] pl-[25px] md:pl-[50px]  md:h-[80px] w-[80%] md:w-full rounded-[20px] bg-[#ECE9E9] p-2 text-[20px] text-black outline-none md:text-[27px] ${
                            phoneError ? "border-red-500" : ""
                         }`}
                         {...inputProps}
@@ -104,7 +104,7 @@ const Form = () => {
                <input
                   type="text"
                   placeholder="Email"
-                  className="mb-5 h-[50px] md:h-[80px] w-[80%] md:w-full rounded-[20px] bg-[#ECE9E9] p-2 text-[20px] text-black outline-none md:text-[27px]"
+                  className="mb-5 h-[40px] pl-[25px] md:pl-[50px]  md:h-[80px] w-[80%] md:w-full rounded-[20px] bg-[#ECE9E9] p-2 text-[20px] text-black outline-none md:text-[27px]"
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
                />

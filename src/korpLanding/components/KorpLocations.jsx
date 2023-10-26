@@ -25,7 +25,7 @@ const KorpLocations = () => {
       <div id="locations" className="location py-[6vh]">
          <div className="wrapper ">
             <h1 className="text-center text-lg">Локации</h1>
-            <h2 className="text-center text-md mb-10">
+            <h2 className="text-center font-bold text-36px mb-10">
                У нас есть локации{" "}
                <span className="text-brown"> специально для вас</span>
             </h2>
