@@ -2,7 +2,7 @@ import cookie from "icons/cookies.png";
 
 const Cookie = () => {
    return (
-      <div className="bg-white px-[2%] md:px-[5%] fixed z-[400000] bottom-0 items-center  w-full h-[145px] flex justify-between">
+      <div className="bg-white px-[2%] md:px-[5%] gap-3 fixed z-[400000] bottom-0 items-center  w-full h-[145px] flex justify-between">
          <img className="w-[50px] md:w-auto" src={cookie} alt="" />
          <p className="text-small text-black max-w-[600px]">
             Мы используем файлы cookie. Продолжая использовать наш сайт, вы
