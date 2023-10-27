@@ -18,6 +18,7 @@ import blag from "/images/korpLanding/blag.png";
 import korpprev from "icons/korpprev.png";
 import korpnext from "icons/korpnext.png";
 import { useRef } from "react";
+import trans2 from "images/korpLanding/trans2.png";
 const guests = [
    {
       img: guest4,
@@ -115,6 +116,11 @@ const KorpGuest = () => {
                alt="blagodarnosc"
             />
          </div>
+         <img
+            src={trans2}
+            alt=""
+            className="absolute w-full -bottom-[20vh] object-cover   "
+         />
       </div>
    );
 };

@@ -106,7 +106,7 @@ const KorpKaytering = () => {
                </div>
             )}
             <img
-               className="absolute -top-[2%] sm:-top-[3\%] md:-top-[5%] lg:-top-[8%] xl:-top-[10%] w-full "
+               className="absolute -top-[2%] sm:-top-[3%] md:-top-[5%] lg:-top-[8%] xl:-top-[10%] w-full "
                src={trans5}
                alt=""
             />

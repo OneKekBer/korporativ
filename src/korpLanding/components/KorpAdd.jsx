@@ -9,8 +9,7 @@ import add6 from "images/korpLanding/add/006.webp";
 import Button from "common/Button";
 import korpnext from "icons/next_photo.png";
 
-import trans3 from "images/korpLanding/trans3.png";
-import trans4 from "images/korpLanding/trans4.png";
+import trans2 from "images/korpLanding/trans2.png";
 
 import arrow from "icons/arrow.png";
 
@@ -38,12 +37,15 @@ const Add = () => {
       setActiveTab((prev) => prev + 1);
    };
    return (
-      <div id="add" className="relative bg-korpPrimary pb-[13vh]">
+      <div id="add" className="relative bg-korpPrimary pb-[13vh] w-full">
+         {/* <div className="absolute w-full"> */}
          <img
-            src={trans4}
-            className="absolute -top-[4%] sm:-top-[5%] md:-top-[9%] lg:-top-[12%] xl:-top-[13%] w-full "
+            src={trans2}
+            alt=""
+            className="absolute w-full -top-[3vh] sm:-top-[3.5vh] md:-top-[6vh] lg:-top-[8vh] xl:-top-[10vh]  object-cover   "
          />
-         <div className="wrapper pt-[5%]">
+         {/* </div> */}
+         <div className="wrapper relative pt-[10%]">
             <div className="mb-[10vh]">
                <h1 className="mb-[5vh] text-center text-lg text-white">
                   Дополнительные услуги
@@ -88,8 +90,8 @@ const Add = () => {
             </Button>
          </div>
          <img
-            src={trans3}
-            className="absolute -bottom-[4%] sm:-bottom-[5%] md:-bottom-[10%] lg:-bottom-[12%] xl:-bottom-[13%] w-full "
+            src={trans2}
+            className="absolute -bottom-[2vh] sm:-bottom-[4vh] md:-bottom-[6vh] lg:-bottom-[8vh] xl:-bottom-[10vh] w-full "
          />
       </div>
    );
