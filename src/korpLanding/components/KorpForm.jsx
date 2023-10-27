@@ -66,7 +66,7 @@ const Form = () => {
       <div className="bg-brown py-[14%]">
          <div className="">
             <form
-               className="montserrat flex justify-center flex-col items-center mx-auto w-[90%] md:max-w-[840px] rounded-[40px] bg-black px-[20px] py-[30px] md:px-[50px] md:py-[70px]"
+               className="montserrat flex justify-center flex-col items-center mx-auto w-[90%] md:max-w-[840px] rounded-[40px] bg-korpPrimary px-[20px] py-[30px] md:px-[50px] md:py-[70px]"
                name="Form"
                action=""
             >
@@ -111,7 +111,7 @@ const Form = () => {
 
                <Button
                   onClick={handleSubmit}
-                  className="mx-auto  h-[40px] w-1/2 bg-brown text-white shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]"
+                  className="mx-auto  h-[60px] montserrat gap-10 md:w-[600px] w-1/2 bg-brown text-white shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]"
                >
                   Отправить
                   <img src={arrow} className="h-5 w-9" alt="" />

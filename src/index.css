@@ -504,3 +504,10 @@ ul {
 .underlineOnHoverHeader:hover::after {
   transform: scaleX(1);
 }
+
+
+.menu_kay {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}

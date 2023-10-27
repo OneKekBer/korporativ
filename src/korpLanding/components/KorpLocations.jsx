@@ -5,6 +5,7 @@ import loc4 from "images/korpLanding/locations/004.png";
 import longarrow from "icons/longarrow.png";
 import brownarrow from "icons/brownarrow.png";
 import Button from "common/Button";
+import { Link } from "react-router-dom";
 
 // const LocationsBlocks = () => {
 //    return (
@@ -114,14 +115,28 @@ const locations = [
       people: "До 30 чел",
       price: "от 15 000 руб",
       img: loc1,
+      link: "/location/1",
    },
-   { title: "КОТТЕДЖ", people: "До 30 чел", price: "от 15 000 руб", img: loc2 },
-   { title: "ШАЛЕ", people: "До 30 чел", price: "от 15 000 руб", img: loc3 },
+   {
+      title: "КОТТЕДЖ",
+      people: "До 30 чел",
+      price: "от 15 000 руб",
+      img: loc2,
+      link: "/location/2",
+   },
+   {
+      title: "ШАЛЕ",
+      people: "До 30 чел",
+      price: "от 15 000 руб",
+      img: loc3,
+      link: "/location/3",
+   },
    {
       title: "ОЛИМПИЙСКАЯ ДЕРЕВНЯ",
       people: "До 30 чел",
       price: "от 15 000 руб",
       img: loc4,
+      link: "/location/4",
    },
 ];
 const KorpLocations = () => {
@@ -136,8 +151,9 @@ const KorpLocations = () => {
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
                {locations.map((loc, i) => {
                   return (
-                     <div
-                        className="flex gap-[10px]  md:gap-[30px] md:max-h-[216px] max-w-[500px]  md:max-w-[580px]  rounded-[19px] bg-korpPrimary"
+                     <Link
+                        to={loc.link}
+                        className="flex gap-[10px]  md:gap-[20px] md:max-h-[216px] max-w-[500px]  md:max-w-[580px]  rounded-[19px] bg-korpPrimary"
                         key={i}
                      >
                         <img
@@ -155,18 +171,18 @@ const KorpLocations = () => {
                                  <div>{loc.price}</div>
                               </div>
                               <img
-                                 className="w-7 md:w-[120px] pr-1"
+                                 className="w-7 md:max-w-[120px] lg:w-[100px] pr-1"
                                  src={longarrow}
                                  alt=""
                               />
                            </div>
                         </div>
-                     </div>
+                     </Link>
                   );
                })}
             </div>
             {/* <LocationsBlocks /> */}
-            <Button className="bg-brown bg-opacity-70 w-auto gap-10 md:min-w-[400px]   mx-auto montserrat z-20 text-black">
+            <Button className="bg-brown bg-opacity-70 w-auto h-[60px] gap-10 md:min-w-[600px]   mx-auto montserrat z-20 text-black">
                Узнать подробнее
                <img src={brownarrow} alt="" />
             </Button>
