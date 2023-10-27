@@ -182,7 +182,7 @@ const KorpLocations = () => {
                })}
             </div>
             {/* <LocationsBlocks /> */}
-            <Button className="bg-brown bg-opacity-70 w-auto h-[60px] gap-10 md:min-w-[600px]   mx-auto montserrat z-20 text-black">
+            <Button className="bg-brown bg-opacity-70 w-auto h-[40px] md:h-[60px] gap-10 md:min-w-[600px]   mx-auto montserrat z-20 text-black">
                Узнать подробнее
                <img src={brownarrow} alt="" />
             </Button>

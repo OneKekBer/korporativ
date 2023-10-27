@@ -70,7 +70,7 @@ const KorpGuest = () => {
                {guests.map((guest, i) => {
                   return (
                      <SwiperSlide className="px-[2vw] md:p-0" key={i}>
-                        <div className="flex w-full items-center justify-end">
+                        <div className="flex pl-5 w-full items-center justify-end">
                            <div className="min-w-[200px] min-h-[130px] md:w-[700px] bg-[#ECE9E9] rounded-[10px] md:h-[500px] relative">
                               <img
                                  className="absolute w-[30%] md:w-[40%]  md:max-w-auto -left-[10%] md:-left-[20%] top-1/2 transform -translate-y-1/2"

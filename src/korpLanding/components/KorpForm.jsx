@@ -63,7 +63,7 @@ const Form = () => {
    // };
 
    return (
-      <div className="bg-brown py-[14%]">
+      <div className="bg-brown py-[4%]">
          <div className="">
             <form
                className="montserrat flex justify-center flex-col items-center mx-auto w-[90%] md:max-w-[840px] rounded-[40px] bg-korpPrimary px-[20px] py-[30px] md:px-[50px] md:py-[70px]"
@@ -77,7 +77,7 @@ const Form = () => {
                <input
                   type="text"
                   placeholder="Имя"
-                  className="mb-5 h-[40px] pl-[25px] md:pl-[50px]  md:h-[80px] w-[80%] md:w-full rounded-[20px] bg-[#ECE9E9] p-2 text-[20px] text-black outline-none md:text-[27px]"
+                  className="mb-5 h-[40px] pl-[25px] md:pl-[50px]  md:h-[80px] w-[80%] md:w-full rounded-[20px] bg-[#ECE9E9] p-2 text-[14px] text-black outline-none md:text-[27px]"
                   onChange={(e) => setName(e.target.value)}
                   value={name}
                />
@@ -93,7 +93,7 @@ const Form = () => {
                      <input
                         type="text"
                         placeholder="Телефон"
-                        className={`mb-5 h-[40px] pl-[25px] md:pl-[50px]  md:h-[80px] w-[80%] md:w-full rounded-[20px] bg-[#ECE9E9] p-2 text-[20px] text-black outline-none md:text-[27px] ${
+                        className={`mb-5 h-[40px] pl-[25px] md:pl-[50px]  md:h-[80px] w-[80%] md:w-full rounded-[20px] bg-[#ECE9E9] p-2 text-[14px] text-black outline-none md:text-[27px] ${
                            phoneError ? "border-red-500" : ""
                         }`}
                         {...inputProps}
@@ -104,14 +104,14 @@ const Form = () => {
                <input
                   type="text"
                   placeholder="Email"
-                  className="mb-5 h-[40px] pl-[25px] md:pl-[50px]  md:h-[80px] w-[80%] md:w-full rounded-[20px] bg-[#ECE9E9] p-2 text-[20px] text-black outline-none md:text-[27px]"
+                  className="mb-5 h-[40px] pl-[25px] md:pl-[50px]  md:h-[80px] w-[80%] md:w-full rounded-[20px] bg-[#ECE9E9] p-2 text-[14px] text-black outline-none md:text-[27px]"
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
                />
 
                <Button
                   onClick={handleSubmit}
-                  className="mx-auto  h-[60px] montserrat gap-10 md:w-[600px] w-1/2 bg-brown text-white shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]"
+                  className="mx-auto h-[40px]  md:h-[60px] montserrat gap-10 md:w-[600px] w-1/2 bg-brown text-white shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]"
                >
                   Отправить
                   <img src={arrow} className="h-5 w-9" alt="" />

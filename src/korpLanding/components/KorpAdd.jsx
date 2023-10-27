@@ -42,7 +42,7 @@ const Add = () => {
          <img
             src={trans2}
             alt=""
-            className="absolute w-full -top-[3vh] sm:-top-[3.5vh] md:-top-[6vh] lg:-top-[8vh] xl:-top-[10vh]  object-cover   "
+            className="absolute w-full -top-[2.5vh] sm:-top-[3.5vh] md:-top-[5vh] lg:-top-[7vh] xl:-top-[8vh] 2xl:-top-[10vh]   "
          />
          {/* </div> */}
          <div className="wrapper relative pt-[10%]">
@@ -84,14 +84,14 @@ const Add = () => {
                Также по вашему желанию мы можем предоставить услугу
                <br /> оформление юр.договора (+10% к общей сумме)
             </h2>
-            <Button className="h-[60px] montserrat z-[100] min-w-[200px] sm:w-[600px] gap-5 bg-brown text-white">
+            <Button className="h-[40px] md:h-[60px] montserrat z-[100] min-w-[200px] sm:w-[600px] gap-5 bg-brown text-white">
                Узнать стоимость
                <img src={arrow} alt="" />
             </Button>
          </div>
          <img
             src={trans2}
-            className="absolute -bottom-[2vh] sm:-bottom-[4vh] md:-bottom-[6vh] lg:-bottom-[8vh] xl:-bottom-[10vh] w-full "
+            className="absolute -bottom-[2.5vh] sm:-bottom-[3.5vh] md:-bottom-[5vh] lg:-bottom-[7vh] xl:-bottom-[8vh] 2xl:-bottom-[10vh] w-full "
          />
       </div>
    );
