@@ -1,4 +1,4 @@
-import hero from "images/korpLanding/korp_hero.png";
+import hero from "images/korpLanding/korp_hero.webp";
 import arrow from "icons/arrow.png";
 import Button from "common/Button";
 import trans1 from "images/korpLanding/trans1.png";

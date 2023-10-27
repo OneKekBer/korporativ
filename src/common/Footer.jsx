@@ -53,11 +53,15 @@ const Footer = ({ className }) => {
                      </motion.a>
                   </div>
                </div>
-               <div className="hidden  justify-center gap-10 md:flex">
+
+               {/* <div className="hidden  justify-center gap-10 md:flex">
                   <a href="#Programa">Программа</a>
                   <a href="#Tariff">Тарифы</a>
                   <a href="tel:+7 (499) 505-50-31">Связаться со мной</a>
-               </div>
+               </div> */}
+               <a href="tel:+7 (499) 505-50-31" className="min-w-[160px]">
+                  +7 (499) 505-50-31
+               </a>
             </div>
          </div>
       </div>
