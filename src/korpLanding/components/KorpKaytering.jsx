@@ -41,13 +41,22 @@ const KorpKaytering = () => {
    const toggleMenu = () => {
       setIsMenuOpen(!isMenuOpen);
    };
+
    return (
       <AnimatePresence>
          <div id="kay" className="bg-brown relative">
             {isMenuOpen && (
                <div className="fixed inset-0 z-[10000] flex items-center justify-center  h-full w-[100vw] bg-slate-100 bg-opacity-60 ">
-                  <div className="absolute top-5 right-5 " onClick={toggleMenu}>
-                     <img className="w-9 h-9" src={closeblack} alt="" />
+                  <div
+                     className="absolute top-5 right-5 cursor-pointer"
+                     onClick={toggleMenu}
+                  >
+                     <img
+                        onClick={toggleMenu}
+                        className="w-9 h-9"
+                        src={closeblack}
+                        alt=""
+                     />
                   </div>
                   <Swiper
                      // install Swiper modules

@@ -7,6 +7,7 @@ import add5 from "images/korpLanding/add/005.webp";
 import add6 from "images/korpLanding/add/006.webp";
 
 import Button from "common/Button";
+import korpnext from "icons/next_photo.png";
 
 import trans3 from "images/korpLanding/trans3.png";
 import trans4 from "images/korpLanding/trans4.png";
@@ -31,6 +32,11 @@ const Add = () => {
    const handleTabClick = (index) => {
       setActiveTab(index);
    };
+
+   const switchSlide = () => {
+      if (activeTab === 5) setActiveTab(-1);
+      setActiveTab((prev) => prev + 1);
+   };
    return (
       <div id="add" className="relative bg-korpPrimary pb-[13vh]">
          <img
@@ -42,24 +48,33 @@ const Add = () => {
                <h1 className="mb-[5vh] text-center text-lg text-white">
                   Дополнительные услуги
                </h1>
-               <div className="flex flex-col-reverse md:flex-row  gap-10">
-                  <div className="tabs flex w-full md:max-w-[400px] flex-col gap-5  text-slate-600">
-                     {tabs.map((tab, index) => (
-                        <div
-                           key={index}
-                           className={`${
-                              index === activeTab
-                                 ? "text-white border border-white rounded-[30px] p-2 border-opacity-50"
-                                 : ""
-                           } cursor-pointer text-md font-semibold text-center md:text-start`}
-                           onClick={() => handleTabClick(index)}
+
+               <div className="relative">
+                  <div className="flex flex-col-reverse md:flex-row  gap-10">
+                     <div className="tabs flex w-full md:max-w-[400px] flex-col gap-5  text-slate-600">
+                        {tabs.map((tab, index) => (
+                           <div
+                              key={index}
+                              className={`${
+                                 index === activeTab
+                                    ? "text-white border border-white rounded-[30px] p-2 border-opacity-50"
+                                    : ""
+                              } cursor-pointer text-md font-semibold text-center  md:text-start`}
+                              onClick={() => handleTabClick(index)}
+                           >
+                              {tab.label}
+                           </div>
+                        ))}
+                     </div>
+                     <div className="tab-content relative">
+                        <img src={tabs[activeTab].img} alt="" />
+                        <button
+                           onClick={switchSlide}
+                           className="absolute right-0 md:-right-10 w-[60px] md:w-auto transform top-1/2 -translate-y-1/2 text-white "
                         >
-                           {tab.label}
-                        </div>
-                     ))}
-                  </div>
-                  <div className="tab-content">
-                     <img src={tabs[activeTab].img} alt="" />
+                           <img src={korpnext} alt="" />
+                        </button>
+                     </div>
                   </div>
                </div>
             </div>
