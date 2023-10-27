@@ -1,10 +1,10 @@
 import { useState } from "react";
-import add1 from "images/korpLanding/add/001.png";
-import add2 from "images/korpLanding/add/002.png";
-import add3 from "images/korpLanding/add/003.png";
-import add4 from "images/korpLanding/add/004.png";
-import add5 from "images/korpLanding/add/005.png";
-import add6 from "images/korpLanding/add/006.png";
+import add1 from "images/korpLanding/add/001.webp";
+import add2 from "images/korpLanding/add/002.webp";
+import add3 from "images/korpLanding/add/003.webp";
+import add4 from "images/korpLanding/add/004.webp";
+import add5 from "images/korpLanding/add/005.webp";
+import add6 from "images/korpLanding/add/006.webp";
 
 import Button from "common/Button";
 

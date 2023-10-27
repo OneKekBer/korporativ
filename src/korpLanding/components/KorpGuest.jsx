@@ -10,10 +10,10 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import "swiper/css/scrollbar";
 
-import guest1 from "images/korpLanding/guest/001.png";
-import guest2 from "images/korpLanding/guest/002.png";
-import guest3 from "images/korpLanding/guest/003.png";
-import guest4 from "images/korpLanding/guest/004.png";
+import guest1 from "images/korpLanding/guest/001.webp";
+import guest2 from "images/korpLanding/guest/002.webp";
+import guest3 from "images/korpLanding/guest/003.webp";
+import guest4 from "images/korpLanding/guest/004.webp";
 import blag from "/images/korpLanding/blag.png";
 import korpprev from "icons/korpprev.png";
 import korpnext from "icons/korpnext.png";

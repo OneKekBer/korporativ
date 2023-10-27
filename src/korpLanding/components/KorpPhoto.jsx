@@ -6,14 +6,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import next from "icons/next_photo.png";
 import prev from "icons/prev_photo.png";
 
-import photo1 from "images/korpLanding/photo/001.png";
-import photo2 from "images/korpLanding/photo/002.png";
-import photo3 from "images/korpLanding/photo/003.png";
-import photo4 from "images/korpLanding/photo/004.png";
-import photo5 from "images/korpLanding/photo/005.png";
-import photo6 from "images/korpLanding/photo/006.png";
-import photo7 from "images/korpLanding/photo/007.png";
-import photo8 from "images/korpLanding/photo/008.png";
+import photo1 from "images/korpLanding/photo/001.webp";
+import photo2 from "images/korpLanding/photo/002.webp";
+import photo3 from "images/korpLanding/photo/003.webp";
+import photo4 from "images/korpLanding/photo/004.webp";
+import photo5 from "images/korpLanding/photo/005.webp";
+import photo6 from "images/korpLanding/photo/006.webp";
+import photo7 from "images/korpLanding/photo/007.webp";
 
 const photos = [
    { img: photo1 },
@@ -23,7 +22,6 @@ const photos = [
    { img: photo5 },
    { img: photo6 },
    { img: photo7 },
-   { img: photo8 },
 ];
 // Import Swiper styles
 import "swiper/css";

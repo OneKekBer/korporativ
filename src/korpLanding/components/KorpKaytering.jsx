@@ -1,4 +1,4 @@
-import kay1 from "images/korpLanding/kayt/1.png";
+import kay1 from "images/korpLanding/kayt/1.webp";
 import Button from "common/Button";
 import transline from "images/korpLanding/transline.png";
 import trans5 from "images/korpLanding/trans5.png";
@@ -8,14 +8,14 @@ import prev from "icons/prev_photo.png";
 import { useState, useRef } from "react";
 import { AnimatePresence } from "framer-motion";
 
-import menu1 from "images/korpLanding/menu/001.png";
-import menu2 from "images/korpLanding/menu/002.png";
-import menu3 from "images/korpLanding/menu/003.png";
-import menu4 from "images/korpLanding/menu/004.png";
-import menu5 from "images/korpLanding/menu/005.png";
-import menu6 from "images/korpLanding/menu/006.png";
-import menu7 from "images/korpLanding/menu/007.png";
-import menu8 from "images/korpLanding/menu/008.png";
+import menu1 from "images/korpLanding/menu/001.webp";
+import menu2 from "images/korpLanding/menu/002.webp";
+import menu3 from "images/korpLanding/menu/003.webp";
+import menu4 from "images/korpLanding/menu/004.webp";
+import menu5 from "images/korpLanding/menu/005.webp";
+import menu6 from "images/korpLanding/menu/006.webp";
+import menu7 from "images/korpLanding/menu/007.webp";
+import menu8 from "images/korpLanding/menu/008.webp";
 
 const menus = [
    { img: menu1 },
@@ -45,7 +45,7 @@ const KorpKaytering = () => {
       <AnimatePresence>
          <div id="kay" className="bg-brown relative">
             {isMenuOpen && (
-               <div className="fixed inset-0 z-20 flex items-center justify-center  h-full w-[100vw] bg-slate-100 bg-opacity-60 ">
+               <div className="fixed inset-0 z-[10000] flex items-center justify-center  h-full w-[100vw] bg-slate-100 bg-opacity-60 ">
                   <div className="absolute top-5 right-5 " onClick={toggleMenu}>
                      <img className="w-9 h-9" src={closeblack} alt="" />
                   </div>
