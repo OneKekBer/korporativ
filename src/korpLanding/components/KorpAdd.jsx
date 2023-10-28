@@ -12,6 +12,7 @@ import korpnext from "icons/next_photo.png";
 import trans2 from "images/korpLanding/trans2.png";
 
 import arrow from "icons/arrow.png";
+import Lightbox from "common/Lightbox";
 
 const tabs = [
    { label: "Растопка бани/купели", img: add1 },
@@ -26,10 +27,15 @@ const tabs = [
 ];
 
 const Add = () => {
+   const [isMenuOpen, setIsMenuOpen] = useState(false);
    const [activeTab, setActiveTab] = useState(0);
 
    const handleTabClick = (index) => {
       setActiveTab(index);
+   };
+
+   const toggleMenu = () => {
+      setIsMenuOpen(!isMenuOpen);
    };
 
    const switchSlide = () => {
@@ -38,7 +44,8 @@ const Add = () => {
    };
    return (
       <div id="add" className="relative bg-korpPrimary pb-[13vh] w-full">
-         {/* <div className="absolute w-full"> */}
+         {isMenuOpen && <Lightbox toggleMenu={toggleMenu} items={tabs} />}
+
          <img
             src={trans2}
             alt=""
@@ -69,7 +76,12 @@ const Add = () => {
                         ))}
                      </div>
                      <div className="tab-content relative">
-                        <img src={tabs[activeTab].img} alt="" />
+                        <img
+                           onClick={toggleMenu}
+                           className="cursor-pointer object-contain"
+                           src={tabs[activeTab].img}
+                           alt=""
+                        />
                         <button
                            onClick={switchSlide}
                            className="absolute right-0 md:-right-10 w-[60px] md:w-auto transform top-1/2 -translate-y-1/2 text-white "

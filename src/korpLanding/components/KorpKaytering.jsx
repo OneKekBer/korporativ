@@ -2,12 +2,10 @@ import kay1 from "images/korpLanding/kayt/1.webp";
 import Button from "common/Button";
 import transline from "images/korpLanding/transline.png";
 import trans5 from "images/korpLanding/trans5.png";
-import closeblack from "icons/closeblack.png";
-import next from "icons/next_photo.png";
-import prev from "icons/prev_photo.png";
-import { useState, useRef } from "react";
-import { AnimatePresence } from "framer-motion";
 
+import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import Lightbox from "common/Lightbox";
 import menu1 from "images/korpLanding/menu/001.webp";
 import menu2 from "images/korpLanding/menu/002.webp";
 import menu3 from "images/korpLanding/menu/003.webp";
@@ -28,15 +26,7 @@ const menus = [
    { img: menu8 },
 ];
 
-import { Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-
 const KorpKaytering = () => {
-   const swiperRef = useRef();
    const [isMenuOpen, setIsMenuOpen] = useState(false);
    const toggleMenu = () => {
       setIsMenuOpen(!isMenuOpen);
@@ -45,66 +35,7 @@ const KorpKaytering = () => {
    return (
       <AnimatePresence>
          <div id="kay" className="bg-brown relative">
-            {isMenuOpen && (
-               <div className="fixed inset-0 z-[10000] flex items-center justify-center  h-full w-[100vw] bg-slate-100 bg-opacity-60 ">
-                  <div
-                     className="absolute top-5 right-5 cursor-pointer"
-                     onClick={toggleMenu}
-                  >
-                     <img
-                        onClick={toggleMenu}
-                        className="w-9 h-9"
-                        src={closeblack}
-                        alt=""
-                     />
-                  </div>
-                  <Swiper
-                     // install Swiper modules
-                     modules={[Pagination]}
-                     spaceBetween={50}
-                     slidesPerView={1}
-                     navigation
-                     loop={true}
-                     className="absolute photo_swiper "
-                     onBeforeInit={(swiper) => {
-                        swiperRef.current = swiper;
-                     }}
-                     // onSwiper={(swiper) => console.log(swiper)}
-                     // onSlideChange={() => console.log("slide change")}
-                  >
-                     {menus.map((photo, i) => {
-                        return (
-                           <SwiperSlide
-                              className="menu_kay flex w-[100vw] items-center justify-center"
-                              key={i}
-                           >
-                              <img
-                                 className="object-cover"
-                                 src={photo.img}
-                                 alt=""
-                              />
-                           </SwiperSlide>
-                        );
-                     })}
-                  </Swiper>
-                  <button
-                     className="absolute right-0  top-1/2 z-20 h-[50px] w-[50px] md:h-[150px] md:w-[150px] -translate-y-1/2 transform "
-                     onClick={() => {
-                        swiperRef.current?.slideNext();
-                     }}
-                  >
-                     <img src={next} alt="" />
-                  </button>
-                  <button
-                     className="absolute left-0  top-1/2 z-20 h-[50px] w-[50px] md:h-[150px] md:w-[150px] -translate-y-1/2 transform "
-                     onClick={() => {
-                        swiperRef.current?.slidePrev();
-                     }}
-                  >
-                     <img src={prev} alt="" />
-                  </button>
-               </div>
-            )}
+            {isMenuOpen && <Lightbox toggleMenu={toggleMenu} items={menus} />}
             <img
                className="absolute -top-[2%] sm:-top-[3%] md:-top-[5%] lg:-top-[8%] xl:-top-[10%] w-full "
                src={trans5}
