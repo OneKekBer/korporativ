@@ -159,7 +159,7 @@ body {
   display: flex !important;
   justify-content: center !important;
   /* width: 100% !important; */
-  flex-direction: row !impor tant;
+  flex-direction: row;
 }
 
 .slick-track {

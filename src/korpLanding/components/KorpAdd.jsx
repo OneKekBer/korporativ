@@ -103,7 +103,7 @@ const Add = () => {
          </div>
          <img
             src={trans2}
-            className="absolute -bottom-[2.5vh] sm:-bottom-[3.5vh] md:-bottom-[5vh] lg:-bottom-[7vh] xl:-bottom-[8vh] 2xl:-bottom-[10vh] w-full "
+            className="absolute -bottom-[2%] md:-bottom-[4%] lg:-bottom-[6%] xl:-bottom-[7%] object-contain w-full "
          />
       </div>
    );
