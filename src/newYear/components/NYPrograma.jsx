@@ -1,5 +1,5 @@
 
-import bat from "images/NY/bat.png";
+// import bat from "images/NY/bat.png";
 
 import arrow from "images/NY/arrow.png";
 import down_arrow from "icons/down_arrow.png";
@@ -79,11 +79,11 @@ export const Programa = () => {
                                  за сладостями и конкурс на лучший детский костюм
                               </h2>
                               <Reveal variants={scale()}>
-                                 <img
+                                 {/* <img
                                     src={bat}
                                     className="absolute -bottom-[90px] -right-[20%] "
                                     alt=""
-                                 />
+                                 /> */}
                               </Reveal>
                            </div>
                         </div>
@@ -123,11 +123,11 @@ export const Programa = () => {
                               раздача призов
                            </h2>
                            <Reveal delay={0.5} variants={scale()}>
-                              <img
+                              {/* <img
                                  src={bat}
                                  className="absolute scale-50 -rotate-90 -bottom-[150px] -right-[20%] "
                                  alt=""
-                              />
+                              /> */}
                            </Reveal>
                         </div>
                      </div>
