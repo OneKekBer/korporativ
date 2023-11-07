@@ -16,12 +16,23 @@ const KorpLanding = () => {
    const toggleMenu = () => {
       setIsMenuOpen(!isMenuOpen);
    };
+
+   const links = [
+      // { title: "Почему мы", link: "whyus" },
+      { title: "Фотографии", link: "photo" },
+      { title: "Локации", link: "locations" },
+      { title: "Кейтеринг", link: "kay" },
+      { title: "Доп услуги", link: "add" },
+      { title: "Связаться со мной", link: "Form" },
+   ];
    return (
       <div className="montserrat relative">
          <Cookie />
          <Header
             isMenuOpen={isMenuOpen}
+            links={links}
             toggleMenu={toggleMenu}
+            MenuClassName='bg-NYheader'
             className="montserrat bg-korpHeader text-grey"
          />
          <Hero />
@@ -36,5 +47,6 @@ const KorpLanding = () => {
       </div>
    );
 };
+
 
 export default KorpLanding;

@@ -279,6 +279,12 @@ body {
 
 }
 
+
+.NYhero {
+  background-image: url('./../public/images/NY/bg/bg-main.webp');
+
+}
+
 .hero {
 
   /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/bg.jpg'); */

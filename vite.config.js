@@ -9,9 +9,11 @@ export default defineConfig({
       alias: {
          images: "/public/images",
          common: "/src/common",
+         assets: "/src/assets",
+         constants: "/src/constants",
          icons: "/public/images/icons",
          //  state: "/src/state",
-         //  utils: "/src/utils",
+         utils: "/src/utils",
          //  assets: "/src/assets",
          //  constants: "/src/constants",
       },

@@ -148,7 +148,7 @@ const KorpLocations = () => {
                У нас есть локации{" "}
                <span className="text-brown"> специально для вас</span>
             </h2>
-            <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
+            <div className="grid grid-rows-1  gap-10 md:grid-cols-2">
                {locations.map((loc, i) => {
                   return (
                      <Link
@@ -182,10 +182,12 @@ const KorpLocations = () => {
                })}
             </div>
             {/* <LocationsBlocks /> */}
-            <Button className="bg-brown bg-opacity-70 w-auto h-[40px] md:h-[60px] gap-10 md:min-w-[600px]   mx-auto montserrat z-20 text-black">
-               Узнать подробнее
-               <img src={brownarrow} alt="" />
-            </Button>
+            <a href="#form">
+               <Button className="bg-brown bg-opacity-70 w-auto h-[40px] md:h-[60px] gap-10 md:min-w-[600px]   mx-auto montserrat z-20 text-black">
+                  Узнать подробнее
+                  <img src={brownarrow} alt="" />
+               </Button>
+            </a>
          </div>
       </div>
    );
