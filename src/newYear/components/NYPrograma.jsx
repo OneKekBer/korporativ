@@ -1,8 +1,8 @@
 
 // import bat from "images/NY/bat.png";
 
-import arrow from "images/NY/arrow.png";
-import down_arrow from "icons/down_arrow.png";
+// import arrow from "images/NY/arrow.png";
+// import down_arrow from "icons/down_arrow.png";
 
 import { Link as ScrollLink } from "react-scroll";
 
@@ -140,7 +140,7 @@ export const Programa = () => {
                >
                   <NYGreenButton className="mx-auto text-black">
                      Забронировать место
-                     <img src={arrow} className="w-9 h-5" alt="" />
+                     {/* <img src={arrow} className="w-9 h-5" alt="" /> */}
                   </NYGreenButton>
                </ScrollLink>
                <ScrollLink
@@ -150,7 +150,7 @@ export const Programa = () => {
                >
                   <NYCreamButton className="mx-auto">
                      Посмотреть тарифы
-                     <img src={down_arrow} className="w-6 h-8" alt="" />
+                     {/* <img src={down_arrow} className="w-6 h-8" alt="" /> */}
                   </NYCreamButton>
                </ScrollLink>
             </Reveal>
