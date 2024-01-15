@@ -3,6 +3,7 @@ export default {
    content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
    theme: {
       fontSize: {
+         "3xl": "clamp(60px, 20vw, 100px)",
          ultra: "clamp(48px, 10vw, 128px)",
          tarif: "clamp(6px, 5vw, 24px)",
          xl: "clamp(30px, 5vw, 70px)",
@@ -31,6 +32,7 @@ export default {
             NYbrown: "#BC8E4A",
             NYred: "#EF004B",
             NYheader: "#041106",
+            FBlack: '#081130'
          },
          container: {
             center: true,
@@ -39,6 +41,7 @@ export default {
          screens: {
             "3xl": "2500px",
             vsm: "355px",
+            "900p": "900px",
             "370p": "370px",
          },
          keyframes: {
@@ -54,7 +57,7 @@ export default {
          addVariant(
             "supports-backdrop-blur",
             "@supports (backdrop-filter: blur(0)) or (-webkit-backdrop-filter: blur(0))"
-         );
+         )
       },
    ],
-};
+}

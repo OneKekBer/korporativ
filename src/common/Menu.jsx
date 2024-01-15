@@ -67,7 +67,7 @@ const Menu = ({ toggleMenu, links, className }) => {
             >
                <img src={close} alt="" />
             </div>
-            <ul className="gap-10 text-center text-white">
+            <ul className="gap-10 text-center">
                {links?.map((link, i) => {
                   return (
                      <motion.li

@@ -39,30 +39,28 @@ const locations = [
       link: '/locations-about',
    },
 ]
-const KorpLocations = () => {
+const FishLocations = () => {
    return (
-      <div id="locations" className="location ">
+      <div id="locations" className="bg-[#081130] text-white ">
          <div className="wrapper py-[10vh]">
-            <h1 className="text-center text-lg">Локации</h1>
-            <h2 className="text-center font-bold text-36px mb-10">
-               У нас есть локации{" "}
-               <span className="text-brown"> специально для вас</span>
-            </h2>
-            <div className="grid grid-rows-1 grid-cols-1 gap-10 md:grid-cols-2">
+            <div className='max-w-[900px] text-center text-md mx-auto mb-10'>
+               После успешной рыбалки мы можем предложить вам сварить уху из пойманного вами улова, а также остановиться на ночлег в уютных локациях нашего загородного клуба Икша Кантри Клаб.
+            </div>
+            <div className="grid grid-rows-1 grid-cols-1 md:place-items-start place-items-center gap-10 md:grid-cols-2">
                {locations.map((loc, i) => {
                   return (
                      <Link
                         to={loc.link}
-                        className={`flex  md:place-self-start  gap-[10px]   md:w-auto sm:max-w-[500px] md:max-w-auto  md:gap-[20px] md:max-h-[216px]   md:max-w-[580px]  rounded-[19px] bg-korpPrimary`}
+                        className={`flex md:place-self-start gap-[10px] sm:max-w-[500px] h-[82] md:h-[182px]  md:gap-[20px] md:max-h-[216px]   w-full  rounded-[19px] bg-brown`}
                         key={i}
                      >
                         <img
-                           className="  w-[110px] sm:w-[130px] h-full"
+                           className="  w-[110px] sm:w-[150px] h-full"
                            src={loc.img}
                            alt=""
                         />
                         <div className="flex flex-col justify-between    py-3">
-                           <div className="text-md font-bold text-brown">
+                           <div className="text-md font-bold text-black">
                               {loc.title}
                            </div>
                            <div className="flex items-center  gap-5 text-sm font-bold text-white">
@@ -71,7 +69,7 @@ const KorpLocations = () => {
                                  <div>{loc.price}</div>
                               </div>
                               <img
-                                 className="w-12 md:w-[120px] lg:w-[100px] pr-1"
+                                 className="w-12 md:w-[80px] lg:w-[100px] pr-1"
                                  src={longarrow}
                                  alt=""
                               />
@@ -93,4 +91,4 @@ const KorpLocations = () => {
    )
 }
 
-export default KorpLocations
+export default FishLocations
