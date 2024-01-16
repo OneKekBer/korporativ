@@ -9,38 +9,28 @@ const GetServices = () => {
       [
 
          {
-            title: "Зимняя удочка, 1 день ",
-            price: '100',
+            title: "Удочка и рыболовные снасти, 1 день",
+            price: '1000',
             description: ""
 
          },
          {
-            title: "Пластиковая весельная лодка, 1 день",
-            price: '100',
+            title: "Резиновая  лодка, 1 день",
+            price: '5000',
+            description: "Возможна почасовая аренда "
+         },
+
+
+
+
+         {
+            title: "Катер, 1 час ",
+            price: 'от 5000',
             description: "Возможна почасовая аренда "
          },
          {
-            title: "Катер ‘Wyatboat-430 dcm’, на 1 рыбалку",
-            price: '100',
-            description: ""
-
-         },
-
-
-         {
-            title: "Зимняя удочка, 1 день ",
-            price: '100',
-            description: ""
-
-         },
-         {
-            title: "Пластиковая весельная лодка, 1 день",
-            price: '100',
-            description: "Возможна почасовая аренда "
-         },
-         {
-            title: "Катер ‘Wyatboat-430 dcm’, на 1 рыбалку",
-            price: '100',
+            title: "Квадроцикл",
+            price: 'от 3500',
             description: ""
          },
       ], [
@@ -89,9 +79,9 @@ const FishServices = () => {
    const services = GetServices()
 
    return (
-      <div className='relative py-[100px]  text-white bg-FBlack '>
+      <div className='relative py-[100px] wrapper text-white bg-FBlack '>
          <div>
-            <div className='text-center text-md font-bold'>Дополнительные услуги</div>
+            <div className='text-center text-36px font-bold'>Дополнительные услуги</div>
             <div className='grid grid-cols-1 md:grid-cols-2 mt-8 mx-[40px] md:mx-auto gap-x-11 max-w-[1200px] content-center '>
 
 
@@ -112,7 +102,7 @@ const FishServices = () => {
          </div>
 
          <div className='mt-[120px]'>
-            <div className='text-center text-md font-bold'>Стоимость услуг</div>
+            <div className='text-center text-36px font-bold'>Стоимость услуг</div>
             <div className='grid grid-cols-1 md:grid-cols-2 mx-[40px] mt-8 md:mx-auto gap-x-11 max-w-[1200px] content-center '>
 
 

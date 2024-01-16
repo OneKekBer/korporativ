@@ -4,7 +4,7 @@ import Button from "common/Button"
 
 import { URLData } from "utils/URLData"
 
-import arrow from "icons/arrow.png"
+
 
 import InputMask from "react-input-mask"
 
@@ -26,7 +26,7 @@ const FishForm = () => {
          name: name,
          phone: phone,
          email: email,
-         groupID: 981875757,
+         groupID: 1002014846298,
       }
       if (!email.match(emailRegex)) {
          alert("Введите корректный почтовый адресс")
@@ -36,7 +36,7 @@ const FishForm = () => {
       const sendingData = {
          ...data,
          source: "https://ikshacountryclub.com/",
-         formType: "корпоратив лендинг",
+         formType: "рыбалка лендинг",
          link: window.location.href,
          ...URLData,
       }
@@ -120,7 +120,7 @@ const FishForm = () => {
                <input
                   type="text"
                   placeholder="Имя"
-                  className="mb-5 h-[40px] pl-[25px] md:pl-[50px]  md:h-[80px] w-[80%] md:w-full rounded-[20px] bg-[#ECE9E9] p-2 text-[14px] text-black outline-none md:text-[27px]"
+                  className="mb-5 h-[40px] pl-[25px] md:pl-[50px] md:h-[80px] w-[100%] md:w-full rounded-[20px] bg-[#ECE9E9] p-2 text-[14px] text-black outline-none md:text-[27px]"
                   onChange={handleNameChange}
                   value={name}
                />
@@ -134,7 +134,7 @@ const FishForm = () => {
                      <input
                         type="text"
                         placeholder="Телефон"
-                        className={`mb-5 h-[40px] pl-[25px] md:pl-[50px]  md:h-[80px] w-[80%] md:w-full rounded-[20px] bg-[#ECE9E9] p-2 text-[14px] text-black outline-none md:text-[27px] ${phoneError ? "border-red-500" : ""
+                        className={`mb-5 h-[40px] pl-[25px] md:pl-[50px]  md:h-[80px] w-[100%] md:w-full rounded-[20px] bg-[#ECE9E9] p-2 text-[14px] text-black outline-none md:text-[27px] ${phoneError ? "border-red-500" : ""
                            }`}
                         {...inputProps}
                      />
@@ -144,14 +144,14 @@ const FishForm = () => {
                <input
                   type="text"
                   placeholder="Email"
-                  className="mb-5 h-[40px] pl-[25px] md:pl-[50px]  md:h-[80px] w-[80%] md:w-full rounded-[20px] bg-[#ECE9E9] p-2 text-[14px] text-black outline-none md:text-[27px]"
+                  className="mb-5 h-[40px] pl-[25px] md:pl-[50px]  md:h-[80px] w-[100%] md:w-full rounded-[20px] bg-[#ECE9E9] p-2 text-[14px] text-black outline-none md:text-[27px]"
                   onChange={handleEmailChange}
                   value={email}
                />
 
                <Button
                   onClick={handleSubmit}
-                  className="mx-auto h-[40px]  md:h-[60px] montserrat gap-10 md:w-[600px] w-1/2 bg-brown text-black shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]"
+                  className="mx-auto h-[40px] w-full md:h-[60px] montserrat gap-10 md:w-[600px]  bg-brown text-black shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]"
                >
                   Узнать стоимость
 

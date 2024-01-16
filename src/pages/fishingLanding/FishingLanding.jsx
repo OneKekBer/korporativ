@@ -27,13 +27,23 @@ const FishingLanding = () => {
 
    const GetLinks = () => {
       const { t } = useTranslation()
+      // const links = [
+      //    { title: t('fishing.header.Main'), link: "Programa" },
+      //    { title: t('fishing.header.Gallery'), link: "Tariff" },
+      //    { title: t('fishing.header.Price'), link: "Form" },
+      //    { title: t('fishing.header.Terr'), link: "Form" },
+      //    { title: t('fishing.header.Locations'), link: "Form" },
+      //    { title: t('fishing.header.Call'), link: "Form" },
+
+      // ]
+
       const links = [
-         { title: t('fishing.header.Main'), link: "Programa" },
-         { title: t('fishing.header.Gallery'), link: "Tariff" },
-         { title: t('fishing.header.Price'), link: "Form" },
-         { title: t('fishing.header.Terr'), link: "Form" },
-         { title: t('fishing.header.Locations'), link: "Form" },
-         { title: t('fishing.header.Call'), link: "Form" },
+         { title: 'Главная', link: "Programa" },
+         { title: 'Галерея', link: "Tariff" },
+         { title: 'Стоимость Услуг', link: "Form" },
+         { title: 'Территория', link: "Form" },
+         { title: 'Локации', link: "Form" },
+         { title: 'Связаться со мной', link: "Form" },
 
       ]
 
@@ -66,8 +76,8 @@ const FishingLanding = () => {
             links={links}
             toggleMenu={toggleMenu}
             MenuClassName='bg-NYheader text-NYgreen'
-            className='bg-black text-grey' />
-         <div className='ny-bg relative  w-full h-full'>
+            className='bg-black font-bold text-grey' />
+         <div className='bg-FBlack relative  w-full h-full'>
             <FishHero />
             <FishPhoto />
             <FishServices />
@@ -81,7 +91,7 @@ const FishingLanding = () => {
          </div>
          {/* </div> */}
 
-         <Footer className='bg-NYheader text-NYgreen' />
+         <Footer className='bg-FBlack text-grey' />
       </div>
    )
 }

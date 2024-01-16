@@ -82,8 +82,8 @@ const FishLocations = () => {
             {/* <LocationsBlocks /> */}
             <a href="#form">
                <Button className="bg-brown text-[15px] bg-opacity-70 w-auto h-[40px] md:h-[60px] gap-10 md:min-w-[600px]   mx-auto montserrat z-20 text-black">
-                  Узнать подробнее
-                  <img className='md:block hidden' src={brownarrow} alt="" />
+                  Забронировать
+
                </Button>
             </a>
          </div>

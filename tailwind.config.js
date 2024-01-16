@@ -8,7 +8,7 @@ export default {
          tarif: "clamp(6px, 5vw, 24px)",
          xl: "clamp(30px, 5vw, 70px)",
          lg: "clamp(12px, 5vw, 48px)",
-         "36px": "clamp(11px, 4vw, 36px)",
+         "36px": "clamp(18px, 4vw, 36px)",
          md: "clamp(10px, 4vw, 28px)",
          extramd: "clamp(10px, 3vw, 28px)",
 

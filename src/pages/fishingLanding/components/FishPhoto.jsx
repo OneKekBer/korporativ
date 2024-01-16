@@ -48,7 +48,7 @@ const FishPhoto = () => {
                      slidesPerView={1}
                      navigation
                      loop={true}
-                     className="photo_swiper w-full h-[50vh] md:h-[90vh] relative "
+                     className="photo_swiper h-[200px] sm:h-[40vh] md:h-[650px] relative "
                      onBeforeInit={(swiper) => {
                         swiperRef.current = swiper
                      }}

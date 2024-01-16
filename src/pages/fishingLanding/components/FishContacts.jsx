@@ -8,25 +8,25 @@ import vk from 'images/icons/social/white/vk.png'
 const FishContacts = () => {
    return (
       <div className='bg-FBlack px-4 w-full text-white'>
-         <div className='text-white font-bold text-center mb-[5vh] text-md'>Контакты</div>
-         <div className='flex w-full justify-between flex-col gap-2 md:flex-row'>
+         <div className='text-white font-bold text-center mb-[5vh] text-36px'>Контакты</div>
+         <div className='flex w-full justify-between flex-col mb-10 gap-2 md:flex-row'>
             <div className='w-[733.57px] text-white text-[20px ] md:text-[32px] font-semibold  leading-[44.80px] tracking-wide'>Мы находимся по адресу Московская область,<br /> городской округ Мытищи,<br /> посёлок Менжинец </div>
 
             <div className='flex gap-2 flex-col text-left md:text-right'>
                <div className='flex justify-start md:justify-end gap-5'>
                   <a href="">
-                     <img className='w-[50px]' src={inst} alt="" />
+                     <img className='w-[30px] md:w-[50px]' src={inst} alt="" />
                   </a>
                   <a href="">
-                     <img className='w-[50px]' src={what} alt="" />
+                     <img className='w-[30px] md:w-[50px]' src={what} alt="" />
                   </a>
                   <a href="">
-                     <img className='w-[50px]' src={vk} alt="" />
+                     <img className='w-[30px] md:w-[50px]' src={vk} alt="" />
                   </a>
                </div>
-               <div className="text-white text-[26px] font-medium acari">+7 (499) 505 50 31</div>
-               <div className="text-white text-[26px] font-medium acari">Время работы 24/7</div>
-               <div className="text-white text-[26px] font-medium acari">Как проехать</div>
+               <div className="text-white text-[22px] font-medium acari">+7 (499) 505 50 31</div>
+               <div className="text-white text-[22px] font-medium acari">Время работы 24/7</div>
+               <div className="text-white text-[22px] font-medium acari">Как проехать</div>
             </div>
          </div>
          <iframe
