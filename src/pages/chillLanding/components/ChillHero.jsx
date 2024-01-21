@@ -1,16 +1,36 @@
-// import bg_hero from "./assets/";
 
-
-import hero from 'images/ban/hero.webp'
 import Reveal from "common/Reveal"
-import { Link as ScrollLink } from "react-scroll"
+
 import { useEffect } from 'react'
 import { isItWinterNow } from "utils/helpers"
 import Button from 'common/Button'
-import s from './../ban.module.scss'
+import s from './../chill.module.scss'
+
+import next from 'icons/slider/brown/next.png'
+import prev from 'icons/slider/brown/prev.png'
 
 
-const BanHero = () => {
+import { useRef } from "react"
+
+import { Pagination } from "swiper/modules"
+import { Swiper, SwiperSlide } from "swiper/react"
+
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+import "swiper/css/scrollbar"
+
+import photo1 from "images/chill/hero/001.webp"
+import photo2 from "images/chill/hero/002.webp"
+import photo3 from "images/chill/hero/003.webp"
+import photo4 from "images/chill/hero/004.webp"
+import photo5 from "images/chill/hero/005.webp"
+import photo6 from "images/chill/hero/006.webp"
+import photo7 from "images/chill/hero/007.webp"
+
+const photos = [photo7, photo6, photo5, photo4, photo3, photo2, photo1]
+
+const ChillHero = () => {
 
    useEffect(() => {
       const script = document.createElement("script")
@@ -137,60 +157,88 @@ const BanHero = () => {
       document.body.appendChild(script)
 
    }, [])
-
+   const swiperRef = useRef()
 
    return (
-      <div className='h-[70vh] md:h-screen'>
-
-
-         <div
-            id="Hero"
-            className={` text-black text-center `}
-         // style={{ backgroundImage: bg_hero, backgroundRepeat: "no-repeat" }}
-         >
-            <div className="relative  flex h-[30vh] md:h-[40vh] flex-col-reverse items-center justify-center ">
+      <div id="Hero" className='mb-[10vh]'>
+         <div className={` text-black text-center `}>
+            <div className="relative  flex h-[80vh]  flex-col-reverse items-center justify-center ">
                <div className="z-10 flex max-w-[1000px] flex-col items-center justify-center ">
                   <Reveal delay={0.25}>
-                     <div className={`text-white ${s.acariBold} acari text-lg font-bold`}>
-                        Баня с купелью<br />
+                     <div className={`text-white ${s.acariBold} acari text-xl font-bold`}>
+                        Активный отдых
+                        <br />
                         в Подмосковье
                      </div>
                   </Reveal>
-                  {/* <Reveal delay={0.5}>
-                     <div className="text-md font-semibold">
-                        Насладитесь баней с купелью, расположенной на Икшинском водохранилище.
-                        Мы предлагаем своим гостям возможность насладиться не только полезными процедурами, но и красивыми пейзажами окружающей природы.
-                     </div>
-                  </Reveal> */}
-                  <ScrollLink
-                     to="Tariff"
-                     smooth={true}
-                     duration={1000} // Длительность анимации скролла (в миллисекундах)
+                  <div className='absolute bottom-0 flex justify-center gap-[20px] left-0'>
+                     <button
+                        className=" z-20 h-[50px] w-[50px] md:h-[100px] md:w-[100px] -translate-y-1/2 transform "
+                        onClick={() => {
+                           swiperRef.current?.slidePrev()
+                        }}
+                     >
+                        <img src={prev} alt="" />
+                     </button>
+                     <button
+                        className=" z-20 h-[50px] w-[50px] md:h-[100px] md:w-[100px] -translate-y-1/2 transform "
+                        onClick={() => {
+                           swiperRef.current?.slideNext()
+                        }}
+                     >
+                        <img src={next} alt="" />
+                     </button>
+
+                  </div>
+               </div>
+               <div className='absolute h-[80vh]  w-full'>
+                  <Swiper
+                     // install Swiper modules
+                     modules={[Pagination]}
+                     spaceBetween={50}
+                     slidesPerView={1}
+                     navigation
+                     loop={true}
+                     className="photo_swiper h-[80vh]"
+                     onBeforeInit={(swiper) => {
+                        swiperRef.current = swiper
+                     }}
                   >
 
-                  </ScrollLink>
-               </div>
-               <div className=' absolute h-[30vh] md:h-[40vh] w-[95vw]'>
-                  <img className='w-full h-full object-cover' src={hero} alt="" />
+                     {photos.map((photo, i) => {
+                        return (
+                           <SwiperSlide className="w-full h-full" key={i}>
+                              <img
+                                 className="w-full h-full object-cover"
+                                 src={photo}
+                                 alt=""
+                              />
+                           </SwiperSlide>
+                        )
+                     })}
+
+
+                  </Swiper>
                </div>
             </div>
          </div>
-         <Reveal delay={0.5}>
-            <div className="text-md max-w-[1200px] text-center mt-[40px] mx-auto font-semibold">
-               Насладитесь баней с купелью, расположенной на Икшинском водохранилище.
-               Мы предлагаем своим гостям возможность насладиться не только полезными процедурами, но и красивыми пейзажами окружающей природы.
-            </div>
-         </Reveal>
          <div className='hidden md:block'>
 
             <div id="znms-widget-1"></div>
          </div>
+         <Reveal delay={0.5}>
+            <div className="text-md max-w-[1200px] text-center mt-[10vh] mx-auto font-semibold">
+               Насладитесь баней с купелью, расположенной на Икшинском водохранилище.
+               Мы предлагаем своим гостям возможность насладиться не только полезными процедурами, но и красивыми пейзажами окружающей природы.
+            </div>
+         </Reveal>
 
-         <div onClick={() => { window.znmsWidget.open('#znms-widget-1') }}>
-            <Button className='bg-black h-[40px] w-[80%] mx-auto text-white'>Забронировать</Button>
+
+         <div className='block md:hidden' onClick={() => { window.znmsWidget.open('#znms-widget-1') }}>
+            <Button className='bg-black h-[40px] w-[200px] text-md mx-auto text-white'>Забронировать</Button>
          </div>
-      </div>
+      </div >
    )
 }
 
-export default BanHero
+export default ChillHero

@@ -39,7 +39,7 @@ const locations = [
       link: '/locations-about',
    },
 ]
-const BanLocations = () => {
+const ChillLocations = () => {
    return (
       <div id="locations" className=" text-black ">
          <div className="wrapper py-[10vh]">
@@ -49,7 +49,7 @@ const BanLocations = () => {
                   return (
                      <Link
                         to={loc.link}
-                        className={`flex md:place-self-start gap-[10px] sm:max-w-[550px] h-[82] md:h-[182px]  md:gap-[20px] md:max-h-[216px]   w-full  rounded-[19px] bg-[#8BB26F]`}
+                        className={`flex md:place-self-start gap-[10px] sm:max-w-[550px] h-[82] md:h-[182px]  md:gap-[20px] md:max-h-[216px]   w-full  rounded-[19px] bg-[#F5F5F5]`}
                         key={i}
                      >
                         <img
@@ -62,9 +62,9 @@ const BanLocations = () => {
                               {loc.title}
                            </div>
                            <div className="flex items-center  gap-5 text-sm font-bold text-white">
-                              <div className="flex flex-col gap-5">
-                                 <div>{loc.people}</div>
-                                 <div>{loc.price}</div>
+                              <div className="flex flex-col text-[#785E4E] gap-5">
+                                 <div className='text-[#785E4E]'>{loc.people}</div>
+                                 <div className='text-[#785E4E]'>{loc.price}</div>
                               </div>
                               <img
                                  className="w-12 md:w-[80px] lg:w-[100px] pr-1"
@@ -79,7 +79,7 @@ const BanLocations = () => {
             </div>
             {/* <LocationsBlocks /> */}
             <a href="#form">
-               <Button className="bg-black text-[15px]  w-auto h-[40px] md:h-[60px] gap-10 md:min-w-[600px]   mx-auto montserrat z-20 text-white">
+               <Button className="bg-ChillBrown text-md  w-auto h-[40px] md:h-[60px] gap-10 md:min-w-[600px]   mx-auto montserrat z-20 text-white">
                   Забронировать
 
                </Button>
@@ -89,4 +89,4 @@ const BanLocations = () => {
    )
 }
 
-export default BanLocations
+export default ChillLocations

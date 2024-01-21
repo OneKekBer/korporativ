@@ -8,6 +8,7 @@ import BanLanding from './pages/banLanding/BanLanding'
 
 import { ReactRouter6Adapter } from 'use-query-params/adapters/react-router-6'
 import { QueryParamProvider } from 'use-query-params'
+import ChillLanding from './pages/chillLanding/chillLanding'
 
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
                <Route element={<KorpLanding />} path="/korp" />
                <Route element={<NYLanding />} path="/ny" />
                <Route element={<FishingLanding />} path="/fish" />
-               <Route element={<BanLanding />} path="/" />
+               <Route element={<BanLanding />} path="/ban" />
+               <Route element={<ChillLanding />} path="/" />
             </Routes>
          </QueryParamProvider>
       </BrowserRouter>

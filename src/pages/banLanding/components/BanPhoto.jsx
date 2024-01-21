@@ -28,14 +28,14 @@ import "swiper/css/scrollbar"
 // const ytId = ytSrc.split("/")[ytSrc.split("/").length - 1];
 
 
-const photos = [photo1, photo2, photo3, photo4, photo5]
+const photos = [photo2, photo1, photo3, photo4, photo5]
 const BanPhoto = () => {
    const swiperRef = useRef()
    return (
       <div id="photo" className=" py-[10vh]">
          <div className="">
             <div className="text-center">
-               <h1 className="block md:hidden  mb-[30px] text-md max-w-[900px] mx-auto text-center text-[#081130]">
+               <h1 className="block md:hidden  mb-[30px] text-md max-w-[900px] mx-auto font-semibold text-center text-[#081130]">
                   Комфортная отдельная купель, в которой можно расслабиться и насладиться прохладной водой.
                   В нашей бане можно провести отдых как на несколько часов, так и на целый день. Возможно, после бани вы захотите поплавать в водохранилище, пойти на рыбалку или просто насладиться красотой природы вокруг.
                </h1>

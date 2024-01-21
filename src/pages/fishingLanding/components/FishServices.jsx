@@ -44,7 +44,7 @@ const GetServices = () => {
          },
          {
             title: "Шашлык куриный/мясной на гриле Овощи на гриле",
-            price: '5000/блюдо',
+            price: 'блюдо 5000',
             description: ""
          },
          {
@@ -86,7 +86,7 @@ const FishServices = () => {
 
                {services[0].map((item, i) => {
                   return (
-                     <div key={i} className='justify-between w-full items-center py-[50px] border-y border-white flex'>
+                     <div key={i} className='justify-between w-full items-center py-[50px] gap-2 border-y border-white flex'>
                         <div className='flex flex-col'>
                            <div className="text-white text-[16px] md:text-[26px] font-medium  leading-[33.80px] tracking-wide">{item.title}</div>
 
@@ -107,7 +107,7 @@ const FishServices = () => {
 
                {services[1].map((item, i) => {
                   return (
-                     <div key={i} className='justify-between w-full items-center py-[50px] border-y border-white flex'>
+                     <div key={i} className='justify-between w-full items-center py-[50px] gap-2 border-y border-white flex'>
                         <div className='flex flex-col'>
                            <div className="text-white text-[16px] md:text-[26px] font-medium  leading-[33.80px] tracking-wide">{item.title}</div>
 

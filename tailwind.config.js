@@ -35,7 +35,8 @@ export default {
             NYbrown: "#BC8E4A",
             NYred: "#EF004B",
             NYheader: "#041106",
-            FBlack: '#081130'
+            FBlack: '#081130',
+            ChillBrown: '#593723'
          },
          container: {
             center: true,

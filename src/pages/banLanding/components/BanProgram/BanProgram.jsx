@@ -31,18 +31,18 @@ const GetProgram = () => {
          for: 'Для больших групп',
          desc: 'Для практик, улучшения отношений,налаживания контактов',
          includes: ['самовар', 'Фен', 'Тапочки', 'Халаты', 'Полотенца', 'Аромапар'],
-         price: '10 000',
+         price: '12 000',
          number: 2
       },
       {
          img: main3,
          title: 'Семейное древо',
-         people: 'до 2 человек ',
-         time: 'до 6 человек',
+         people: 'до 6 человек ',
+         time: 'от 3-х часов',
          for: 'Для семей',
          desc: 'Для сближения, улучшения отношений,баланса с собой',
          includes: ['самовар', 'Фен', 'Тапочки', 'Халаты', 'Полотенца', 'Аромапар'],
-         price: '10 000',
+         price: '15 000',
          number: 3
       },
 
@@ -64,13 +64,13 @@ const BanProgram = ({ togglePopup, setCurrentNumber }) => {
    return (
       <div id='program' className='bg-white relative text-black'>
 
-         <div className='text-white font-bold text-center mb-[10vh] text-md+'>Наши программы</div>
-         <div className='flex justify-around px-[30px] flex-col gap-5 w-full items-center lg:flex-row'>
+         <div className='text-black font-bold text-center mb-[10vh] text-md+'>Наши программы</div>
+         <div className='flex justify-around md:px-[30px] flex-col gap-5 w-full items-center lg:flex-row'>
 
             {program.map((item, i) => {
                return (
 
-                  <div key={i} className={` ${s.acariMedium} md:max-w-[414.43px] h-[707.89px] bg-white rounded-[10px] border border-stone-700`}>
+                  <div key={i} className={` ${s.acariMedium} w-[94%] sm:max-w-[414.43px] md:h-[707.89px] bg-white rounded-[10px] border border-stone-700`}>
 
 
                      <div className={` ${s.acariMedium} h-[217.35px] relative`}>
@@ -88,7 +88,7 @@ const BanProgram = ({ togglePopup, setCurrentNumber }) => {
                      </div>
 
 
-                     <div className=' p-[30px] '>
+                     <div className=' p-[15px] md:p-[30px] '>
                         <div className='flex mb-[6px]'>
                            <img src={check} alt="" />
                            <div className=" text-md- text-stone-700  font-semibold ">Для пар и друзей</div>
@@ -119,7 +119,7 @@ const BanProgram = ({ togglePopup, setCurrentNumber }) => {
                            <div className="max-w-[200.98px] text-center text-stone-500  font-semibold  leading-snug">+ депозит от 20 000 ₽ на услуги пармастера</div>
                         </div>
 
-                        <div className='flex justify-between'>
+                        <div className='flex flex-col  sm:flex-row justify-center items-center gap-4 sm:gap-0 sm:justify-between'>
                            <div className="w-[156.94px] cursor-pointer h-[41.64px] rounded-tr-[20px] flex justify-center items-center rounded-bl-[20px] border-4 border-stone-700">
                               <div className="text-center text-stone-700 font-semibold ">Забронировать</div>
                            </div>

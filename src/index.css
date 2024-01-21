@@ -88,13 +88,7 @@ body {
 	font-weight: 400;
 }
 
-font-face {
-	font-family: 'Acari Sans';
-	font-display: swap;
-	src: url('./../public/fonts/AcariSans-Bold.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
+
 
 @font-face {
 	font-family: 'MontaguSlab';
@@ -102,6 +96,33 @@ font-face {
 	src: local('MontaguSlab-VariableFont_opsz,wght'),
 		url('./fonts/MontaguSlab-VariableFont_opsz,wght.ttf') format('truetype');
 	font-weight: 500;
+}
+
+@font-face {
+   font-family: 'Acari Sans';
+   font-display: swap;
+   src: url('./../../../public/fonts/AcariSans-Bold.ttf') format('truetype');
+   font-weight: bold;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Acari Sans Medium';
+   font-display: swap;
+   src: url('./../../../public/fonts/AcariSans-Medium.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}
+
+
+.acariBold {
+   font-family: 'Acari Sans Bold', sans-serif;
+
+}
+
+.acariMedium {
+   font-family: 'Acari Sans Medium', sans-serif;
+
 }
 
 .monterey {
