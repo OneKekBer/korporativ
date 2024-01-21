@@ -8,18 +8,22 @@ import { useState } from 'react'
 
 import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
-import FishHero from './components/FishHero'
+import BanHero from './components/BanHero'
+import { BooleanParam, NumberParam, useQueryParam } from "use-query-params"
 
-import s from './fishing.module.scss'
-import FishPhoto from './components/FishPhoto'
-import FishServices from './components/FishServices'
-import FishLocations from './components/FishLocations'
-import FishGuest from './components/FishGuest'
-import FishMap from './components/FishMap'
-import FishContacts from './components/FishContacts'
-import FishForm from './components/FishForm'
+import s from './ban.module.scss'
+import BanPhoto from './components/BanPhoto'
+// import BanServices from './components/BanServices'
+import BanLocations from './components/BanLocations'
+import BanGuest from './components/BanGuest'
+import BanMap from './components/BanMap'
+import BanContacts from './components/BanContacts'
+import BanForm from './components/BanForm'
+import BanServices from './components/BanServices'
+import BanProgram from './components/BanProgram/BanProgram'
+import BanProgramPopup from './components/BanProgram/BanProgramPopup'
 
-const FishingLanding = () => {
+const BanLanding = () => {
    const [isMenuOpen, setIsMenuOpen] = useState(false)
    const toggleMenu = () => {
       setIsMenuOpen(!isMenuOpen)
@@ -28,12 +32,12 @@ const FishingLanding = () => {
    const GetLinks = () => {
       const { t } = useTranslation()
       // const links = [
-      //    { title: t('fishing.header.Main'), link: "Programa" },
-      //    { title: t('fishing.header.Gallery'), link: "Tariff" },
-      //    { title: t('fishing.header.Price'), link: "Form" },
-      //    { title: t('fishing.header.Terr'), link: "Form" },
-      //    { title: t('fishing.header.Locations'), link: "Form" },
-      //    { title: t('fishing.header.Call'), link: "Form" },
+      //    { title: t('baning.header.Main'), link: "Programa" },
+      //    { title: t('baning.header.Gallery'), link: "Tariff" },
+      //    { title: t('baning.header.Price'), link: "Form" },
+      //    { title: t('baning.header.Terr'), link: "Form" },
+      //    { title: t('baning.header.Locations'), link: "Form" },
+      //    { title: t('baning.header.Call'), link: "Form" },
 
       // ]
 
@@ -51,8 +55,18 @@ const FishingLanding = () => {
    }
 
    const links = GetLinks()
+
+
+   const [currentNumber, setCurrentNumber] = useState()
+   const [isPopupOpen, setIsPopupOpen] = useQueryParam("popupOpen", BooleanParam)
+
+   const togglePopup = () => {
+      setIsPopupOpen((prev) => !prev)
+   }
+
+
    return (
-      <div className={`montserrat ${s.main}`}>
+      <div className={`montserrat ${s.bg}`}>
          <Helmet>
             <title>Новый год в Подмосковье на берегу Икшинского водохранилища - Икша Кантри Клаб</title>
             <meta
@@ -75,25 +89,29 @@ const FishingLanding = () => {
             isMenuOpen={isMenuOpen}
             links={links}
             toggleMenu={toggleMenu}
-            MenuClassName='bg-FBlack text-grey'
-            className='bg-black font-bold text-grey' />
-         <div className='bg-FBlack relative  w-full h-full'>
-            <FishHero />
-            <FishPhoto />
-            <FishServices />
-            <FishMap />
-            <FishLocations />
-            <FishGuest />
-            <FishContacts />
-            <FishForm />
+            MenuClassName='bg-white text-black'
+            className='bg-white font-bold text-black' />
+         <div className={` bg-white relative  w-full h-full`}>
+
+            {/* {isPopupOpen && <BanProgramPopup currentNumber={currentNumber} togglePopup={togglePopup} />} */}
+
+            <BanHero />
+            <BanPhoto />
+            <BanProgram setCurrentNumber={setCurrentNumber} togglePopup={togglePopup} />
+            <BanServices />
+            <BanMap />
+            <BanLocations />
+            <BanGuest />
+            <BanContacts />
+            <BanForm />
 
 
          </div>
          {/* </div> */}
 
-         <Footer className='bg-FBlack text-grey' />
+         <Footer className='bg-black text-white' />
       </div>
    )
 }
 
-export default FishingLanding
+export default BanLanding
