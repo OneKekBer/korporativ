@@ -8,7 +8,7 @@ import BanLanding from './pages/banLanding/BanLanding'
 
 import { ReactRouter6Adapter } from 'use-query-params/adapters/react-router-6'
 import { QueryParamProvider } from 'use-query-params'
-import ChillLanding from './pages/chillLanding/chillLanding'
+import ChillLanding from './pages/chillLanding/ChillLanding'
 
 
 function App() {
