@@ -7,9 +7,9 @@ import Header from "common/Header"
 import { useState } from 'react'
 
 import { Helmet } from 'react-helmet'
-import { useTranslation } from 'react-i18next'
+// import { useTranslation } from 'react-i18next'
 import BanHero from './components/BanHero'
-import { StringParam, NumberParam, useQueryParam } from "use-query-params"
+import { StringParam, useQueryParam } from "use-query-params"
 
 import s from './ban.module.scss'
 import BanPhoto from './components/BanPhoto'
@@ -30,7 +30,7 @@ const BanLanding = () => {
    }
 
    const GetLinks = () => {
-      const { t } = useTranslation()
+      // const { t } = useTranslation()
       // const links = [
       //    { title: t('baning.header.Main'), link: "Programa" },
       //    { title: t('baning.header.Gallery'), link: "Tariff" },

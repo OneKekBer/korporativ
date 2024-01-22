@@ -8,6 +8,7 @@ import main2 from 'images/ban/program/009.webp'
 import main3 from 'images/ban/program/010.webp'
 
 import s from './../../ban.module.scss'
+import { useEffect } from 'react'
 
 const GetProgram = () => {
    const program = [
@@ -56,14 +57,41 @@ const GetProgram = () => {
 
 const BanProgram = ({ handleProductClick }) => {
 
+   useEffect(() => {
+      const script = document.createElement("script")
+      script.src = "//widget.bronirui-online.ru/js/app.js"
+      script.async = true
 
+      const initializeWidget = () => {
+         window.znmsWidget.init("#znms-service-widget-module", {
+            moduleId: 5026,
+            type: 'booking-services',
+         })
+         // const customStyles = `
+         //  .znms-widget__brononline_popup_full {
+         //    width: 90vw !important;
+         //    height: 60vh !important;
+         //    position: fixed !important;
+         //    top: 50% !important;
+         //    left: 50% !important;
+         //    transform: translate(-50%, -50%) !important;
+         // }
+
+         // `
+         // const styleElement = document.createElement("style")
+         // styleElement.innerHTML = customStyles
+         // document.head.appendChild(styleElement)
+      }
+      script.onload = initializeWidget
+      document.body.appendChild(script)
+   }, [])
 
 
 
    const program = GetProgram()
    return (
       <div id='program' className='bg-white relative text-black'>
-
+         <div id="znms-service-widget-module"></div>
          <div className='text-black font-bold text-center mb-[10vh] text-md+'>Наши программы</div>
          <div className='flex justify-around md:px-[30px] flex-col gap-5 w-full items-center lg:flex-row'>
 
@@ -120,7 +148,7 @@ const BanProgram = ({ handleProductClick }) => {
                         </div>
 
                         <div className='flex flex-col  sm:flex-row justify-center items-center gap-4 sm:gap-0 sm:justify-between'>
-                           <div onClick={() => { window.znmsWidget.open('#znms-widget-1') }} className="w-[156.94px]  cursor-pointer h-[41.64px] rounded-tr-[20px] flex justify-center items-center rounded-bl-[20px] border-4 border-stone-700">
+                           <div onClick={() => { window.znmsWidget.open('#znms-service-widget-module') }} className="w-[156.94px]  cursor-pointer h-[41.64px] rounded-tr-[20px] flex justify-center items-center rounded-bl-[20px] border-4 border-stone-700">
                               <div className="text-center text-stone-700 font-semibold ">Забронировать</div>
                            </div>
 

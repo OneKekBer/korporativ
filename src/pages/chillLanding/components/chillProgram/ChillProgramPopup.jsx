@@ -1,8 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import people from 'icons/ban/brown/people.png'
-import time from 'icons/ban/brown/time.png'
-import check from 'icons/ban/check.png'
+
 import arrow from 'icons/brownarrow.png'
 
 // import one from 'images/chill/program/group1.png'
@@ -130,7 +128,7 @@ const GetInfo = () => {
    }
    return info
 }
-const ChillProgramPopup = ({ productId, onClose }) => {
+const ChillProgramPopup = ({ onClose }) => {
    const infos = GetInfo()
    const [productQueryParam] = useQueryParam('productId', StringParam)
    const info = infos[productQueryParam]

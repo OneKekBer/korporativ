@@ -1,7 +1,4 @@
 /* eslint-disable react/prop-types */
-import people from 'icons/ban/people.png'
-import time from 'icons/ban/time.png'
-import check from 'icons/ban/check.png'
 
 import main1 from 'images/chill/program/001.webp'
 import main2 from 'images/chill/program/002.webp'

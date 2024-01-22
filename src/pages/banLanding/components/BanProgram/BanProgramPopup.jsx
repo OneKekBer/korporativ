@@ -52,7 +52,7 @@ const GetInfo = () => {
    }
    return info
 }
-const BanProgramPopup = ({ productId, onClose }) => {
+const BanProgramPopup = ({ onClose }) => {
    const infos = GetInfo()
    const [productQueryParam] = useQueryParam('productId', StringParam)
    const info = infos[productQueryParam]
@@ -104,13 +104,13 @@ const BanProgramPopup = ({ productId, onClose }) => {
 
 
             <div className="items-center sm:justify-start justify-centers gap-10 flex-col sm:flex-row flex">
-               <div onClick={onClose} className=" cursor-pointer h-3 ">
+               <div onClick={onClose} className=" cursor-pointer flex items-center gap-2 h-3 ">
                   <img src={arrow} className='transform rotate-180' alt="" />
                   <div className="text-stone-700 font-medium  leading-snug">Вернуться назад</div>
                </div>
 
 
-               <div className="w-[184.02px] cursor-pointer h-[41.89px] flex items-center justify-center rounded-tr-[20px] rounded-bl-[20px] border-2 border-stone-700">
+               <div onClick={() => { window.znmsWidget.open('#znms-service-widget-module'); onClose() }} className="w-[184.02px] cursor-pointer h-[41.89px] flex items-center justify-center rounded-tr-[20px] rounded-bl-[20px] border-2 border-stone-700">
                   <div className="w-[135.03px] h-[17.26px] text-center text-stone-700 text-base font-bold montserrat leading-snug tracking-tight">Забронировать</div>
                </div>
 
