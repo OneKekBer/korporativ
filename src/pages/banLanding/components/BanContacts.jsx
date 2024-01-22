@@ -14,13 +14,13 @@ const FishContacts = () => {
 
             <div className='flex gap-2 flex-col text-left md:text-right'>
                <div className='flex justify-start md:justify-end gap-5'>
-                  <a href="">
+                  <a href="https://www.instagram.com/ikshacountryclub" target='_blank' rel="noreferrer">
                      <img className='w-[30px] md:w-[50px]' src={inst} alt="" />
                   </a>
-                  <a href="">
+                  <a href="https://api.whatsapp.com/send/?phone=79859091202&text&type=phone_number&app_absent=0" target='_blank' rel="noreferrer">
                      <img className='w-[30px] md:w-[50px]' src={what} alt="" />
                   </a>
-                  <a href="">
+                  <a href="https://vk.com/ikshacountryclub" target='_blank' rel="noreferrer">
                      <img className='w-[30px] md:w-[50px]' src={vk} alt="" />
                   </a>
                </div>
