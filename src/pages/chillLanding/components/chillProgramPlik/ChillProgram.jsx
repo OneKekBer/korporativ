@@ -143,7 +143,7 @@ const ChillProgram = ({ handleProductClick }) => {
 
    const program = GetProgram()
    return (
-      <div id='program' className='bg-white relative text-black'>
+      <div name='proga' id='program' className='bg-white relative text-black'>
          <div id="znms-service-widget-module"></div>
          <div className=' font-bold text-center mb-[10vh] text-ChillBrown text-lg'>Активный отдых в Икша Кантри Клаб</div>
          <div className='grid max-w-[1200px] mx-auto grid-cols-1 sm:grid-cols-2 md:grid-cols-3 place-content-center place-items-center md:px-[30px] flex-col gap-[40px] w-full items-center lg:flex-row'>
