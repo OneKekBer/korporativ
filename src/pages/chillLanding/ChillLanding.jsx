@@ -20,11 +20,11 @@ import ChillMap from './components/ChillMap'
 import ChillContacts from './components/ChillContacts'
 import ChillForm from './components/ChillForm'
 import ChillServices from './components/ChillServices'
-import ChillProgram from './components/chillProgram/ChillProgram'
 // import ChillProgramPopup from './components/ChillProgram/ChillProgramPopup'
 
-import { StringParam, NumberParam, useQueryParam } from "use-query-params"
+import { StringParam, useQueryParam } from "use-query-params"
 import ChillProgramPopup from './components/chillProgram/ChillProgramPopup'
+import ChillProgram from './components/ChillProgram/ChillProgram'
 
 const ChillLanding = () => {
    const [isMenuOpen, setIsMenuOpen] = useState(false)
