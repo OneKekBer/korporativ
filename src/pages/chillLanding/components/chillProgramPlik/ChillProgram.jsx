@@ -20,25 +20,28 @@ const GetProgram = () => {
       {
          img: main1,
          title: 'Казан плова + заезд на фэтбайках',
-         price: '4990',
+         price: '4990₽',
          number: 1,
          hasAbout: false,
+         desc: ''
 
       },
       {
          img: main2,
          title: 'Экскурсия в усадьбу Марфино',
-         price: '10 000',
+         price: 'от 1500₽ / чел',
          number: 2,
          hasAbout: true,
+         desc: 'с онлайн-гидом'
 
       },
       {
          img: main3,
          title: 'Фэтбайки',
-         price: '10 000',
+         price: '1000₽',
          number: 3,
          hasAbout: true,
+         desc: ''
 
       },
 
@@ -46,48 +49,53 @@ const GetProgram = () => {
       {
          img: main4,
          title: 'Гидроцикл',
-         price: '10 000',
+         price: 'от 3 500₽',
          number: 4,
          hasAbout: true,
+         desc: '* цена за 1 час'
 
       },
       {
          img: main5,
          title: 'Волейбол',
-         price: '10 000',
+         price: '1000₽',
          number: 5,
-         hasAbout: true
+         hasAbout: true,
+         desc: '* цена за 1 час'
       },
       {
          img: main6,
          title: 'Сап-борд',
-         price: '10 000',
+         price: '3 000₽',
          number: 6,
-         hasAbout: true
+         hasAbout: true,
+         desc: '* цена за 1 шт'
       },
       {
          img: main7,
          title: 'Катер',
-         price: '10 000',
+         price: '10 000₽',
          number: 7,
-         hasAbout: true
+         hasAbout: true,
+         desc: ''
       },
       {
          img: main8,
          title: 'Баня с купелью',
-         price: '10 000',
+         price: '10 000₽',
          number: 8,
-         hasAbout: true
+         hasAbout: true,
+         desc: '* цена за 1 час'
+
       },
       {
          img: main9,
          title: 'Кино и настольные игры',
-         price: '10 000',
+         price: '500₽',
          number: 9,
-         hasAbout: true
+         hasAbout: true,
+         desc: ''
       },
-
-
 
    ]
 
@@ -155,9 +163,9 @@ const ChillProgram = ({ handleProductClick }) => {
                         <div className='text-md acariBold'>{item.title}</div>
                         <div className='flex justify-between mb-[20px]'>
                            <div className='flex flex-col'>
-                              <div className="text-left text-md- text-stone-700 font-semibold">{item.price}₽</div>
+                              <div className="text-left text-md- text-stone-700 font-semibold">{item.price}</div>
 
-                              <div className="text-left text-stone-500 font-semibold ">* цена за 1 час</div>
+                              <div className="text-left text-stone-500 font-semibold ">{item.desc !== '' ? <div>{item.desc}</div> : ''}</div>
 
                            </div>
 

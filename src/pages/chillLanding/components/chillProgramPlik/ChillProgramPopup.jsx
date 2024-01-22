@@ -12,6 +12,7 @@ import six from 'images/chill/program/group6.webp'
 import seven from 'images/chill/program/group7.webp'
 import eight from 'images/chill/program/group8.webp'
 import nine from 'images/chill/program/group9.webp'
+import { useEffect } from 'react'
 
 import { useQueryParam, StringParam } from 'use-query-params'
 
@@ -131,6 +132,9 @@ const GetInfo = () => {
 const ChillProgramPopup = ({ onClose }) => {
    const infos = GetInfo()
    const [productQueryParam] = useQueryParam('productId', StringParam)
+
+
+
    const info = infos[productQueryParam]
 
    // const about = info.about.split('\n')
@@ -140,7 +144,7 @@ const ChillProgramPopup = ({ onClose }) => {
    ))
 
    return (
-      <div className='fixed transform -translate-y-1/2 top-1/2 border overflow-y-auto border-stone-700 rounded-[10px] -translate-x-1/2 left-1/2 z-[10000000] w-[90vw] md:max-w-[1000px] acariMedium h-[90vh] flex justify-between bg-white text-black'>
+      <div className='fixed transform top-1/2 -translate-y-1/2 border overflow-y-auto border-stone-700 rounded-[10px] -translate-x-1/2 left-1/2 z-[10000000] w-screen md:max-w-[1000px] acariMedium h-screen md:h-[90vh] flex justify-between bg-white text-black'>
          <div className='p-[20px] pb-[40px] md:p-[40px] max-w-[500px]'>
             <div className="text-stone-700 font-medium mb-[10px] text-md">{info.title}</div>
 

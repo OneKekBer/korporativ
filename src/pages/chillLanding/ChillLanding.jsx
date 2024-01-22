@@ -4,7 +4,7 @@
 import Footer from "common/Footer"
 import Header from "common/Header"
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { Helmet } from 'react-helmet'
 // import { useTranslation } from 'react-i18next'
@@ -62,6 +62,15 @@ const ChillLanding = () => {
    const handleProductClick = (productId) => {
       setProductId(productId)
    }
+   useEffect(() => {
+      if (productId === undefined) {
+         document.body.style.overflow = 'visible'
+
+      } else {
+         document.body.style.overflow = 'hidden'
+      }
+
+   }, [productId])
 
 
 
