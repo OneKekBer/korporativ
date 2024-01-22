@@ -2,8 +2,8 @@
 
 import Button from "common/Button"
 
-import s from './../fishing.module.scss'
-import hero from 'images/fishing/hero.webp'
+
+import hero from 'images/fishing/Hero.webp'
 import Reveal from "common/Reveal"
 import { Link as ScrollLink } from "react-scroll"
 

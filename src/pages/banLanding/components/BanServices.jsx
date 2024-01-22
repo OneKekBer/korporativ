@@ -1,9 +1,9 @@
-import { useTranslation } from 'react-i18next'
+// import { useTranslation } from 'react-i18next'
 import s from './../ban.module.scss'
 
 const GetServices = () => {
 
-   const { t } = useTranslation()
+   // const { t } = useTranslation()
 
    const services = [
 

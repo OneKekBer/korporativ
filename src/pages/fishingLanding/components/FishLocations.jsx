@@ -3,7 +3,7 @@ import loc2 from "images/korpLanding/locations/001.webp"
 import loc3 from "images/korpLanding/locations/002.webp"
 import loc4 from "images/korpLanding/locations/004.webp"
 import longarrow from "icons/longarrow.png"
-import brownarrow from "icons/brownarrow.png"
+
 // import arrow from "icons/arrow.png"
 import Button from "common/Button"
 import { Link } from "react-router-dom"
