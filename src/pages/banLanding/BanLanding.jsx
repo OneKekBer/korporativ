@@ -9,7 +9,7 @@ import { useState } from 'react'
 import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 import BanHero from './components/BanHero'
-import { BooleanParam, NumberParam, useQueryParam } from "use-query-params"
+import { StringParam, NumberParam, useQueryParam } from "use-query-params"
 
 import s from './ban.module.scss'
 import BanPhoto from './components/BanPhoto'
@@ -57,12 +57,13 @@ const BanLanding = () => {
    const links = GetLinks()
 
 
-   const [currentNumber, setCurrentNumber] = useState()
-   const [isPopupOpen, setIsPopupOpen] = useQueryParam("popupOpen", BooleanParam)
+   const [productId, setProductId] = useQueryParam('productId', StringParam)
 
-   const togglePopup = () => {
-      setIsPopupOpen((prev) => !prev)
+   const handleProductClick = (productId) => {
+      setProductId(productId)
    }
+
+
 
 
    return (
@@ -93,11 +94,11 @@ const BanLanding = () => {
             className='bg-white font-bold text-black' />
          <div className={` bg-white relative  w-full h-full`}>
 
-            {/* {isPopupOpen && <BanProgramPopup currentNumber={currentNumber} togglePopup={togglePopup} />} */}
+            {productId && <BanProgramPopup productId={productId} onClose={() => setProductId(undefined)} />}
 
             <BanHero />
             <BanPhoto />
-            <BanProgram setCurrentNumber={setCurrentNumber} togglePopup={togglePopup} />
+            <BanProgram handleProductClick={handleProductClick} />
             <BanServices />
             <BanMap />
             <BanLocations />

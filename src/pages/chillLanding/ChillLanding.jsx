@@ -23,6 +23,9 @@ import ChillServices from './components/ChillServices'
 import ChillProgram from './components/chillProgram/ChillProgram'
 // import ChillProgramPopup from './components/ChillProgram/ChillProgramPopup'
 
+import { StringParam, NumberParam, useQueryParam } from "use-query-params"
+import ChillProgramPopup from './components/chillProgram/ChillProgramPopup'
+
 const ChillLanding = () => {
    const [isMenuOpen, setIsMenuOpen] = useState(false)
    const toggleMenu = () => {
@@ -54,12 +57,12 @@ const ChillLanding = () => {
    const links = GetLinks()
 
 
-   // const [currentNumber, setCurrentNumber] = useState()
-   // const [isPopupOpen, setIsPopupOpen] = useQueryParam("popupOpen", BooleanParam)
+   const [productId, setProductId] = useQueryParam('productId', StringParam)
 
-   // const togglePopup = () => {
-   //    setIsPopupOpen((prev) => !prev)
-   // }
+   const handleProductClick = (productId) => {
+      setProductId(productId)
+   }
+
 
 
    return (
@@ -90,11 +93,11 @@ const ChillLanding = () => {
             className='bg-ChillBrown font-bold text-white' />
          <div className={` bg-white relative  w-full h-full`}>
 
-            {/* {isPopupOpen && <ChillProgramPopup currentNumber={currentNumber} togglePopup={togglePopup} />} */}
 
+            {productId && <ChillProgramPopup productId={productId} onClose={() => setProductId(undefined)} />}
             <ChillHero />
-            {/* <ChillProgram setCurrentNumber={setCurrentNumber} togglePopup={togglePopup} /> */}
-            <ChillProgram />
+
+            <ChillProgram handleProductClick={handleProductClick} />
             <ChillServices />
             <ChillMap />
             <ChillLocations />

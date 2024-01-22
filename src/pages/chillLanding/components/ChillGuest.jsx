@@ -9,14 +9,14 @@ import "swiper/css/navigation"
 import "swiper/css/pagination"
 import "swiper/css/autoplay"
 import "swiper/css/scrollbar"
-
+import s from './../chill.module.scss'
 
 import guest2 from "images/korpLanding/guest/002.webp"
 
 import guest4 from "images/korpLanding/guest/004.webp"
 
-import korpprev from "icons/swiperprev_black.png"
-import korpnext from "icons/swipernext_black.png"
+import korpprev from "icons/slider/white/prev.png"
+import korpnext from "icons/slider/white/next.png"
 import { useRef } from "react"
 
 const guests = [
@@ -38,9 +38,31 @@ const guests = [
 const ChillGuest = () => {
    const swiperRef = useRef()
    return (
-      <div className=" relative pt-[5vh] pb-[15vh] md:pb-[25vh]">
+      <div className={` ${s.guestBg} relative pt-[5vh] pb-[15vh] max-h-[1000px] text-white md:pb-[25vh]`}>
          <div className='text-black font-bold text-center mb-[10vh] text-md+'>Почему нас выбирают</div>
-         <div className="bg-[#221C1C]">
+         <div className="flex px-[20px] w-full ml-auto gap-4 md:pr-[100px]  z-10 justify-end">
+            <button
+               className="z-[200]"
+               onClick={() => swiperRef.current?.slidePrev()}
+            >
+               <img
+                  className="aspect-square hover:scale-110 duration-300 w-[40px] md:w-[120px]"
+                  src={korpprev}
+                  alt=""
+               />
+            </button>
+            <button
+               className="z-[200]"
+               onClick={() => swiperRef.current?.slideNext()}
+            >
+               <img
+                  className="aspect-square hover:scale-110 duration-300 w-[40px] md:w-[120px]"
+                  src={korpnext}
+                  alt=""
+               />
+            </button>
+         </div>
+         <div className="">
             <Swiper
                // install Swiper modules
                modules={[Navigation, Autoplay]}
@@ -59,19 +81,29 @@ const ChillGuest = () => {
             >
                {guests.map((guest, i) => {
                   return (
-                     <SwiperSlide className="px-[2vw] md:p-0" key={i}>
+                     <SwiperSlide className="px-[2vw] flex justify-center items-center  md:p-0" key={i}>
 
-                        <div className="flex mb-10 w-full items-center justify-end">
+                        <div className="flex mb-10 w-full mx-auto bg-[#ECE9E9]  max-w-[1050px] items-center justify-end">
                            <div className="min-w-[200px] min-h-[130px] w-full bg-transparent  text-white  rounded-[10px] md:h-[600px] relative">
                               <img
                                  className="absolute w-[20%] md:w-[20%]  md:max-w-auto z-10 -bottom-10 right-5  md:left-2 md:top-1/2 transform md:-translate-y-1/2"
                                  src={guest.img}
                                  alt=""
                               />
-                              <div className="p-5 flex h-full flex-col justify-center md:pl-[23%] py-[2vh]">
-                                 <h1 className="text-md ">{guest.name}</h1>
-                                 <div className="text-sm ">{guest.date}</div>
-                                 <h1 className="text-extramd ">{guest.text}</h1>
+                              <div className="p-5 flex text-black h-full flex-col justify-center md:pl-[23%] py-[2vh]">
+                                 <div className={`${s.acariMedium} gap-4 mb-[20px] md:hidden flex items-center justify-start`}>
+
+
+                                    <div className="text-sm ">{guest.date}</div>
+                                    <h1 className="text-md ">{guest.name}</h1>
+                                 </div>
+                                 <h1 className="text-md md:mb-[100px] ">{guest.text}</h1>
+                                 <div className={`${s.acariMedium} gap-4 hidden md:flex items-center justify-end`}>
+
+
+                                    <div className="text-sm ">{guest.date}</div>
+                                    <h1 className="text-md ">{guest.name}</h1>
+                                 </div>
                               </div>
                            </div>
                         </div>
@@ -79,32 +111,11 @@ const ChillGuest = () => {
                   )
                })}
             </Swiper>
-            <div className="flex px-[20px] w-full ml-auto  bg-white z-10 justify-between">
-               <button
-                  className="z-[200]"
-                  onClick={() => swiperRef.current?.slidePrev()}
-               >
-                  <img
-                     className="aspect-square hover:scale-110 duration-300 w-[40px] md:w-[120px]"
-                     src={korpprev}
-                     alt=""
-                  />
-               </button>
-               <button
-                  className="z-[200]"
-                  onClick={() => swiperRef.current?.slideNext()}
-               >
-                  <img
-                     className="aspect-square hover:scale-110 duration-300 w-[40px] md:w-[120px]"
-                     src={korpnext}
-                     alt=""
-                  />
-               </button>
-            </div>
+
 
          </div>
 
-      </div>
+      </div >
    )
 }
 

@@ -54,7 +54,7 @@ const GetProgram = () => {
 
 
 
-const BanProgram = ({ togglePopup, setCurrentNumber }) => {
+const BanProgram = ({ handleProductClick }) => {
 
 
 
@@ -120,11 +120,11 @@ const BanProgram = ({ togglePopup, setCurrentNumber }) => {
                         </div>
 
                         <div className='flex flex-col  sm:flex-row justify-center items-center gap-4 sm:gap-0 sm:justify-between'>
-                           <div className="w-[156.94px] cursor-pointer h-[41.64px] rounded-tr-[20px] flex justify-center items-center rounded-bl-[20px] border-4 border-stone-700">
+                           <div onClick={() => { window.znmsWidget.open('#znms-widget-1') }} className="w-[156.94px]  cursor-pointer h-[41.64px] rounded-tr-[20px] flex justify-center items-center rounded-bl-[20px] border-4 border-stone-700">
                               <div className="text-center text-stone-700 font-semibold ">Забронировать</div>
                            </div>
 
-                           <div onClick={() => { togglePopup(); setCurrentNumber(item.number) }} className="cursor-pointer w-[156.94px] h-[41.64px] rounded-[20px] flex justify-center items-center border-2 border-zinc-500">
+                           <div onClick={() => { handleProductClick(item.number) }} className="cursor-pointer w-[156.94px] h-[41.64px] rounded-[20px] flex justify-center items-center border-2 border-zinc-500">
                               <div className="text-center text-zinc-500 font-semibold">Подробнее</div>
                            </div>
                         </div>

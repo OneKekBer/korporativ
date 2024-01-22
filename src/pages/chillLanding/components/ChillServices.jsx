@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import s from './../chill.module.scss'
 
+
 const GetServices = () => {
 
    const { t } = useTranslation()
@@ -52,7 +53,15 @@ const GetServices = () => {
    return services
 }
 
+
+
+
+
 const ChillServices = () => {
+
+
+
+
 
    const services = GetServices()
 
@@ -78,6 +87,8 @@ const ChillServices = () => {
                })}
             </div>
          </div>
+
+         <div id='znms-service-widget-module'></div>
 
 
          <div className='text-center w-full mt-[5vh]'>
