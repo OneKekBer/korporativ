@@ -23,8 +23,8 @@ import ChillServices from './components/ChillServices'
 // import ChillProgramPopup from './components/ChillProgram/ChillProgramPopup'
 
 import { StringParam, useQueryParam } from "use-query-params"
-import ChillProgramPopup from './components/chillProgram/ChillProgramPopup'
-import ChillProgram from './components/ChillProgram/ChillProgram'
+import ChillProgramPopup from './components/chillProgramPlik/ChillProgramPopup'
+import ChillProgram from './components/chillProgramPlik/ChillProgram'
 
 const ChillLanding = () => {
    const [isMenuOpen, setIsMenuOpen] = useState(false)
