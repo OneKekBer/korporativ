@@ -4,14 +4,14 @@
 import arrow from 'icons/brownarrow.png'
 
 // import one from 'images/chill/program/group1.png'
-import two from 'images/chill/program/group2.png'
-import three from 'images/chill/program/group3.png'
-import four from 'images/chill/program/group4.png'
-import five from 'images/chill/program/group5.png'
-import six from 'images/chill/program/group6.png'
-import seven from 'images/chill/program/group7.png'
-import eight from 'images/chill/program/group8.png'
-import nine from 'images/chill/program/group9.png'
+import two from 'images/chill/program/group2.webp'
+import three from 'images/chill/program/group3.webp'
+import four from 'images/chill/program/group4.webp'
+import five from 'images/chill/program/group5.webp'
+import six from 'images/chill/program/group6.webp'
+import seven from 'images/chill/program/group7.webp'
+import eight from 'images/chill/program/group8.webp'
+import nine from 'images/chill/program/group9.webp'
 
 import { useQueryParam, StringParam } from 'use-query-params'
 

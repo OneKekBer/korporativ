@@ -5,9 +5,9 @@ import time from 'icons/ban/brown/time.png'
 import check from 'icons/ban/check.png'
 import arrow from 'icons/brownarrow.png'
 
-import one1 from 'images/ban/program/group1.png'
-import two from 'images/ban/program/group2.png'
-import three from 'images/ban/program/group3.png'
+import one1 from 'images/ban/program/group1.webp'
+import two from 'images/ban/program/Group2.webp'
+import three from 'images/ban/program/group3.webp'
 
 import { useQueryParam, StringParam } from 'use-query-params'
 
