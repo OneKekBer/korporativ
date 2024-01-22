@@ -144,11 +144,11 @@ const ChillProgramPopup = ({ onClose }) => {
          <div className='p-[20px] pb-[40px] md:p-[40px] max-w-[500px]'>
             <div className="text-stone-700 font-medium mb-[10px] text-md">{info.title}</div>
 
-            <div className="w-[514.47px] text-stone-700 text-md- mb-[20px] font-semibold leading-loose">{about}</div>
+            <div className=" text-stone-700 text-md- mb-[20px] font-semibold leading-loose">{about}</div>
 
 
             <div className='mb-[20px] '>
-               <div className="max-w-[531.13px] min-h-[145.62px] rounded-[20px] p-[30px] border-2 border-yellow-900">
+               <div className="max-w-[531.13px]  rounded-[20px] p-[10px] md:p-[30px] border-2 border-yellow-900">
                   <div className="text-stone-700 text-md font-semibold text-left">Стоимость аренды:</div>
                   {info.prices.map((item, i) => {
                      return (
