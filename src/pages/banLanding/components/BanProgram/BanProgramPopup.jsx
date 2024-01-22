@@ -6,7 +6,7 @@ import check from 'icons/ban/check.png'
 import arrow from 'icons/brownarrow.png'
 
 import one1 from 'images/ban/program/group1.webp'
-import two from 'images/ban/program/Group2.webp'
+import two from 'images/ban/program/group2.webp'
 import three from 'images/ban/program/group3.webp'
 
 import { useQueryParam, StringParam } from 'use-query-params'
