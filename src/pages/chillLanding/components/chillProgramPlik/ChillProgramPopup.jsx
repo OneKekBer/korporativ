@@ -12,7 +12,7 @@ import six from 'images/chill/program/group6.webp'
 import seven from 'images/chill/program/group7.webp'
 import eight from 'images/chill/program/group8.webp'
 import nine from 'images/chill/program/group9.webp'
-import { useEffect } from 'react'
+// import { useEffect } from 'react'
 
 import { useQueryParam, StringParam } from 'use-query-params'
 

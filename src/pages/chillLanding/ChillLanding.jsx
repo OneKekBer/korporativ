@@ -64,7 +64,7 @@ const ChillLanding = () => {
    }
    useEffect(() => {
       if (productId === undefined) {
-         document.body.style.overflow = 'visible'
+         document.body.style.overflow = 'scroll'
 
       } else {
          document.body.style.overflow = 'hidden'
