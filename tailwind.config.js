@@ -1,4 +1,16 @@
 /** @type {import('tailwindcss').Config} */
+
+
+import baseColor from 'tailwindcss/colors'
+
+
+
+// Use the baseColor object directly in the configuration
+
+
+baseColor.black = '#1b1c1e'
+
+
 export default {
    content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
    theme: {
@@ -12,12 +24,11 @@ export default {
          "md+": "clamp(17px, 4vw, 34px)",
          md: "clamp(10px, 4vw, 28px)",
          "md-": "clamp(6px, 4vw, 18px)",
-
          extramd: "clamp(10px, 3vw, 28px)",
-
          sm: "clamp(9px, 3vw, 18px)",
          small: "clamp(6px, 3vw, 18px)",
       },
+      colors: baseColor,
       extend: {
          colors: {
             primary: "#ecd23b",
@@ -36,7 +47,8 @@ export default {
             NYred: "#EF004B",
             NYheader: "#041106",
             FBlack: '#081130',
-            ChillBrown: '#593723'
+            ChillBrown: '#593723',
+            ChillHeadBrown: '#483122'
          },
          container: {
             center: true,

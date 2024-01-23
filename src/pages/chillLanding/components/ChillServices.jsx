@@ -68,7 +68,7 @@ const ChillServices = () => {
    return (
       <div id='services' className='relative py-[100px] wrapper text-black bg-white '>
          <div>
-            <div className='text-center text-md+ font-bold'>Дополнительные услуги</div>
+            <div className='text-center text-md+ text-ChillHeadBrown font-bold'>Дополнительные услуги</div>
             <div className={`grid grid-cols-1 ${s.acariMedium} md:grid-cols-2 mt-8 mx-[40px] md:mx-auto gap-x-11 max-w-[1200px] content-center `}>
 
 

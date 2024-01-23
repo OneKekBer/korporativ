@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-import inst from "./../assets/inst.png";
-import what from "./../assets/what.png";
-import phone from "./../assets/phone.png";
-import { motion } from "framer-motion";
+import inst from "./../assets/inst.png"
+import what from "./../assets/what.png"
+import phone from "./../assets/phone.png"
+import { motion } from "framer-motion"
 
 const slideVariants = {
    initial: {
@@ -13,15 +13,25 @@ const slideVariants = {
       x: "-2%", // Конечная позиция за пределами экрана слева
       scale: 1,
    },
-};
-const Footer = ({ className }) => {
+}
+const Footer = ({ className, FooterLinks = [], isMediaOpen = true }) => {
    return (
       <div className={`${className || ""}`}>
          <div className="wrapper  ">
             <div className="flex justify-between gap-5 py-5">
                <div className="flex w-full items-center justify-between gap-5 md:justify-start">
-                  <div>Икша Кантри Kлаб 2023 </div>
-                  <div className="fixed bottom-5 md:bottom-[70px]  right-5 z-10 flex flex-col gap-5 md:left-5 md:flex-row">
+                  <div className='flex gap-5 items-center'>
+
+                     <div>Икша Кантри Kлаб 2023 </div>
+                     {FooterLinks.length !== 0 && FooterLinks.map((item, i) => {
+                        return (
+                           <div key={i}>
+                              <a className='underline' target='_blank' rel="noreferrer" href={item.link}>{item.title}</a>
+                           </div>
+                        )
+                     })}
+                  </div>
+                  {isMediaOpen && <div className="fixed bottom-5 md:bottom-[70px]  right-5 z-10 flex flex-col gap-5 md:left-5 md:flex-row">
                      <a
                         target="_blank"
                         rel="noreferrer"
@@ -51,7 +61,8 @@ const Footer = ({ className }) => {
                      >
                         <img className="z-10 h-9 w-9" src={phone} alt="" />
                      </motion.a>
-                  </div>
+                  </div>}
+
                </div>
 
                {/* <div className="hidden  justify-center gap-10 md:flex">
@@ -65,7 +76,7 @@ const Footer = ({ className }) => {
             </div>
          </div>
       </div>
-   );
-};
+   )
+}
 
-export default Footer;
+export default Footer

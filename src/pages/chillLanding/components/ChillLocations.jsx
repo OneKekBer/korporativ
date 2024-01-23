@@ -2,7 +2,7 @@ import loc1 from "images/korpLanding/locations/003.webp"
 import loc2 from "images/korpLanding/locations/001.webp"
 import loc3 from "images/korpLanding/locations/002.webp"
 import loc4 from "images/korpLanding/locations/004.webp"
-import longarrow from "icons/longarrow.png"
+import longarrow from "icons/longbrownarrow.png"
 
 // import arrow from "icons/arrow.png"
 import Button from "common/Button"
@@ -49,7 +49,7 @@ const ChillLocations = () => {
                   return (
                      <Link
                         to={loc.link}
-                        className={`flex md:place-self-start gap-[10px] sm:max-w-[550px] h-[82] md:h-[182px]  md:gap-[20px] md:max-h-[216px]   w-full  rounded-[19px] bg-[#F5F5F5]`}
+                        className={`flex md:place-self-start shadow gap-[10px] sm:max-w-[550px] h-[82] md:h-[182px]  md:gap-[40px] md:max-h-[216px]   w-full  rounded-[19px] bg-[#F5F5F5]`}
                         key={i}
                      >
                         <img
@@ -58,10 +58,10 @@ const ChillLocations = () => {
                            alt=""
                         />
                         <div className="flex flex-col justify-between    py-3">
-                           <div className="text-md font-bold text-black">
+                           <div className="text-md acariMedium max-w-[150px] font-bold text-black">
                               {loc.title}
                            </div>
-                           <div className="flex items-center  gap-5 text-sm font-bold text-white">
+                           <div className="flex items-center acariMedium  gap-5 text-sm font-semibolda text-white">
                               <div className="flex flex-col text-[#785E4E] gap-5">
                                  <div className='text-[#785E4E]'>{loc.people}</div>
                                  <div className='text-[#785E4E]'>{loc.price}</div>
