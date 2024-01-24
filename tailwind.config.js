@@ -21,6 +21,7 @@ export default {
          xl: "clamp(30px, 5vw, 70px)",
          lg: "clamp(12px, 5vw, 48px)",
          "36px": "clamp(18px, 4vw, 36px)",
+         "32px": "clamp(21px, 4vw, 32px)",
          "md+": "clamp(17px, 4vw, 34px)",
          md: "clamp(10px, 4vw, 28px)",
          "md-": "clamp(6px, 4vw, 18px)",
