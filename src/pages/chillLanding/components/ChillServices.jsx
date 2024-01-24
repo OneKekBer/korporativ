@@ -75,7 +75,7 @@ const ChillServices = () => {
 
                {services[0].map((item, i) => {
                   return (
-                     <div key={i} className='justify-between w-full gap-2 md:gap-4 items-center py-[10px] md:py-[50px] border-y border-black flex'>
+                     <div key={i} className={`justify-between ${s.services_wrapper} w-full gap-2 md:gap-4 items-center py-[10px] md:py-[50px] flex`}>
                         <div className='flex flex-col'>
                            <div className="text-black text-md   leading-[33.80px] tracking-wide">{item.title}</div>
 

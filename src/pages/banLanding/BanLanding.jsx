@@ -91,7 +91,7 @@ const BanLanding = () => {
             links={links}
             toggleMenu={toggleMenu}
             MenuClassName='bg-white text-black'
-            className='bg-white font-bold text-black' />
+            className=' font-bold text-black' />
          <div className={` ${s.bg} relative  w-full h-full`}>
 
             {productId && <BanProgramPopup productId={productId} onClose={() => setProductId(undefined)} />}

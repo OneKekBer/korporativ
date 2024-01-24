@@ -1,5 +1,8 @@
 /* eslint-disable react/prop-types */
 
+import { v4 as uuid4 } from 'uuid'
+import { m } from 'framer-motion'
+
 import main1 from 'images/chill/program/001.webp'
 import main2 from 'images/chill/program/002.webp'
 import main3 from 'images/chill/program/003.webp'
@@ -32,10 +35,22 @@ import main29 from 'images/chill/program/029.webp'
 // import main30 from 'images/chill/program/030.webp'
 
 
+import { Navigation, Autoplay } from "swiper/modules"
+
+import { Swiper, SwiperSlide } from "swiper/react"
+
+// Import Swiper styles
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+import "swiper/css/autoplay"
+import "swiper/css/scrollbar"
+
+import close from 'icons/close.png'
 
 
 import s from './../../chill.module.scss'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 const GetProgram = () => {
    const program = [
@@ -47,7 +62,8 @@ const GetProgram = () => {
          number: 1,
          hasAbout: false,
          oldPrice: '',
-         desc: ''
+         desc: '',
+         type: 'Лето'
 
       },
       {
@@ -57,7 +73,8 @@ const GetProgram = () => {
          oldPrice: '',
          number: 2,
          hasAbout: true,
-         desc: 'с онлайн-гидом'
+         desc: 'с онлайн-гидом',
+         type: 'Лето'
 
       },
       {
@@ -67,7 +84,8 @@ const GetProgram = () => {
          oldPrice: '',
          number: 3,
          hasAbout: true,
-         desc: ''
+         desc: '',
+         type: 'Лето'
 
       },
 
@@ -79,7 +97,8 @@ const GetProgram = () => {
          oldPrice: '',
          number: 4,
          hasAbout: true,
-         desc: '* цена за 1 час'
+         desc: '* цена за 1 час',
+         type: 'Лето'
 
       },
       {
@@ -89,7 +108,8 @@ const GetProgram = () => {
          oldPrice: '',
          number: 5,
          hasAbout: true,
-         desc: '* цена за 1 час'
+         desc: '* цена за 1 час',
+         type: 'Лето'
       },
       {
          img: main6,
@@ -98,7 +118,8 @@ const GetProgram = () => {
          oldPrice: '',
          number: 6,
          hasAbout: true,
-         desc: '* цена за 1 шт'
+         desc: '* цена за 1 шт',
+         type: 'Лето'
       },
       {
          img: main7,
@@ -107,7 +128,8 @@ const GetProgram = () => {
          oldPrice: '',
          number: 7,
          hasAbout: true,
-         desc: ''
+         desc: '',
+         type: 'Лето'
       },
       {
          img: main8,
@@ -116,7 +138,8 @@ const GetProgram = () => {
          price: '10 000₽',
          number: 8,
          hasAbout: true,
-         desc: '* цена за 1 час'
+         desc: '* цена за 1 час',
+         type: 'Лето'
 
       },
       {
@@ -126,7 +149,8 @@ const GetProgram = () => {
          price: '500₽',
          number: 9,
          hasAbout: true,
-         desc: ''
+         desc: '',
+         type: 'Лето'
       },
       {
          img: main10,
@@ -135,7 +159,8 @@ const GetProgram = () => {
          oldPrice: '8990 ₽ /чел.',
          number: 10,
          hasAbout: false,
-         desc: ''
+         desc: '',
+         type: 'Лето'
       },
       {
          img: main11,
@@ -144,7 +169,8 @@ const GetProgram = () => {
          oldPrice: '8990 ₽ /чел.',
          number: 11,
          hasAbout: false,
-         desc: ''
+         desc: '',
+         type: 'Лето'
       },
       {
          img: main12,
@@ -153,7 +179,8 @@ const GetProgram = () => {
          oldPrice: '15 990 ₽ /чел.',
          number: 12,
          hasAbout: false,
-         desc: ''
+         desc: '',
+         type: 'Лето'
       },
       {
          img: main13,
@@ -162,7 +189,8 @@ const GetProgram = () => {
          oldPrice: '15 990 ₽ /чел.',
          number: 13,
          hasAbout: false,
-         desc: ''
+         desc: '',
+         type: 'Лето'
       },
       {
          img: main14,
@@ -171,7 +199,8 @@ const GetProgram = () => {
          oldPrice: '10 990 ₽ /чел.',
          number: 14,
          hasAbout: false,
-         desc: ''
+         desc: '',
+         type: 'Лето'
       },
       {
          img: main15,
@@ -180,7 +209,8 @@ const GetProgram = () => {
          oldPrice: '18 990 ₽ /чел',
          number: 15,
          hasAbout: false,
-         desc: ''
+         desc: '',
+         type: 'Лето'
       },
       {
          img: main16,
@@ -189,7 +219,8 @@ const GetProgram = () => {
          oldPrice: 'от 19 990 ₽ /чел',
          number: 16,
          hasAbout: false,
-         desc: ''
+         desc: '',
+         type: 'Лето'
       },
       {
          img: main17,
@@ -198,7 +229,8 @@ const GetProgram = () => {
          oldPrice: 'от 15990 ₽ / чел.',
          number: 17,
          hasAbout: false,
-         desc: ''
+         desc: '',
+         type: 'Лето'
       },
       {
          img: main18,
@@ -207,7 +239,8 @@ const GetProgram = () => {
          oldPrice: 'от 10 990 ₽ /чел',
          number: 18,
          hasAbout: false,
-         desc: ''
+         desc: '',
+         type: 'Компания'
       },
       {
          img: main19,
@@ -216,7 +249,8 @@ const GetProgram = () => {
          oldPrice: '11 990 ₽ /чел',
          number: 19,
          hasAbout: false,
-         desc: ''
+         desc: '',
+         type: 'Лето'
       },
       {
          img: main20,
@@ -225,7 +259,8 @@ const GetProgram = () => {
          oldPrice: '9 990 ₽ /чел',
          number: 20,
          hasAbout: false,
-         desc: ''
+         desc: '',
+         type: 'Компания'
       },
       {
          img: main21,
@@ -234,7 +269,8 @@ const GetProgram = () => {
          oldPrice: '9 990 ₽ /чел',
          number: 21,
          hasAbout: false,
-         desc: '*Рассчитано на команды от 4 человек'
+         desc: '*Рассчитано на команды от 4 человек',
+         type: 'Компания'
       },
       {
          img: main22,
@@ -243,7 +279,8 @@ const GetProgram = () => {
          oldPrice: '18 990 ₽ /чел',
          number: 22,
          hasAbout: false,
-         desc: ''
+         desc: '',
+         type: 'Лето'
       },
       {
          img: main23,
@@ -252,7 +289,8 @@ const GetProgram = () => {
          oldPrice: '18 990 ₽ /чел',
          number: 23,
          hasAbout: false,
-         desc: '* Рассчитано на команды от 4 человек'
+         desc: '* Рассчитано на команды от 4 человек',
+         type: 'Компания'
       },
       {
          img: main24,
@@ -261,7 +299,8 @@ const GetProgram = () => {
          oldPrice: '9 990 ₽ /чел',
          number: 24,
          hasAbout: false,
-         desc: '* Рассчитано на команды от 3 человек'
+         desc: '* Рассчитано на команды от 3 человек',
+         type: 'Лето'
       },
       {
          img: main25,
@@ -270,7 +309,8 @@ const GetProgram = () => {
          oldPrice: '8 990 ₽ /чел',
          number: 25,
          hasAbout: false,
-         desc: '* Рассчитано на команды от 4 человек'
+         desc: '* Рассчитано на команды от 4 человек',
+         type: 'Компания'
       },
       {
          img: main26,
@@ -279,7 +319,8 @@ const GetProgram = () => {
          oldPrice: '18 990 ₽ /чел',
          number: 26,
          hasAbout: false,
-         desc: '*Рассчитано на команды от 4 человек'
+         desc: '*Рассчитано на команды от 4 человек',
+         type: 'Компания'
       },
       {
          img: main27,
@@ -288,7 +329,8 @@ const GetProgram = () => {
          oldPrice: '18 990 ₽ /чел',
          number: 27,
          hasAbout: false,
-         desc: '* Рассчитано на команды от 4 человек'
+         desc: '* Рассчитано на команды от 4 человек',
+         type: 'Компания'
       },
       {
          img: main28,
@@ -297,7 +339,8 @@ const GetProgram = () => {
          oldPrice: '5 990 ₽ /чел',
          number: 28,
          hasAbout: false,
-         desc: '* Рассчитано на команды от 5 человек'
+         desc: '* Рассчитано на команды от 5 человек',
+         type: 'Компания'
       },
       {
          img: main29,
@@ -306,7 +349,8 @@ const GetProgram = () => {
          oldPrice: '4 990 ₽ /чел',
          number: 29,
          hasAbout: false,
-         desc: '* Рассчитано на команды от 5 человек'
+         desc: '* Рассчитано на команды от 5 человек',
+         type: 'Компания'
       },
 
 
@@ -319,6 +363,58 @@ const GetProgram = () => {
 
 const ChillProgram = ({ handleProductClick }) => {
 
+
+   const program = GetProgram()
+
+
+   const getAllTypes = (program) => {
+      const types = []
+      program.map((item) => {
+         if (!types.includes(item.type)) {
+            if (item.type !== undefined) {
+
+               types.push(item.type)
+            }
+         }
+
+
+      })
+      return types
+   }
+
+   const types = getAllTypes(program)
+
+
+   const [menuItem, setMenuItem] = useState('Все')
+   const [isMenuOpen, setIsMenuOpen] = useState(false)
+   const [selectedImages, setSelectedImages] = useState(program)
+
+   const handleMenu = () => {
+      setIsMenuOpen(!isMenuOpen)
+      // changeCurrentItems()
+   }
+
+
+   const handleItems = (currentType) => {
+      setIsMenuOpen(false)
+      setMenuItem(currentType)
+      filterProgram()
+   }
+
+   const handleClose = () => {
+      setIsMenuOpen(false)
+      setMenuItem('Все')
+      setSelectedImages(program)
+      filterProgram()
+   }
+
+   const filterProgram = () => {
+      const filteredPrograms = program.filter(item => item.type !== menuItem)
+      setSelectedImages(filteredPrograms)
+   }
+
+
+   console.log(menuItem)
 
    useEffect(() => {
       const script = document.createElement("script")
@@ -353,28 +449,68 @@ const ChillProgram = ({ handleProductClick }) => {
       document.body.appendChild(script)
 
    }, [])
+   console.log()
 
-   const program = GetProgram()
    return (
       <div name='proga' id='program' className='bg-white relative text-black'>
          <div id="znms-service-widget-module"></div>
-         <div className=' font-bold text-center mb-[10vh] text-ChillHeadBrown text-lg'>Активный отдых в Икша Кантри Клаб</div>
-         <div className='grid max-w-[1400px] mx-auto grid-cols-1 sm:grid-cols-2 md:grid-cols-3 place-content-center place-items-center md:px-[30px] flex-col gap-[40px] w-full items-center lg:flex-row'>
+         <div className="text-center text-stone-700 mb-[10vh] text-lg font-bold leading-[62.40px]">Активный отдых в Икша Кантри Клаб</div>
+         {/* <div className=' font-bold text-center mb-[10vh] text-ChillHeadBrown text-lg'>Активный отдых в Икша Кантри Клаб</div> */}
 
-            {program.map((item, i) => {
+
+
+         <div style={{ display: `${isMenuOpen ? 'block' : 'none'}` }} className="absolute py-7 z-10 left-1/2 -translate-x-1/2 lg:top-[210px] top-[180px]  w-[360px] bg-[#5F4D3A] rounded-b-[22px]">
+            <div className="relative w-full pl-12 flex flex-col gap-2 items-start">
+               {
+                  types.map((el) => {
+                     return (
+                        <button key={uuid4()} onClick={() => { handleItems(el) }} className="lg:text-[35px] text-[24px] text-white font-medium">
+                           {el}
+                        </button>
+                     )
+                  })
+               }
+            </div>
+         </div>
+         <m.button
+            // initial={{ opacity: 1 }}
+            // animate={{
+            //    opacity: 1,
+            //    transition: {
+            //       delay: 2,
+            //       duration: 2
+            //    },
+            // }}
+
+            className={` ${isMenuOpen ? 'rounded-t-[22px]' : 'rounded-[22px]'} opacity-100 mb-[70px] w-[360px] mx-auto h-[65px] flex items-center justify-between text-white bg-[#5F4D3A] `}
+         >
+            <div onClick={handleMenu} className="relative h-full w-full flex  justify-between px-[40px] gap-14 items-center ">
+               <p className="text-white lg:text-[35px] text-[24px] font-medium">
+                  {menuItem}
+               </p>
+
+            </div>
+            <img onClick={handleClose} className=' z-[10] p-[20px]' src={close} alt="" />
+         </m.button>
+
+
+
+         <div className='lg:grid hidden  max-w-[1400px] mx-auto grid-cols-1 sm:grid-cols-2 md:grid-cols-3 place-content-center place-items-center md:px-[30px] flex-col gap-[40px] w-full items-center lg:flex-row'>
+
+            {selectedImages.map((item, i) => {
                return (
 
                   <div key={i} className={` ${s.acariMedium} w-[94%] sm:max-w-[500.43px]  bg-white rounded-[10px] border border-stone-700`}>
 
 
                      <div className={` ${s.acariMedium} h-[217.35px] relative`}>
-                        {item.oldPrice !== '' && <div className='absolute -top-5 right-0 z-[20] flex justify-center items-center acariBold text-white w-[200px] h-[60px] text-md rounded-[10px] bg-NYred'>Акция</div>}
+                        {item.oldPrice !== '' && <div className='absolute -top-5 right-0 z-[2] flex justify-center items-center acariBold text-white w-[200px] h-[60px] text-md rounded-[10px] bg-NYred'>Акция</div>}
                         <img className="w-full  absolute h-[217.35px]  border-b-2 " src={item.img} />
                      </div>
 
 
                      <div className=' p-[15px] md:p-[30px] '>
-                        <div className='text-32px acariBold'>{item.title}</div>
+                        <div className='text-32px text-[#593723] leading-[41.60px] acariBold'>{item.title}</div>
                         <div className="text-left text-stone-500 font-semibold ">{item.desc !== '' ? <div>{item.desc}</div> : ''}</div>
 
                         <div className='flex justify-between mb-[20px]'>
@@ -413,8 +549,76 @@ const ChillProgram = ({ handleProductClick }) => {
             })}
 
 
-
          </div >
+
+         <Swiper
+            // install Swiper modules
+            modules={[Navigation]}
+            className="block lg:hidden korpswiper"
+            spaceBetween={50}
+            loop={true}
+            autoplay={{
+               delay: 2500,
+               disableOnInteraction: false,
+            }}
+            slidesPerView={window.innerWidth > 450 ? 2 : 1}
+            navigation
+
+         >
+            {selectedImages.map((item, i) => {
+               return (
+                  <SwiperSlide className="" key={i}>
+
+
+
+                     <div key={i} className={` ${s.acariMedium} w-full  bg-white rounded-[10px] border border-stone-700`}>
+
+
+                        <div className={` ${s.acariMedium} h-[217.35px] relative`}>
+                           {item.oldPrice !== '' && <div className='absolute -top-5 right-0 z-[2] flex justify-center items-center acariBold text-white w-[200px] h-[60px] text-md rounded-[10px] bg-NYred'>Акция</div>}
+                           <img className="w-full  absolute h-[217.35px]  border-b-2 " src={item.img} />
+                        </div>
+
+
+                        <div className=' p-[15px] md:p-[30px] '>
+                           <div className='text-32px text-[#593723] leading-[41.60px] acariBold'>{item.title}</div>
+                           <div className="text-left text-stone-500 font-semibold ">{item.desc !== '' ? <div>{item.desc}</div> : ''}</div>
+
+                           <div className='flex justify-between mb-[20px]'>
+                              {item.oldPrice !== '' ?
+                                 <div className='flex flex-col items-center justify-center w-full'>
+                                    <div className="text-center text-yellow-900 text-36px font-semibold line-through leading-loose">{item.oldPrice}</div>
+                                    <div className="text-center text-red-600 text-36px font-semibold leading-loose">{item.price}</div>
+
+
+                                 </div>
+                                 :
+                                 <div className='flex flex-col'>
+                                    <div className="text-left text-36px text-stone-700 font-semibold">{item.price}</div>
+
+
+                                 </div>
+                              }
+                           </div>
+
+                           <div className='flex flex-col md:flex-row justify-center items-center gap-4 md:gap-0 md:justify-between'>
+                              <div onClick={() => { window.znmsWidget.open('#znms-service-widget-module') }} className="w-[156.94px] cursor-pointer h-[41.64px] rounded-tr-[20px] flex justify-center items-center rounded-bl-[20px] border-4 border-stone-700">
+                                 <div className="text-center text-stone-700 font-semibold ">Забронировать</div>
+                              </div>
+                              {item.hasAbout ? <div onClick={() => { handleProductClick(item.number) }} className="cursor-pointer w-[156.94px] h-[41.64px] rounded-[20px] flex justify-center items-center border-2 border-zinc-500">
+                                 <div className="text-center text-zinc-500 font-semibold">Подробнее</div>
+                              </div> : ''}
+
+                           </div>
+
+
+                        </div>
+                     </div>
+
+                  </SwiperSlide>
+               )
+            })}
+         </Swiper>
 
 
       </div >

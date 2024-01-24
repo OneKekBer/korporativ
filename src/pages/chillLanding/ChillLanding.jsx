@@ -46,9 +46,10 @@ const ChillLanding = () => {
 
       const links = [
          { title: 'Главная', link: "Programa" },
-         { title: 'Программа', link: "proga" },
+         { title: 'Пакеты услуг', link: "proga" },
          { title: 'Стоимость Услуг', link: "services" },
          { title: 'Локации', link: "locations" },
+         { title: 'Контакты', link: "contacts" },
          { title: 'Связаться со мной', link: "Form" },
       ]
 
