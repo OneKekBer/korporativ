@@ -47,8 +47,13 @@ html {
   font-weight: 600;
 } */
 
+* {
+	/* outline: 1px solid red; */
+}
+
 body {
 	font-family: 'Montserrat', sans-serif;
+	overflow-y: hidden;
 }
 
 .slow-move > .swiper-wrapper {

@@ -63,18 +63,20 @@ const GetProgram = () => {
          hasAbout: false,
          oldPrice: '',
          desc: '',
-         type: 'Лето'
+         time: 'Лето',
+         people:
+            type: 'Лето от 2-4 гостей'
 
       },
       {
          img: main2,
-         title: 'Экскурсия в усадьбу Марфино',
-         price: 'от 1500₽ / чел',
-         oldPrice: '',
+         title: 'Экскурсия в Усадьбу Марфино + аренда фэтбайков или лыж + казан ухи/плова ',
+         price: '1 190 ₽ /чел.',
+         oldPrice: '10 990 ₽ /чел.',
          number: 2,
          hasAbout: true,
          desc: 'с онлайн-гидом',
-         type: 'Лето'
+         type: 'Зима от 2-4 гостей'
 
       },
       {
@@ -144,13 +146,13 @@ const GetProgram = () => {
       },
       {
          img: main9,
-         title: 'Кино и настольные игры',
-         oldPrice: '',
-         price: '500₽',
+         title: 'Кино и настольные игры + казан ухи/плова',
+         oldPrice: '10 990 ₽ /чел',
+         price: '1 190 ₽ /чел.',
          number: 9,
          hasAbout: true,
          desc: '',
-         type: 'Лето'
+         type: 'Зима от 2-4 гостей'
       },
       {
          img: main10,
@@ -160,7 +162,7 @@ const GetProgram = () => {
          number: 10,
          hasAbout: false,
          desc: '',
-         type: 'Лето'
+         type: 'Лето от 2-4 гостей'
       },
       {
          img: main11,
@@ -180,17 +182,17 @@ const GetProgram = () => {
          number: 12,
          hasAbout: false,
          desc: '',
-         type: 'Лето'
+         type: 'Лето от 2-4 гостей'
       },
       {
          img: main13,
-         title: 'Аренда SUP + баня с купелью + чай из самовара на выбор',
+         title: 'Катание на SUP-досках + баня с купелью или казан ухи/плова ',
          price: '10990 ₽ /чел.',
          oldPrice: '15 990 ₽ /чел.',
          number: 13,
          hasAbout: false,
          desc: '',
-         type: 'Лето'
+         type: 'Лето от 2-4 гостей'
       },
       {
          img: main14,
@@ -200,7 +202,7 @@ const GetProgram = () => {
          number: 14,
          hasAbout: false,
          desc: '',
-         type: 'Лето'
+         type: ['Зима от 2-4 гостей', 'Лето от 2-4 гостей']
       },
       {
          img: main15,
@@ -235,22 +237,22 @@ const GetProgram = () => {
       {
          img: main18,
          title: 'Командные лыжи + аренда бани с купелью + чай из самовара или глинтвейн',
-         price: 'от 6 990 ₽ /чел',
-         oldPrice: 'от 10 990 ₽ /чел',
+         price: 'от 1 190 ₽ /чел',
+         oldPrice: 'от 15 990 ₽ /чел',
          number: 18,
          hasAbout: false,
          desc: '',
-         type: 'Компания'
+         type: 'Зима от 2-4 гостей'
       },
       {
          img: main19,
-         title: 'Стрельба из лука + баня с купелью на 3 часа + аренда мангала',
+         title: 'Стрельба из лука или дартс + баня с купелью на 3 часа + аренда мангала',
          price: '7 990 ₽ /чел',
          oldPrice: '11 990 ₽ /чел',
          number: 19,
          hasAbout: false,
          desc: '',
-         type: 'Лето'
+         type: ['Зима от 2-4 гостей', 'Лето от 2-4 гостей']
       },
       {
          img: main20,
@@ -260,7 +262,7 @@ const GetProgram = () => {
          number: 20,
          hasAbout: false,
          desc: '',
-         type: 'Компания'
+         type: 'Лето от 2-4 гостей'
       },
       {
          img: main21,
@@ -270,7 +272,7 @@ const GetProgram = () => {
          number: 21,
          hasAbout: false,
          desc: '*Рассчитано на команды от 4 человек',
-         type: 'Компания'
+         type: 'Лето от 2-4 гостей'
       },
       {
          img: main22,
@@ -290,7 +292,7 @@ const GetProgram = () => {
          number: 23,
          hasAbout: false,
          desc: '* Рассчитано на команды от 4 человек',
-         type: 'Компания'
+         type: ['Зима от 2-4 гостей', 'Лето от 2-4 гостей']
       },
       {
          img: main24,
@@ -300,7 +302,7 @@ const GetProgram = () => {
          number: 24,
          hasAbout: false,
          desc: '* Рассчитано на команды от 3 человек',
-         type: 'Лето'
+         type: 'Лето от 2-4 гостей'
       },
       {
          img: main25,
@@ -310,7 +312,7 @@ const GetProgram = () => {
          number: 25,
          hasAbout: false,
          desc: '* Рассчитано на команды от 4 человек',
-         type: 'Компания'
+         type: ['Зима от 2-4 гостей', 'Лето от 2-4 гостей']
       },
       {
          img: main26,
@@ -320,7 +322,8 @@ const GetProgram = () => {
          number: 26,
          hasAbout: false,
          desc: '*Рассчитано на команды от 4 человек',
-         type: 'Компания'
+
+         type: ['Зима от 10 гостей', 'Лето от 10 гостей']
       },
       {
          img: main27,
@@ -330,7 +333,7 @@ const GetProgram = () => {
          number: 27,
          hasAbout: false,
          desc: '* Рассчитано на команды от 4 человек',
-         type: 'Компания'
+         type: 'Лето от 10 гостей'
       },
       {
          img: main28,
@@ -340,7 +343,7 @@ const GetProgram = () => {
          number: 28,
          hasAbout: false,
          desc: '* Рассчитано на команды от 5 человек',
-         type: 'Компания'
+         type: ['Зима от 10 гостей', 'Лето от 10 гостей']
       },
       {
          img: main29,
@@ -350,7 +353,7 @@ const GetProgram = () => {
          number: 29,
          hasAbout: false,
          desc: '* Рассчитано на команды от 5 человек',
-         type: 'Компания'
+         type: ['Зима от 10 гостей', 'Лето от 10 гостей']
       },
 
 
@@ -370,11 +373,23 @@ const ChillProgram = ({ handleProductClick }) => {
    const getAllTypes = (program) => {
       const types = []
       program.map((item) => {
-         if (!types.includes(item.type)) {
-            if (item.type !== undefined) {
+         if (typeof item.type === 'string') {
 
-               types.push(item.type)
+            if (!types.includes(item.type)) {
+               if (item.type !== undefined) {
+
+                  types.push(item.type)
+               }
             }
+         } else {
+            item.type.map((type) => {
+               if (!types.includes(type)) {
+                  if (type !== undefined) {
+
+                     types.push(type)
+                  }
+               }
+            })
          }
 
 
@@ -409,12 +424,14 @@ const ChillProgram = ({ handleProductClick }) => {
    }
 
    const filterProgram = () => {
-      const filteredPrograms = program.filter(item => item.type !== menuItem)
+      const filteredPrograms = program.filter((item) => {
+         return item.type !== menuItem
+      })
       setSelectedImages(filteredPrograms)
    }
 
 
-   console.log(menuItem)
+
 
    useEffect(() => {
       const script = document.createElement("script")
