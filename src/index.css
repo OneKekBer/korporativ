@@ -453,6 +453,9 @@ ul {
 .swiper-button-next {
 	display: none !important;
 }
+.chill .swiper-button-prev {
+	display: none;
+}
 
 .whyus_img {
 	/* box-outline: 0px 0px 0px 4px rgba(0, 0, 0, 0.75); */

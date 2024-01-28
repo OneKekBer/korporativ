@@ -1,8 +1,16 @@
 .bg {
-	background-image: url('./../../../public/images/ban/bg.webp');
+	background-image: url('public/images/ban/bg.png');
+
+	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center;
+
+	background-color: rgba(255, 255, 255, 0.499);
+	overflow-x: hidden;
+}
+
+.banner {
+	background-color: #8bb26fbb;
 }
 
 @font-face {

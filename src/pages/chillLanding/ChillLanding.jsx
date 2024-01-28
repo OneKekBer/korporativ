@@ -25,6 +25,7 @@ import ChillServices from './components/ChillServices'
 import { StringParam, useQueryParam } from "use-query-params"
 import ChillProgramPopup from './components/chillProgramPlik/ChillProgramPopup'
 import ChillProgram from './components/chillProgramPlik/ChillProgram'
+import { ChillModule } from './components/ChillModule'
 
 const ChillLanding = () => {
    const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -87,7 +88,7 @@ const ChillLanding = () => {
    }
    useEffect(() => {
       if (productId === undefined) {
-         document.body.style.overflow = 'scroll'
+         document.body.style.overflow = 'auto'
 
       } else {
          document.body.style.overflow = 'hidden'
@@ -123,7 +124,7 @@ const ChillLanding = () => {
             toggleMenu={toggleMenu}
             MenuClassName='bg-ChillBrown text-white'
             className='bg-ChillBrown acariBold font-bold text-white' />
-         <div className={` bg-white relative  w-full h-full`}>
+         <div className={`${s.bg} bg-white relative  w-full h-full`}>
 
 
             {productId && <ChillProgramPopup productId={productId} onClose={() => setProductId(undefined)} />}
@@ -131,6 +132,7 @@ const ChillLanding = () => {
 
             <ChillProgram handleProductClick={handleProductClick} />
             <ChillServices />
+            <ChillModule />
             <ChillMap />
             <ChillLocations />
             <ChillGuest />

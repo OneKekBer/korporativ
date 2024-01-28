@@ -46,6 +46,10 @@ import "swiper/css/pagination"
 import "swiper/css/autoplay"
 import "swiper/css/scrollbar"
 
+
+import korpprev from "icons/swiperprev_black.png"
+import korpnext from "icons/swipernext_black.png"
+
 import close from 'icons/close.png'
 
 import sun from 'icons/buttons/filter/sun.png'
@@ -58,7 +62,7 @@ import { motion } from 'framer-motion'
 
 
 import s from './../../chill.module.scss'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const GetProgram = () => {
    const program = [
@@ -443,8 +447,7 @@ const ChillProgram = ({ handleProductClick }) => {
 
       setSelectedImages(filteredProgram)
 
-      console.log('time ' + currentTime)
-      console.log('isManypeople: ' + isManyPeople)
+
    }
 
    useEffect(() => {
@@ -453,9 +456,9 @@ const ChillProgram = ({ handleProductClick }) => {
 
 
    const togglePeople = () => {
-      console.log('after:' + isManyPeople)
+
       setIsManyPeople(!isManyPeople)
-      console.log('before:' + isManyPeople)
+
    }
 
 
@@ -473,6 +476,8 @@ const ChillProgram = ({ handleProductClick }) => {
       filter()
    }, [currentTime, isManyPeople])
 
+
+   const swiperRef = useRef()
 
 
    useEffect(() => {
@@ -511,7 +516,7 @@ const ChillProgram = ({ handleProductClick }) => {
    console.log()
 
    return (
-      <div name='proga' id='program' className='bg-white relative text-black'>
+      <div name='proga' id='program' className='relative text-black'>
          <div id="znms-service-widget-module"></div>
          <div className="text-center text-stone-700 mb-[10vh] text-lg font-bold leading-[62.40px]">Активный отдых в Икша Кантри Клаб</div>
          {/* <div className=' font-bold text-center mb-[10vh] text-ChillHeadBrown text-lg'>Активный отдых в Икша Кантри Клаб</div> */}
@@ -578,7 +583,9 @@ const ChillProgram = ({ handleProductClick }) => {
                   className={` ${isManyPeople ? 'justify-start border-[#AB8E67]' : 'justify-end border-[#FFFFFF]'} cursor-pointer border-2  relative items-center px-2 flex w-[101.84px] h-[46.98px] bg-[#604E3A] rounded-[20px] shadow-xl`}
                >
 
-                  <div className={`w-[30px]  ${isManyPeople ? 'bg-[#AB8E67]' : 'bg-[#FFFFFF]'} z-[2] h-[29.25px]  rounded-[100px] shadow-lg`}></div>
+                  <div className={`w-[30px] flex justify-center items-center z-[10] text-black text-[15px] ${isManyPeople ? 'bg-[#AB8E67]' : 'bg-[#FFFFFF]'} z-[2] h-[29.25px]  rounded-[100px] shadow-lg`}>
+
+                  </div>
                   {isManyPeople ?
 
 
@@ -592,7 +599,7 @@ const ChillProgram = ({ handleProductClick }) => {
                   }
 
                </div>
-               <div className="text-center text-stone-600 text-sm font-semibold leading-normal tracking-tight">{isManyPeople ? <div>Много людей</div> : <div>Мало людей</div>}</div>
+               <div className="text-center text-stone-600 text-sm font-semibold leading-normal tracking-tight">{isManyPeople ? <div>Много людей (от 10)</div> : <div>Мало людей (от 4)</div>}</div>
 
             </div>
 
@@ -614,8 +621,6 @@ const ChillProgram = ({ handleProductClick }) => {
                         {item.oldPrice !== '' && <div className='absolute -top-5 right-0 z-[2] flex justify-center items-center acariBold text-white w-[100px] md:w-[200px] h-[30px] md:h-[60px] text-md rounded-[10px] bg-NYred'>Акция</div>}
                         <img className="w-full  absolute h-[217.35px]  border-b-2 " src={item.img} />
                      </div>
-
-
                      <div className=' p-[15px] md:p-[30px] '>
                         <div className='text-32px text-[#593723] leading-[41.60px] acariBold'>{item.title}</div>
                         <div className="text-left text-stone-500 font-semibold ">{item.desc !== '' ? <div>{item.desc}</div> : ''}</div>
@@ -631,10 +636,6 @@ const ChillProgram = ({ handleProductClick }) => {
                               :
                               <div className='flex flex-col'>
                                  <div className="text-left text-36px text-stone-700 font-semibold">{item.price}</div>
-
-
-
-
                               </div>
                            }
                         </div>
@@ -657,18 +658,39 @@ const ChillProgram = ({ handleProductClick }) => {
 
 
          </div >
+         <div className="flex md:hidden px-[20px] w-full ml-auto gap-4 md:pr-[100px]  z-10 justify-end">
+            <button
+               className="z-[200]"
+               onClick={() => swiperRef.current?.slidePrev()}
+            >
+               <img
+                  className="aspect-square hover:scale-110 duration-300 w-[40px] md:w-[120px]"
+                  src={korpprev}
+                  alt=""
+               />
+            </button>
+            <button
+               className="z-[200]"
+               onClick={() => swiperRef.current?.slideNext()}
+            >
+               <img
+                  className="aspect-square hover:scale-110 duration-300 w-[40px] md:w-[120px]"
+                  src={korpnext}
+                  alt=""
+               />
+            </button>
+         </div>
          <div className='block md:hidden'>
 
             <Swiper
                // install Swiper modules
                modules={[Navigation]}
                // style={{ display: 'none' }}
-               className="hidden korpswiper"
+               className="hidden chill"
                spaceBetween={50}
                loop={true}
-               autoplay={{
-                  delay: 2500,
-                  disableOnInteraction: false,
+               onBeforeInit={(swiper) => {
+                  swiperRef.current = swiper
                }}
                slidesPerView={window.innerWidth > 450 ? 2 : 1}
                navigation

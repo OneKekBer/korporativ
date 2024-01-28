@@ -3,6 +3,7 @@ import inst from "./../assets/inst.png"
 import what from "./../assets/what.png"
 import phone from "./../assets/phone.png"
 import { motion } from "framer-motion"
+import { useURLData } from 'utils/URLData'
 
 const slideVariants = {
    initial: {
@@ -15,6 +16,9 @@ const slideVariants = {
    },
 }
 const Footer = ({ className, FooterLinks = [], isMediaOpen = true }) => {
+   const { utm_source, phoneContent } = useURLData()
+   const matchingPhone = phoneContent.find(item => item.utm === utm_source)
+   const phoneNumber = matchingPhone ? '+' + matchingPhone.phone : '+74995055031'
    return (
       <div className={`${className || ""}`}>
          <div className="wrapper  ">
@@ -70,8 +74,8 @@ const Footer = ({ className, FooterLinks = [], isMediaOpen = true }) => {
                   <a href="#Tariff">Тарифы</a>
                   <a href="tel:+7 (499) 505-50-31">Связаться со мной</a>
                </div> */}
-               <a href="tel:+7 (499) 505-50-31" className="min-w-[160px]">
-                  +7 (499) 505-50-31
+               <a href={`tel:${phoneNumber}`} className="min-w-[160px]">
+                  {phoneNumber}
                </a>
             </div>
          </div>
