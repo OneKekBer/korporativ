@@ -26,7 +26,7 @@ const Footer = ({ className, FooterLinks = [], isMediaOpen = true }) => {
                <div className="flex w-full items-center  justify-between gap-5 md:justify-start">
                   <div className='flex gap-5 items-center'>
 
-                     <div>Икша Кантри Kлаб 2023 </div>
+                     <a className='underline' href='/'>Икша Кантри Kлаб 2023 </a>
                      {FooterLinks.length !== 0 && FooterLinks.map((item, i) => {
                         return (
                            <div key={i}>

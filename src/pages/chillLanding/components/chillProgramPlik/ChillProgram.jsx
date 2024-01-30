@@ -50,7 +50,6 @@ import "swiper/css/scrollbar"
 import korpprev from "icons/swiperprev_black.png"
 import korpnext from "icons/swipernext_black.png"
 
-import close from 'icons/close.png'
 
 import sun from 'icons/buttons/filter/sun.png'
 import winter from 'icons/buttons/filter/winter.png'
@@ -59,7 +58,7 @@ import low from 'icons/buttons/filter/low.png'
 
 import Button from 'common/Button'
 
-import { motion } from 'framer-motion'
+
 
 
 
