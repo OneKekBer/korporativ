@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { isItWinterNow } from "utils/helpers"
 
 
-export const ChillModule = () => {
+const ChillModule = () => {
    useEffect(() => {
       const script = document.createElement("script")
       script.src = "//widget.bronirui-online.ru/js/app.js"
@@ -36,34 +36,40 @@ export const ChillModule = () => {
 
          // Примените ваши стили после инициализации виджета
          const customStyles = `
-            
+            #module > div > div:nth-child(1) > div > div {
+               position: unset !important;
+            }
             @media (min-width: 960px){
                .znms-widget__module-form-block__items--input-container{
                   display:flex !important;
                   align-items:center !important;
                }
+
+               
             }
+           
+            .znms-widget__main-wrapper {
 
+               
+               margin:0 auto 50px auto !important;
+               box-shadow: none !important;
+               width:auto !important;
+               margin:auto !important;
+            }
+             
             .znms-widget__module-form-block__btn {
-            background-color: #ECE9E9 !important;
-            color:#785E4F !important;
-            border-radius: 30px !important;
-            border: 1px solid #000 !important;
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) !important;
-
-            font-size: 18px !important;
-            height: 100% !important;
-
-            display: flex !important;
-            justify-content: center !important;
-            align-items: center !important;
+               box-shadow: none !important;
+               position: unset !important;
+               border:none !important;
             }
                .znms-widget__main-wrapper {
-                  
-                  background-color: black !important;
+                  position: unset !important;
+               
+                  background-color: #AB8E67 !important;
                   backdrop-filter: none !important;
                   -webkit-backdrop-filter: none !important;
                   --tw-backdrop-blur: none !important;
+                  box-shadow: none !important;
                }
 
                .znms-widget__teleporter {
@@ -77,10 +83,10 @@ export const ChillModule = () => {
                }
 
                .znms-widget__module-form-block {
-                  background-color: black !important;
-                  backdrop-filter: none !important;
-                  -webkit-backdrop-filter: none !important;
-                  --tw-backdrop-blur: none !important;
+                  background-color: #AB8E67 !important;
+                  // backdrop-filter: none !important;
+                  // -webkit-backdrop-filter: none !important;
+                  // --tw-backdrop-blur: none !important;
                   bottom: 20px;
                }
                .znms-widget__widget-btn.znms-widget__v-color4{
@@ -100,8 +106,8 @@ export const ChillModule = () => {
 
                .znms-widget__module-form-block__item {
                   opacity: ${isItWinterNow() ? '1' : '0.8 '} ;
-                  background: black;
-                  color:black;
+                  background: #AB8E67;
+                  color:#AB8E67;
                   
                   padding-top: 0 !important;
                   padding-bottom: 0 !important;
@@ -130,8 +136,15 @@ export const ChillModule = () => {
 
    }, [])
    return (
-      <div id='module'>
+      <div id='module' className='mb-[15vh] md:mb-[0%] mt-[5vh]'>
+         {/* <div className='text-black text-center w-screen  text-md font-semibold'>
+            Проживание в домике для 6 человек к любому пакету услуг <span className='line-through'> 16 990 ₽ </span><span className='text-NYred'> 9990 ₽ </span>
+
+         </div> */}
          <div id="znms-widget-1"></div>
       </div>
    )
 }
+
+
+export default ChillModule

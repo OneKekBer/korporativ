@@ -1,8 +1,8 @@
-import trans2 from "images/korpLanding/trans2.png";
-import why1 from "images/korpLanding/whyus/1.png";
-import why2 from "images/korpLanding/whyus/2.png";
-import why3 from "images/korpLanding/whyus/3.png";
-import why4 from "images/korpLanding/whyus/4.png";
+import trans2 from "images/korpLanding/trans2.png"
+import why1 from "images/korpLanding/whyus/1.png"
+import why2 from "images/korpLanding/whyus/2.png"
+import why3 from "images/korpLanding/whyus/3.png"
+import why4 from "images/korpLanding/whyus/4.png"
 
 const whyusmap = [
    {
@@ -21,7 +21,7 @@ const whyusmap = [
       img: why4,
       text: "Велосипеды, лыжи, коньки и спорт-оборудование позволит Вам активно провести время на свежем воздухе",
    },
-];
+]
 
 const Whyus = () => {
    return (
@@ -47,14 +47,14 @@ const Whyus = () => {
                            />
                            <div className="text-sm">{item.text}</div>
                         </div>
-                     );
+                     )
                   })}
                </div>
             </div>
          </div>
          <img className="absolute w-full object-cover" src={trans2} alt="" />
       </div>
-   );
-};
+   )
+}
 
-export default Whyus;
+export default Whyus

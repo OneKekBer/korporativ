@@ -12,10 +12,10 @@ import tar3 from 'images/NY/tariff/3.webp'
 import tar4 from 'images/NY/tariff/4.webp'
 import tar5 from 'images/NY/tariff/5.webp'
 // import arrow from "icons/arrow.png";
-import { Reveal } from "common/Reveal";
-import { slideFromRight, slideFromLeft } from "constants/motion";
-import { Link as ScrollLink } from "react-scroll";
-import NYGreenButton from './NYGreenButton';
+import { Reveal } from "common/Reveal"
+import { slideFromRight, slideFromLeft } from "constants/motion"
+import { Link as ScrollLink } from "react-scroll"
+import NYGreenButton from './NYGreenButton'
 
 function TariffComponents() {
    return (
@@ -329,7 +329,7 @@ function TariffComponents() {
             </Reveal>
          </div>
       </div>
-   );
+   )
 }
 
-export default TariffComponents;
+export default TariffComponents

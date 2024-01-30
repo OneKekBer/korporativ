@@ -10,6 +10,8 @@ import main3 from 'images/ban/program/010.webp'
 import s from './../../ban.module.scss'
 import { useEffect } from 'react'
 
+import Button from 'common/Button'
+
 const GetProgram = () => {
    const program = [
 
@@ -163,6 +165,18 @@ const BanProgram = ({ handleProductClick }) => {
                )
             })}
          </div>
+
+
+         <div className={` ${s.banner} mt-[50px] w-screen flex justify-center items-center bottom-0 z-[20] h-[70px] md:h-[90px] `}>
+            <div className='text-white text-center text-md font-semibold'>
+               Проживание в домике для 6 человек к любому пакету услуг <span className='line-through'> 16 990 ₽ </span><span className='text-NYred'> 9990 ₽ </span>
+
+            </div>
+
+         </div>
+         <a className='mx-auto' href='#module'>
+            <Button className='bg-[#593723] md:w-[600px] text-md md:h-[70px] text-white mx-auto'>Посмотреть локации</Button>
+         </a>
 
 
       </div>

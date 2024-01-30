@@ -16,9 +16,9 @@ const slideVariants = {
    },
 }
 const Footer = ({ className, FooterLinks = [], isMediaOpen = true }) => {
-   const { utm_source, phoneContent } = useURLData()
-   const matchingPhone = phoneContent.find(item => item.utm === utm_source)
-   const phoneNumber = matchingPhone ? '+' + matchingPhone.phone : '+74995055031'
+   const { utm_source } = useURLData()
+   // const matchingPhone = phoneContent.find(item => item.utm === utm_source)
+   // const phoneNumber = matchingPhone ? '+' + matchingPhone.phone : '+74995055031'
    return (
       <div className={`${className || ""}`}>
          <div className="wrapper  ">
@@ -74,9 +74,25 @@ const Footer = ({ className, FooterLinks = [], isMediaOpen = true }) => {
                   <a href="#Tariff">Тарифы</a>
                   <a href="tel:+7 (499) 505-50-31">Связаться со мной</a>
                </div> */}
-               <a href={`tel:${phoneNumber}`} className="min-w-[160px]">
-                  {phoneNumber}
-               </a>
+               {/* <a href={`tel:${phoneNumber}`} className="min-w-[160px]">
+                  {phoneNumber} */}
+
+               {
+                  utm_source === 'yandex' ?
+                     <a href={'tel:+74995055067'}>
+                        <h4 className="min-w-[160px] underline cursor-pointer">+7(499) 505-50-67</h4>
+                     </a>
+                     : utm_source === 'vkontakte' ?
+                        <a href={'tel:+74995055087'}>
+                           <h4 className="min-w-[160px] underline cursor-pointer">+7(499) 505-50-87</h4>
+                        </a>
+                        :
+                        <a href={"tel:+74995055031"}>
+                           <h4 className="min-w-[160px] underline cursor-pointer">+7(499) 505-50-31</h4>
+                        </a>
+
+               }
+               {/* </a> */}
             </div>
          </div>
       </div>

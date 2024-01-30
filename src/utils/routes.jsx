@@ -34,21 +34,21 @@ const routes = [
    {
       title: "",
       link: "https://vk.com/ikshacountryclub",
-      icon: "/image/vk.webp",
-      iconAvif: "/image/vk.avif",
+      icon: "/images/vk.webp",
+      iconAvif: "/images/vk.avif",
    },
    {
       title: "",
       link: "https://www.instagram.com/ikshacountryclub",
-      icon: "/image/inst.webp",
-      iconAvif: "/image/inst.avif",
+      icon: "/images/inst.webp",
+      iconAvif: "/images/inst.avif",
    },
    {
       title: "",
       link: "https://wa.me/79859091202",
-      icon: "/image/watsApp.webp",
-      iconAvif: "/image/watsApp.avif",
+      icon: "/images/watsApp.webp",
+      iconAvif: "/images/watsApp.avif",
    },
-];
+]
 
-export default routes;
+export default routes

@@ -1,24 +1,24 @@
 // import Swiper core and required modules
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules"
 
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react"
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/autoplay";
-import "swiper/css/scrollbar";
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+import "swiper/css/autoplay"
+import "swiper/css/scrollbar"
 
-import guest1 from "images/korpLanding/guest/001.webp";
-import guest2 from "images/korpLanding/guest/002.webp";
-import guest3 from "images/korpLanding/guest/003.webp";
-import guest4 from "images/korpLanding/guest/004.webp";
-import blag from "images/korpLanding/blag.png";
-import korpprev from "icons/korpprev.png";
-import korpnext from "icons/korpnext.png";
-import { useRef } from "react";
-import trans2 from "images/korpLanding/trans2.png";
+import guest1 from "images/korpLanding/guest/001.webp"
+import guest2 from "images/korpLanding/guest/002.webp"
+import guest3 from "images/korpLanding/guest/003.webp"
+import guest4 from "images/korpLanding/guest/004.webp"
+import blag from "images/korpLanding/blag.png"
+import korpprev from "icons/korpprev.png"
+import korpnext from "icons/korpnext.png"
+import { useRef } from "react"
+import trans2 from "images/korpLanding/trans2.png"
 const guests = [
    {
       img: guest4,
@@ -44,10 +44,10 @@ const guests = [
       date: "25 июля",
       text: "Снимали весь комплекс 24.07.2022 года на 20 человек, все очень понравилось! Ребята молодцы!",
    },
-];
+]
 
 const KorpGuest = () => {
-   const swiperRef = useRef();
+   const swiperRef = useRef()
    return (
       <div className="bg-brown relative pt-[5vh] pb-[15vh] md:pb-[25vh]">
          <div className="wrapper ">
@@ -64,7 +64,7 @@ const KorpGuest = () => {
                slidesPerView={1}
                navigation
                onBeforeInit={(swiper) => {
-                  swiperRef.current = swiper;
+                  swiperRef.current = swiper
                }}
             >
                {guests.map((guest, i) => {
@@ -85,7 +85,7 @@ const KorpGuest = () => {
                            </div>
                         </div>
                      </SwiperSlide>
-                  );
+                  )
                })}
             </Swiper>
             <div className="flex max-w-[700px] ml-auto z-10 justify-between">
@@ -122,7 +122,7 @@ const KorpGuest = () => {
             className="absolute w-full -bottom-[20vh] object-cover   "
          />
       </div>
-   );
-};
+   )
+}
 
-export default KorpGuest;
+export default KorpGuest

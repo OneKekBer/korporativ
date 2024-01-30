@@ -146,7 +146,7 @@ const BanHero = () => {
          <div
             id="Hero"
             className={` text-black text-center `}
-         // style={{ backgroundImage: bg_hero, backgroundRepeat: "no-repeat" }}
+         // style={{ backgroundimages: bg_hero, backgroundRepeat: "no-repeat" }}
          >
             <div className="relative  flex h-[30vh] md:h-[40vh] flex-col-reverse items-center justify-center ">
                <div className="z-10 flex max-w-[1000px] flex-col items-center justify-center ">
@@ -171,7 +171,7 @@ const BanHero = () => {
                   </ScrollLink>
                </div>
                <div className=' absolute h-[30vh] md:h-[40vh] w-[95vw]'>
-                  <img className='w-full h-full object-cover' src={hero} alt="" />
+                  <img className='w-full brightness-75 h-full object-cover' src={hero} alt="" />
                </div>
             </div>
          </div>
@@ -186,9 +186,9 @@ const BanHero = () => {
             <div id="znms-widget-1"></div>
          </div>
 
-         <div onClick={() => { window.znmsWidget.open('#znms-widget-1') }}>
-            <Button className='bg-black h-[40px] w-[80%] mx-auto text-white'>Забронировать</Button>
-         </div>
+         <a href='#program' >
+            <Button className='bg-black h-[40px] w-[80%] mx-auto text-white'>Посмотреть услуги</Button>
+         </a>
       </div>
    )
 }

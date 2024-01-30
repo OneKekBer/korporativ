@@ -163,13 +163,6 @@ const ChillHero = () => {
       <div id="Hero" className='mb-[10vh]'>
          <div className={` text-black text-center `}>
             <div className="relative  flex h-[80vh]  flex-col-reverse items-center justify-center ">
-               <div className={` ${s.banner} absolute flex justify-center items-center bottom-0 w-full z-[20] h-[70px] md:h-[90px] `}>
-                  <div className='text-white text-center text-md font-semibold'>
-                     Проживание в домике для 6 человек к любому пакету услуг <span className='line-through'> 16 990 ₽ </span><span className='text-NYred'> 9990 ₽ </span>
-
-                  </div>
-
-               </div>
                <div className="z-10  flex max-w-[1000px] flex-col items-center justify-center ">
                   <Reveal delay={0.25}>
                      <div className={`text-white ${s.acariBold} text-xl font-bold`}>
@@ -178,6 +171,9 @@ const ChillHero = () => {
                         в Подмосковье
                      </div>
                   </Reveal>
+                  <a href='#program' className='md:w-auto w-[300px] mx-auto' >
+                     <Button className='bg-[#593723] px-3 h-[40px] md:h-[60px] md:w-[700px]  text-md mx-auto text-white'>Выбрать услуги</Button>
+                  </a>
                   <div className='absolute bottom-12 flex justify-center gap-[20px] left-0'>
                      <button
                         className=" z-20 h-[50px] w-[50px] md:h-[100px] md:w-[100px] -translate-y-1/2 transform "
@@ -231,7 +227,6 @@ const ChillHero = () => {
             </div>
          </div>
          <div className='hidden md:block'>
-
             {/* <div id="znms-widget-1"></div> */}
          </div>
          <Reveal delay={0.5}>
@@ -240,9 +235,8 @@ const ChillHero = () => {
             </div>
          </Reveal>
 
-
-         <a href='#module' className='block md:hidden' >
-            <Button className='bg-[#593723] h-[40px] w-[300px] text-md mx-auto text-white'>Забронировать</Button>
+         <a href='#program' className='w-[300px]' >
+            <Button className='bg-[#593723] px-3 h-[40px] md:h-[60px] md:w-[700px] w-[300px] text-md mx-auto text-white'>Забронировать</Button>
          </a>
       </div >
    )

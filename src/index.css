@@ -313,7 +313,7 @@ body {
 }
 
 .NYhero {
-	background-image: url('./../public/images/NY/bg/bg-main.webp');
+	background-image: url('./../public/image/NY/bg/bg-main.webp');
 }
 
 .hero {
@@ -466,7 +466,7 @@ ul {
 }
 
 .location {
-	background-image: url('/public/images/korpLanding/bg_loc.png');
+	background-image: url('/public/image/korpLanding/bg_loc.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;

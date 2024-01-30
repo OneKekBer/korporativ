@@ -25,7 +25,7 @@ import ChillServices from './components/ChillServices'
 import { StringParam, useQueryParam } from "use-query-params"
 import ChillProgramPopup from './components/chillProgramPlik/ChillProgramPopup'
 import ChillProgram from './components/chillProgramPlik/ChillProgram'
-import { ChillModule } from './components/ChillModule'
+// import ChillModule from './components/ChillModule'
 
 const ChillLanding = () => {
    const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -132,7 +132,7 @@ const ChillLanding = () => {
 
             <ChillProgram handleProductClick={handleProductClick} />
             <ChillServices />
-            <ChillModule />
+            {/* <ChillModule /> */}
             <ChillMap />
             <ChillLocations />
             <ChillGuest />

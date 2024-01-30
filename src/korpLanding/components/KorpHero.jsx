@@ -1,7 +1,7 @@
-import hero from "images/korpLanding/korp_hero.webp";
-import arrow from "icons/arrow.png";
-import Button from "common/Button";
-import trans1 from "images/korpLanding/trans1.png";
+import hero from "images/korpLanding/korp_hero.webp"
+import arrow from "icons/arrow.png"
+import Button from "common/Button"
+import trans1 from "images/korpLanding/trans1.png"
 const Hero = () => {
    return (
       <div className="relative bg-korpPrimary pb-[30%] pt-[5%] lg:pb-[40%]">
@@ -36,7 +36,7 @@ const Hero = () => {
             alt=""
          />
       </div>
-   );
-};
+   )
+}
 
-export default Hero;
+export default Hero

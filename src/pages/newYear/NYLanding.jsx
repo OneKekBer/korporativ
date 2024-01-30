@@ -1,28 +1,28 @@
-import Hero from "./components/NYHero";
-import { Programa } from "./components/NYPrograma";
-import "./index.css";
-import Tariff from "./components/NYTariff";
-import Footer from "common/Footer";
-import Header from "common/Header";
-import ProgramaSwiper from './components/NYProgramaSwiper';
-import venok from 'images/NY/venok.webp';
-import { useState } from 'react';
-import NYForm from './components/NYForm';
-import { Helmet } from 'react-helmet';
+import Hero from "./components/NYHero"
+import { Programa } from "./components/NYPrograma"
+import "./index.css"
+import Tariff from "./components/NYTariff"
+import Footer from "common/Footer"
+import Header from "common/Header"
+import ProgramaSwiper from './components/NYProgramaSwiper'
+import venok from 'images/NY/venok.webp'
+import { useState } from 'react'
+import NYForm from './components/NYForm'
+import { Helmet } from 'react-helmet'
 
 
 
 const NYLanding = () => {
-   const [isMenuOpen, setIsMenuOpen] = useState(false);
+   const [isMenuOpen, setIsMenuOpen] = useState(false)
    const toggleMenu = () => {
-      setIsMenuOpen(!isMenuOpen);
-   };
+      setIsMenuOpen(!isMenuOpen)
+   }
 
    const links = [
       { title: "Программа", link: "Programa" },
       { title: "Тарифы", link: "Tariff" },
       { title: "Связаться со мной", link: "Form" },
-   ];
+   ]
    return (
       <div className="yaes">
          <Helmet>
@@ -67,7 +67,7 @@ const NYLanding = () => {
          <NYForm />
          <Footer className='bg-NYheader text-NYgreen' />
       </div>
-   );
-};
+   )
+}
 
-export default NYLanding;
+export default NYLanding

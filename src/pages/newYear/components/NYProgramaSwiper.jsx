@@ -1,8 +1,8 @@
-import swiper1 from "images/NY/swiper/001.webp";
-import swiper2 from "images/NY/swiper/002.webp";
-import swiper3 from "images/NY/swiper/003.webp";
-import swiper4 from "images/NY/swiper/004.webp";
-import { useRef } from "react";
+import swiper1 from "images/NY/swiper/001.webp"
+import swiper2 from "images/NY/swiper/002.webp"
+import swiper3 from "images/NY/swiper/003.webp"
+import swiper4 from "images/NY/swiper/004.webp"
+import { useRef } from "react"
 // import scroll from "./../assets/scroll.png";
 // import orange_scroll from "./../assets/orange_scroll.png";
 
@@ -10,12 +10,12 @@ import swipernext from 'icons/swipernext_black.png'
 import swiperprev from 'icons/swiperprev_black.png'
 // import venok from 'images/NY/venok.webp'
 // import Swiper core and required modules
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules"
 
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react"
 
 const ProgramaSwiper = () => {
-   const swiperRef = useRef();
+   const swiperRef = useRef()
    return (
       <div className='relative'>
 
@@ -30,7 +30,7 @@ const ProgramaSwiper = () => {
                   pagination={{ clickable: true }}
                   className="  w-full nyswiper h-full aspect-video relative  rounded-lg "
                   onBeforeInit={(swiper) => {
-                     swiperRef.current = swiper;
+                     swiperRef.current = swiper
                   }}
                >
                   <SwiperSlide>
@@ -87,7 +87,7 @@ const ProgramaSwiper = () => {
          </div> */}
          </div>
       </div>
-   );
-};
+   )
+}
 
-export default ProgramaSwiper;
+export default ProgramaSwiper

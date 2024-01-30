@@ -1,19 +1,19 @@
-import kay1 from "images/korpLanding/kayt/1.webp";
-import Button from "common/Button";
-import transline from "images/korpLanding/transline.png";
-import trans5 from "images/korpLanding/trans5.png";
+import kay1 from "images/korpLanding/kayt/1.webp"
+import Button from "common/Button"
+import transline from "images/korpLanding/transline.png"
+import trans5 from "images/korpLanding/trans5.png"
 
-import { useState } from "react";
-import { AnimatePresence } from "framer-motion";
-import Lightbox from "common/Lightbox";
-import menu1 from "images/korpLanding/menu/001.webp";
-import menu2 from "images/korpLanding/menu/002.webp";
-import menu3 from "images/korpLanding/menu/003.webp";
-import menu4 from "images/korpLanding/menu/004.webp";
-import menu5 from "images/korpLanding/menu/005.webp";
-import menu6 from "images/korpLanding/menu/006.webp";
-import menu7 from "images/korpLanding/menu/007.webp";
-import menu8 from "images/korpLanding/menu/008.webp";
+import { useState } from "react"
+import { AnimatePresence } from "framer-motion"
+import Lightbox from "common/Lightbox"
+import menu1 from "images/korpLanding/menu/001.webp"
+import menu2 from "images/korpLanding/menu/002.webp"
+import menu3 from "images/korpLanding/menu/003.webp"
+import menu4 from "images/korpLanding/menu/004.webp"
+import menu5 from "images/korpLanding/menu/005.webp"
+import menu6 from "images/korpLanding/menu/006.webp"
+import menu7 from "images/korpLanding/menu/007.webp"
+import menu8 from "images/korpLanding/menu/008.webp"
 
 const menus = [
    { img: menu1 },
@@ -24,13 +24,13 @@ const menus = [
    { img: menu6 },
    { img: menu7 },
    { img: menu8 },
-];
+]
 
 const KorpKaytering = () => {
-   const [isMenuOpen, setIsMenuOpen] = useState(false);
+   const [isMenuOpen, setIsMenuOpen] = useState(false)
    const toggleMenu = () => {
-      setIsMenuOpen(!isMenuOpen);
-   };
+      setIsMenuOpen(!isMenuOpen)
+   }
 
    return (
       <AnimatePresence>
@@ -72,7 +72,7 @@ const KorpKaytering = () => {
             <img src={transline} className="w-full" alt="" />
          </div>
       </AnimatePresence>
-   );
-};
+   )
+}
 
-export default KorpKaytering;
+export default KorpKaytering

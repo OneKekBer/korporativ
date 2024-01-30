@@ -1,18 +1,18 @@
-import { useState } from "react";
-import add1 from "images/korpLanding/add/001.webp";
-import add2 from "images/korpLanding/add/002.webp";
-import add3 from "images/korpLanding/add/003.webp";
-import add4 from "images/korpLanding/add/004.webp";
-import add5 from "images/korpLanding/add/005.webp";
-import add6 from "images/korpLanding/add/006.webp";
+import { useState } from "react"
+import add1 from "images/korpLanding/add/001.webp"
+import add2 from "images/korpLanding/add/002.webp"
+import add3 from "images/korpLanding/add/003.webp"
+import add4 from "images/korpLanding/add/004.webp"
+import add5 from "images/korpLanding/add/005.webp"
+import add6 from "images/korpLanding/add/006.webp"
 
-import Button from "common/Button";
-import korpnext from "icons/next_photo.png";
+import Button from "common/Button"
+import korpnext from "icons/next_photo.png"
 
-import trans2 from "images/korpLanding/trans2.png";
+import trans2 from "images/korpLanding/trans2.png"
 
-import arrow from "icons/arrow.png";
-import Lightbox from "common/Lightbox";
+import arrow from "icons/arrow.png"
+import Lightbox from "common/Lightbox"
 
 const tabs = [
    { label: "Растопка бани/купели", img: add1 },
@@ -24,24 +24,24 @@ const tabs = [
    { label: "Караоке", img: add4 },
    { label: "Кейтеринг", img: add5 },
    { label: "Кальян", img: add6 },
-];
+]
 
 const Add = () => {
-   const [isMenuOpen, setIsMenuOpen] = useState(false);
-   const [activeTab, setActiveTab] = useState(0);
+   const [isMenuOpen, setIsMenuOpen] = useState(false)
+   const [activeTab, setActiveTab] = useState(0)
 
    const handleTabClick = (index) => {
-      setActiveTab(index);
-   };
+      setActiveTab(index)
+   }
 
    const toggleMenu = () => {
-      setIsMenuOpen(!isMenuOpen);
-   };
+      setIsMenuOpen(!isMenuOpen)
+   }
 
    const switchSlide = () => {
-      if (activeTab === 5) setActiveTab(-1);
-      setActiveTab((prev) => prev + 1);
-   };
+      if (activeTab === 5) setActiveTab(-1)
+      setActiveTab((prev) => prev + 1)
+   }
    return (
       <div id="add" className="relative bg-korpPrimary pb-[13vh] w-full">
          {isMenuOpen && <Lightbox toggleMenu={toggleMenu} items={tabs} />}
@@ -64,11 +64,10 @@ const Add = () => {
                         {tabs.map((tab, index) => (
                            <div
                               key={index}
-                              className={`${
-                                 index === activeTab
-                                    ? "text-white border border-white rounded-[30px] p-2 border-opacity-50"
-                                    : ""
-                              } cursor-pointer text-md font-semibold text-center  md:text-start`}
+                              className={`${index === activeTab
+                                 ? "text-white border border-white rounded-[30px] p-2 border-opacity-50"
+                                 : ""
+                                 } cursor-pointer text-md font-semibold text-center  md:text-start`}
                               onClick={() => handleTabClick(index)}
                            >
                               {tab.label}
@@ -108,7 +107,7 @@ const Add = () => {
             className="absolute -bottom-[2%] md:-bottom-[4%] lg:-bottom-[6%] xl:-bottom-[7%] object-contain w-full "
          />
       </div>
-   );
-};
+   )
+}
 
-export default Add;
+export default Add
